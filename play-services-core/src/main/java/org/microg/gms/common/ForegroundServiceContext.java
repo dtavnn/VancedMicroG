@@ -9,6 +9,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
 import android.provider.Settings;
@@ -89,8 +90,13 @@ public class ForegroundServiceContext extends ContextWrapper {
 
     private static Notification buildForegroundNotification(Context context, String serviceName) {
         Intent notificationIntent = new Intent();
-        notificationIntent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
-        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+			notificationIntent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+			notificationIntent.setData(Uri.parse("package:" + context.getPackageName()));
+		} else {
+			notificationIntent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
+			notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		}
         PendingIntent notificationPendingIntent = PendingIntent.getActivity(context,
                 0,
                 notificationIntent,

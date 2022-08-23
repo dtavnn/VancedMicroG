@@ -1,7 +1,7 @@
 # Vanced MicroG
 
-![Build Status](https://github.com/YTVanced/VancedMicroG/workflows/Debug%20APK%20Builder/badge.svg)
-[![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedMicroG/total.svg)](https://github.com/YTVanced/VancedMicroG/releases) [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedMicroG.svg)](https://github.com/YTVanced/VancedMicroG/releases)
+![Build Status](https://github.com/inotia00/VancedMicroG/workflows/Debug%20APK%20Builder/badge.svg)
+[![Github All Releases](https://img.shields.io/github/downloads/inotia00/VancedMicroG/total.svg)](https://github.com/inotia00/VancedMicroG/releases) [![Github All Releases](https://img.shields.io/github/release/inotia00/VancedMicroG.svg)](https://github.com/inotia00/VancedMicroG/releases)
 
 microG GmsCore is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.
 
@@ -30,3 +30,7 @@ This fork tweaks MicroG to be usable by applications that require Google authent
   - Wallet
   - Wear-Api
 - Removed all permissions, as none are required for Google authentication
+
+## Credits
+
+- Source Code for MicroG 0.2.25.223212 was provided by [@OxrxL](https://github.com/OxrxL)

@@ -1,0 +1,37 @@
+/*
+ * SPDX-FileCopyrightText: 2020, microG Project Team
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+dependencies {
+    api project(':play-services-basement')
+    api "androidx.lifecycle:lifecycle-service:2.5.0"
+
+    implementation "androidx.annotation:annotation:1.4.0"
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10'
+}
+
+android {
+    compileSdkVersion androidCompileSdk
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        versionName version
+        minSdkVersion androidMinSdk
+        targetSdkVersion androidTargetSdk
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}

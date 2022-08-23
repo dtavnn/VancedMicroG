@@ -20,10 +20,10 @@
     <string name="gms_settings_name">Nastavení Vanced microG</string>
     <string name="gms_settings_summary">Nastavení Vanced microG.</string>
 
-    <string name="notification_service_name">Varování o úspoře baterie</string>
-    <string name="small_notification_service_title">Rozbalit oznámení</string>
-    <string name="big_notification_service_title">Nechte microG běžet na pozadí</string>
-    <string name="notification_service_content">Klepnutím zde přejděte do nastavení a zakažte optimalizaci baterie pro aplikaci Vanced microG. Po provedení této akce a restartu zařízení toto oznámení zmizí</string>
+
+
+
+
 
     <string name="just_a_sec">Počkejte chviličku…</string>
     <string name="account_manager_title">Google Account Manager</string>
@@ -90,7 +90,7 @@ Tato akce může trvat několik minut."</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging je poskytovatel push oznámení využívaný mnoha aplikacemi třetích stran. Chcete\u2011li jej použít, musíte povolit registraci zařízení.</string>
 
     <string name="pref_about_title">O aplikaci Vanced microG</string>
-    <string name="pref_cast_double_fix">Opravit duplicity ve Vysílání</string>
+
     <string name="hideLauncherIcon">Skrýt ikonu ze spouštěče</string>
 
     <string name="brand_spoof_button">Huawei</string>
@@ -125,7 +125,7 @@ Tato akce může trvat několik minut."</string>
     <string name="prefcat_push_apps_registered_title">Registrované aplikace</string>
     <string name="prefcat_push_apps_unregistered_title">Aplikace se zrušenou registrací</string>
     <string name="prefcat_push_networks_title">Sítě používané pro push oznámení</string>
-    <string name="pref_cast_double_fix_summary">Povolte toto nastavení, jestliže zaznamenáte duplicity v menu Vysílání</string>
+
 
     <string name="device_profile_name">Profil zařízení</string>
     <string name="profile_name">Vybrat profil</string>

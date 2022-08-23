@@ -13,7 +13,6 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
-import com.google.android.gms.cast.media.CastMediaRouteProviderService
 import com.mgoogle.android.gms.R
 import org.microg.gms.checkin.CheckinPrefs
 import org.microg.gms.gcm.GcmDatabase
@@ -28,8 +27,6 @@ class SettingsFragment : ResourceSettingsFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         super.onCreatePreferences(savedInstanceState, rootKey)
 
-        val pm = requireActivity().packageManager
-
         findPreference<Preference>(PREF_CHECKIN)?.setOnPreferenceClickListener {
             findNavController().navigate(requireContext(), R.id.openCheckinSettings)
             true
@@ -43,17 +40,6 @@ class SettingsFragment : ResourceSettingsFragment() {
             true
         }
         findPreference<Preference>(PREF_ABOUT)?.summary = getString(R.string.about_version_str, AboutFragment.getSelfVersion(context))
-
-        findPreference<SwitchPreferenceCompat>(PREF_CAST_DOUBLE_FIX_ENABLED)?.setOnPreferenceChangeListener { _, newValue ->
-            pm?.setComponentEnabledSetting(
-                    ComponentName(requireActivity().applicationContext, CastMediaRouteProviderService::class.java),
-                    when (newValue) {
-                        true -> PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-                        else -> PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                    },
-                    PackageManager.DONT_KILL_APP)
-            true
-        }
 
         findPreference<SwitchPreferenceCompat>(SettingsContract.CheckIn.HIDE_LAUNCHER_ICON)?.apply {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
@@ -94,7 +80,6 @@ class SettingsFragment : ResourceSettingsFragment() {
         const val PREF_ABOUT = "pref_about"
         const val PREF_GCM = "pref_gcm"
         const val PREF_CHECKIN = "pref_checkin"
-        const val PREF_CAST_DOUBLE_FIX_ENABLED = "pref_cast_double_fix_enabled"
     }
 
     init {

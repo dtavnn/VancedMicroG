@@ -99,6 +99,7 @@ import org.microg.gms.gcm.mcs.IqStanza;
 import org.microg.gms.gcm.mcs.LoginRequest;
 import org.microg.gms.gcm.mcs.LoginResponse;
 import org.microg.gms.gcm.mcs.Setting;
+import org.microg.mgms.settings.SettingsProvider;
 
 import java.io.Closeable;
 import java.lang.reflect.Field;
@@ -330,8 +331,8 @@ public class McsService extends Service implements Handler.Callback {
 
     public synchronized static long getCurrentDelay() {
         long delay = currentDelay == 0 ? 5000 : currentDelay;
-        if (currentDelay < GcmPrefs.INTERVAL) currentDelay += 10000;
-        if (currentDelay >= GcmPrefs.INTERVAL && currentDelay < 600000) currentDelay += GcmPrefs.INTERVAL;
+        if (currentDelay < SettingsProvider.INTERVAL) currentDelay += 10000;
+        if (currentDelay >= SettingsProvider.INTERVAL && currentDelay < 600000) currentDelay += SettingsProvider.INTERVAL;
         return delay;
     }
 
@@ -500,7 +501,11 @@ public class McsService extends Service implements Handler.Callback {
         NetworkInfo activeNetworkInfo = cm.getActiveNetworkInfo();
         activeNetworkPref = GcmPrefs.get(this).getNetworkPrefForInfo(activeNetworkInfo);
         if (!GcmPrefs.get(this).isEnabledFor(activeNetworkInfo)) {
-            logd(this, "Don't connect, because disabled for " + activeNetworkInfo.getTypeName());
+            if (activeNetworkInfo != null) {
+                logd(this, "Don't connect, because disabled for " + activeNetworkInfo.getTypeName());
+            } else {
+                logd(this, "Don't connect, no active network");
+            }
             scheduleReconnect(this);
             return;
         }

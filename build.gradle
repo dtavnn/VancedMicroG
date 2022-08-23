@@ -9,13 +9,13 @@ buildscript {
     ext.androidCompileSdk = 31
 
     repositories {
-        jcenter()
+        mavenCentral()
         google()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
         classpath "com.squareup.wire:wire-gradle-plugin:3.2.2"
     }
 }
@@ -24,14 +24,14 @@ allprojects {
     apply plugin: 'idea'
 
     group = 'org.microg.gms'
-    version = "0.2.24.220220"
-    ext.appVersionCode = 220220001
+    version = "0.2.25.223212"
+    ext.appVersionCode = 223212001
     ext.isReleaseVersion = false
 }
 
 subprojects {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
     }
 }

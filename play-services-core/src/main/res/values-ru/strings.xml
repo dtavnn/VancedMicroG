@@ -20,10 +20,10 @@
     <string name="gms_settings_name">Настройки Vanced microG</string>
     <string name="gms_settings_summary">Настройки для Vanced microG.</string>
 
-    <string name="notification_service_name">Уведомление о службе батареи</string>
-    <string name="small_notification_service_title">Разверните уведомление</string>
-    <string name="big_notification_service_title">Удерживать microG в фоне</string>
-    <string name="notification_service_content">Нажмите здесь, чтобы отключить режим энергосбережения для microG. Затем перезагрузите устройство, чтобы отключить уведомление.</string>
+
+
+
+
 
     <string name="just_a_sec">Секундочку…</string>
     <string name="account_manager_title">Настройки аккаунта Google</string>
@@ -90,7 +90,7 @@
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging позволяет получать уведомления от многих приложений. Чтобы использовать GCM, включите регистрацию устройства в Google.</string>
 
     <string name="pref_about_title">О Vanced microG</string>
-    <string name="pref_cast_double_fix">Исправление двух кнопок трансляции</string>
+
     <string name="hideLauncherIcon">скрыть микрог из лаунчера</string>
 
     <string name="brand_spoof_button">Huawei</string>
@@ -125,6 +125,6 @@
     <string name="prefcat_push_apps_registered_title">Зарегистрированные приложения</string>
     <string name="prefcat_push_apps_unregistered_title">Приложения без регистрации</string>
     <string name="prefcat_push_networks_title">Тип сети для получения уведомлений</string>
-    <string name="pref_cast_double_fix_summary">Включите это если у вас появляются копии устройств в меню трансляции</string>
+
 
 </resources>

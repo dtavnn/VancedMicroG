@@ -20,10 +20,10 @@
     <string name="gms_settings_name">Pengaturan Vanced microG</string>
     <string name="gms_settings_summary">Atur Vanced microG.</string>
 
-    <string name="notification_service_name">Memperhatikan Menghemat Baterai</string>
-    <string name="small_notification_service_title">Perluas notifikasi</string>
-    <string name="big_notification_service_title">Pertahankan microG di latar belakang</string>
-    <string name="notification_service_content">Ketuk di sini dan nonaktifkan pengoptimalan baterai untuk microG, lalu reboot perangkat untuk menghapus notifikasi ini.</string>
+
+
+
+
 
     <string name="just_a_sec">Tunggu sebentar…</string>
     <string name="account_manager_title">Pengelola akun Google</string>
@@ -90,7 +90,7 @@ Ini bisa berlangsung beberapa menit."</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging adalah penyedia notifikasi push yang digunakan pada banyak aplikasi pihak ketiga. Untuk menggunakannya anda harus mengaktifkan device registration.</string>
 
     <string name="pref_about_title">Tentang Vanced microG</string>
-    <string name="pref_cast_double_fix">Perbaikan Cast terduplikasi</string>
+
     <string name="hideLauncherIcon">Sembunyikan microG dari peluncur</string>
 
     <string name="pref_switcher_title">Registrasi perangkat</string>
@@ -123,6 +123,6 @@ Ini bisa berlangsung beberapa menit."</string>
     <string name="prefcat_push_apps_registered_title">Aplikasi yang teregistrasi</string>
     <string name="prefcat_push_apps_unregistered_title">Aplikasi yang tidak teregistrasi</string>
     <string name="prefcat_push_networks_title">Internet yang digunakan untuk notifikasi push</string>
-    <string name="pref_cast_double_fix_summary">Aktifkan ini jika anda melihat duplikasi di menu casting</string>
+
 
 </resources>

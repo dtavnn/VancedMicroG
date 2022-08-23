@@ -11,6 +11,7 @@ import org.microg.gms.gcm.TriggerReceiver.FORCE_TRY_RECONNECT
 import org.microg.mgms.settings.SettingsContract
 import org.microg.mgms.settings.SettingsContract.Gcm
 import org.microg.mgms.settings.SettingsContract.setSettings
+import org.microg.mgms.settings.SettingsProvider
 
 data class GcmPrefs(
     val isGcmLogEnabled: Boolean,
@@ -35,8 +36,6 @@ data class GcmPrefs(
         const val PREF_NETWORK_WIFI = Gcm.NETWORK_WIFI
         const val PREF_NETWORK_ROAMING = Gcm.NETWORK_ROAMING
         const val PREF_NETWORK_OTHER = Gcm.NETWORK_OTHER
-
-        public const val INTERVAL = 1 * 60 * 1000 // 1 minute
 
         @JvmStatic
         fun get(context: Context): GcmPrefs {
@@ -104,13 +103,13 @@ data class GcmPrefs(
 
     fun getHeartbeatMsFor(pref: String): Int {
         return if (PREF_NETWORK_ROAMING == pref) {
-            if (networkRoaming != 0) networkRoaming * GcmPrefs.INTERVAL else learntMobileInterval
+            if (networkRoaming != 0) networkRoaming * SettingsProvider.INTERVAL else learntMobileInterval
         } else if (PREF_NETWORK_MOBILE == pref) {
-            if (networkMobile != 0) networkMobile * GcmPrefs.INTERVAL else learntMobileInterval
+            if (networkMobile != 0) networkMobile * SettingsProvider.INTERVAL else learntMobileInterval
         } else if (PREF_NETWORK_WIFI == pref) {
-            if (networkWifi != 0) networkWifi * GcmPrefs.INTERVAL else learntWifiInterval
+            if (networkWifi != 0) networkWifi * SettingsProvider.INTERVAL else learntWifiInterval
         } else {
-            if (networkOther != 0) networkOther * GcmPrefs.INTERVAL else learntOtherInterval
+            if (networkOther != 0) networkOther * SettingsProvider.INTERVAL else learntOtherInterval
         }
     }
 
@@ -138,21 +137,21 @@ data class GcmPrefs(
             PREF_NETWORK_MOBILE, PREF_NETWORK_ROAMING -> {
                 if (time > learntMobileInterval / 4 * 3) {
                     setSettings(context, Gcm.getContentUri(context)) {
-                        put(Gcm.LEARNT_MOBILE, INTERVAL)
+                        put(Gcm.LEARNT_MOBILE, SettingsProvider.INTERVAL)
                     }
                 }
             }
             PREF_NETWORK_WIFI -> {
                 if (time > learntWifiInterval / 4 * 3) {
                     setSettings(context, Gcm.getContentUri(context)) {
-                        put(Gcm.LEARNT_WIFI, INTERVAL)
+                        put(Gcm.LEARNT_WIFI, SettingsProvider.INTERVAL)
                     }
                 }
             }
             else -> {
                 if (time > learntOtherInterval / 4 * 3) {
                     setSettings(context, Gcm.getContentUri(context)) {
-                        put(Gcm.LEARNT_OTHER, INTERVAL)
+                        put(Gcm.LEARNT_OTHER, SettingsProvider.INTERVAL)
                     }
                 }
             }

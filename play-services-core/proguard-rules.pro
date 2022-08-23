@@ -11,7 +11,6 @@
 -dontwarn com.caverock.androidsvg.**
 -dontwarn org.slf4j.**
 -dontwarn org.codehaus.jackson.**
--dontwarn com.android.location.provider.**
 -dontwarn java.lang.instrument.ClassFileTransformer
 -dontwarn sun.misc.SignalHandler
 -dontwarn com.android.org.conscrypt.SSLParametersImpl
@@ -22,7 +21,6 @@
 
 # Keep dynamically loaded GMS classes
 -keep public class com.google.android.gms.common.security.ProviderInstallerImpl { public *; }
--keep public class com.google.android.gms.cast.framework.internal.CastDynamiteModuleImpl { public *; }
 
 # Keep AutoSafeParcelables
 -keep public class * extends org.microg.safeparcel.AutoSafeParcelable {

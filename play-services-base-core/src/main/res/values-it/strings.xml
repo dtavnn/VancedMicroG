@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Avviso Risparmio Energetico</string>
+    <string name="small_notification_service_title">Espandi la notifica</string>
+    <string name="big_notification_service_title">Mantieni i microG in secondo piano</string>
+    <string name="notification_service_content">Tocca qui per disattivare l\'ottimizzazione della batteria per microG, poi riavvia il dispositivo per rimuovere questa notifica.</string>
+</resources>

@@ -189,7 +189,7 @@ message CheckinRequest {
         optional int32 glEsVersion = 8;
 
         // PackageManager.getSystemSharedLibraryNames
-        // eg. "android.test.runner", "com.android.future.usb.accessory", "com.android.location.provider",
+        // eg. "android.test.runner", "com.android.future.usb.accessory",
         //     "com.android.media.remotedisplay", "com.android.mediadrm.signer", "com.google.android.maps",
         //     "com.google.android.media.effects", "com.google.widevine.software.drm", "javax.obex"
         repeated string sharedLibrary = 9;

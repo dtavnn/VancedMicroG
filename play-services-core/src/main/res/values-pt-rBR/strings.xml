@@ -19,10 +19,10 @@
     <string name="gms_settings_name">Configurações do Vanced microG</string>
     <string name="gms_settings_summary">Configuração do Vanced microG.</string>
 
-    <string name="notification_service_name">Aviso de Economia de Bateria</string>
-    <string name="small_notification_service_title">Expandir notificação</string>
-    <string name="big_notification_service_title">Mantenha o microG em segundo plano</string>
-    <string name="notification_service_content">Toque aqui para desativar a otimização da bateria para o vanced microG e, em seguida, reinicie o dispositivo para remover esta notificação</string>
+
+
+
+
 
     <string name="just_a_sec">Só um segundo...</string>
     <string name="account_manager_title">Gerente de Contas do Google</string>
@@ -89,7 +89,7 @@ Isso pode levar alguns minutos."</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging é um provedor de notificação push usado por muitos aplicativos de terceiros. Para usá-lo, você deve ativar ao registro do dispositivo.</string>
 
     <string name="pref_about_title">Sobre o Vanced microG</string>
-    <string name="pref_cast_double_fix">Corrigir duplicação do Cast</string>
+
     <string name="hideLauncherIcon">Ocultar ícone no menu</string>
 
     <string name="brand_spoof_button">Huawei</string>
@@ -124,7 +124,7 @@ Isso pode levar alguns minutos."</string>
     <string name="prefcat_push_apps_registered_title">Aplicativos registrados</string>
     <string name="prefcat_push_apps_unregistered_title">Aplicativos não registrados</string>
     <string name="prefcat_push_networks_title">Redes para usar em notificações push</string>
-    <string name="pref_cast_double_fix_summary">Ative isso se você ver o menu casting duplicado</string>
+
 
     <string name="device_profile_name">Perfil do dispositivo</string>
     <string name="profile_name">Selecionar perfil</string>

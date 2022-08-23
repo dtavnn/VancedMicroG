@@ -18,5 +18,5 @@ public interface OnCanceledListener {
     /**
      * Called when the Task is canceled successfully.
      */
-    void onCanceled();
+    public abstract void onCanceled();
 }

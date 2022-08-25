@@ -41,6 +41,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 
 @Keep
+@SuppressWarnings("unchecked")
 public class ProviderInstallerImpl {
     private static final String TAG = "GmsProviderInstaller";
     private static final List<String> DISABLED = Collections.unmodifiableList(Arrays.asList("com.bankid.bus"));

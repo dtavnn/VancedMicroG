@@ -133,10 +133,12 @@ public class HttpFormClient {
             String[] keyValuePair = s.split("=", 2);
             String key = keyValuePair[0].trim();
             String value = keyValuePair[1].trim();
+            boolean matched = false;
             try {
                 for (Field field : tClass.getDeclaredFields()) {
                     if (field.isAnnotationPresent(ResponseField.class) &&
                             key.equals(field.getAnnotation(ResponseField.class).value())) {
+                        matched = true;
                         if (field.getType().equals(String.class)) {
                             field.set(response, value);
                         } else if (field.getType().equals(boolean.class)) {
@@ -150,6 +152,9 @@ public class HttpFormClient {
                 }
             } catch (Exception e) {
                 Log.w(TAG, e);
+            }
+            if (!matched) {
+                Log.w(TAG, "Response line '" + s + "' not processed");
             }
         }
         for (Field field : tClass.getDeclaredFields()) {
@@ -191,11 +196,14 @@ public class HttpFormClient {
 
     public static <T> void requestAsync(final String url, final Request request, final Class<T> tClass,
                                         final Callback<T> callback) {
-        new Thread(() -> {
-            try {
-                callback.onResponse(request(url, request, tClass));
-            } catch (Exception e) {
-                callback.onException(e);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    callback.onResponse(request(url, request, tClass));
+                } catch (Exception e) {
+                    callback.onException(e);
+                }
             }
         }).start();
     }
@@ -214,25 +222,25 @@ public class HttpFormClient {
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.FIELD)
     public @interface RequestHeader {
-        String[] value();
+        public String[] value();
 
-        boolean truePresent() default true;
+        public boolean truePresent() default true;
 
-        boolean falsePresent() default false;
+        public boolean falsePresent() default false;
 
-        boolean nullPresent() default false;
+        public boolean nullPresent() default false;
     }
 
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.FIELD)
     public @interface RequestContent {
-        String[] value();
+        public String[] value();
 
-        boolean truePresent() default true;
+        public boolean truePresent() default true;
 
-        boolean falsePresent() default false;
+        public boolean falsePresent() default false;
 
-        boolean nullPresent() default false;
+        public boolean nullPresent() default false;
     }
 
     @Retention(RetentionPolicy.RUNTIME)
@@ -243,13 +251,13 @@ public class HttpFormClient {
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.FIELD)
     public @interface ResponseField {
-        String value();
+        public String value();
     }
 
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.FIELD)
     public @interface ResponseHeader {
-        String value();
+        public String value();
     }
 
     @Retention(RetentionPolicy.RUNTIME)

@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+@file:Suppress("DEPRECATION")
+
 package org.microg.gms.gcm
 
 import android.content.BroadcastReceiver

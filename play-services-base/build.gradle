@@ -18,7 +18,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion androidCompileSdk
-    buildToolsVersion "30.0.3"
+    buildToolsVersion '30.0.3'
 
     defaultConfig {
         minSdkVersion androidMinSdk
@@ -34,10 +34,10 @@ android {
 dependencies {
     api project(':play-services-base-api')
 
-    // Dependencies from play-services-base:18.0.1
+    // Dependencies from play-services-base:18.1.0
     api 'androidx.collection:collection:1.2.0'
     api 'androidx.core:core:1.8.0'
-    api 'androidx.fragment:fragment:1.5.0'
+    api 'androidx.fragment:fragment:1.5.2'
     api project(':play-services-basement')
     api project(':play-services-tasks')
 }

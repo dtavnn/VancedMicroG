@@ -35,6 +35,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@link Task} utility methods.
  */
 @PublicApi
+@SuppressWarnings("unchecked")
 public final class Tasks {
 
     /**

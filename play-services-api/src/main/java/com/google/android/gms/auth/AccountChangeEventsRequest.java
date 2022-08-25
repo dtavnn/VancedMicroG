@@ -25,7 +25,7 @@ import org.microg.safeparcel.SafeParceled;
 
 public class AccountChangeEventsRequest extends AutoSafeParcelable {
     @Field(1)
-    private int versionCode = 1;
+    private final int versionCode = 1;
     @Field(2)
     private int since;
     @Field(3)

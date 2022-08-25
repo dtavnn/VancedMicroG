@@ -22,7 +22,7 @@ dependencies {
 
 android {
     compileSdkVersion androidCompileSdk
-    buildToolsVersion "30.0.3"
+    buildToolsVersion '30.0.3'
 
     aidlPackageWhiteList "com/google/android/gms/common/data/DataHolder.aidl"
     aidlPackageWhiteList "com/google/android/gms/common/images/WebImage.aidl"

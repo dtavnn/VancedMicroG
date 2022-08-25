@@ -81,7 +81,6 @@
 
     <application
         android:allowBackup="true"
-        android:extractNativeLibs="true"
         android:forceQueryable="true"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
@@ -356,12 +355,6 @@
         </activity-alias>
 
         <activity
-            android:name="org.microg.gms.ui.AboutFragment$AsActivity"
-            android:label="@string/pref_about_title"
-            android:process=":ui"
-            android:taskAffinity="org.microg.gms.settings" />
-
-        <activity
             android:name="org.microg.gms.ui.GoogleMoreFragment$AsActivity"
             android:label="@string/gms_settings_name"
             android:process=":ui"
@@ -403,5 +396,4 @@
             </intent-filter>
         </service>
     </application>
-
 </manifest>

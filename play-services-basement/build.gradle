@@ -23,12 +23,12 @@ dependencies {
     // Dependencies from play-services-basement:18.0.0
     api 'androidx.collection:collection:1.2.0'
     api 'androidx.core:core:1.8.0'
-    api 'androidx.fragment:fragment:1.5.0'
+    api 'androidx.fragment:fragment:1.5.2'
 }
 
 android {
     compileSdkVersion androidCompileSdk
-    buildToolsVersion "30.0.3"
+    buildToolsVersion '30.0.3'
 
     aidlPackageWhiteList "com/google/android/gms/common/api/Status.aidl"
     aidlPackageWhiteList "com/google/android/gms/common/internal/ICancelToken.aidl"

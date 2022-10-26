@@ -87,7 +87,7 @@ public class PackageUtils {
                     return true;
             }
         }
-        return context.checkCallingPermission("org.mgoogle.gms.EXTENDED_ACCESS") == PackageManager.PERMISSION_GRANTED;
+        return context.checkCallingPermission("com.mgoogle.gms.EXTENDED_ACCESS") == PackageManager.PERMISSION_GRANTED;
     }
 
     public static void checkPackageUid(Context context, String packageName, int callingUid) {

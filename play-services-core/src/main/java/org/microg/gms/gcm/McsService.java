@@ -94,9 +94,8 @@ public class McsService extends Service implements Handler.Callback {
     public static final String SERVICE_HOST = "mtalk.google.com";
     // A few ports are available: 443, 5228-5230 but also 5222-5223
     // See https://github.com/microg/GmsCore/issues/408
-    public static final int SERVICE_PORT = 5228;
     // Likely if the main port 5228 is blocked by a firewall, the other 52xx are blocked as well
-    public static final int SERVICE_PORT_FALLBACK = 443;
+    public static final int[] SERVICE_PORTS = {5228, 443};
 
     private static final int WAKELOCK_TIMEOUT = 5000;
     // On bad mobile network a ping can take >60s, so we wait for an ACK for 90s
@@ -478,8 +477,20 @@ public class McsService extends Service implements Handler.Callback {
             return;
         }
 
-        if (!connect(SERVICE_PORT))
-            connect(SERVICE_PORT_FALLBACK);
+        Exception exception = null;
+        for (int port : SERVICE_PORTS) {
+            try {
+                connect(port);
+                return;
+            } catch (Exception e) {
+                exception = e;
+                Log.w(TAG, "Exception while connecting to " + SERVICE_HOST + ":" + port, e);
+                closeAll();
+            }
+        }
+
+        logd(this, "Unable to connect to all different ports, retrying later");
+        rootHandler.sendMessage(rootHandler.obtainMessage(MSG_TEARDOWN, exception));
     }
 
     private void handleClose(Close close) {

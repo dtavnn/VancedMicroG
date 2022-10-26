@@ -123,7 +123,8 @@ public class PackageUtils {
             for (Signature sig : info.signatures) {
                 String digest = sha1sum(sig.toByteArray());
                 if (digest != null) {
-                    return digest;
+                    // spoof or use real one
+                    return PackageSpoofUtils.spoofStringSignature(packageManager, packageName, digest);
                 }
             }
         }
@@ -147,7 +148,8 @@ public class PackageUtils {
             for (Signature sig : info.signatures) {
                 byte[] digest = sha1bytes(sig.toByteArray());
                 if (digest != null) {
-                    return digest;
+                    // spoof or use real one
+                    return PackageSpoofUtils.spoofBytesSignature(packageManager, packageName, digest);
                 }
             }
         }
@@ -161,7 +163,9 @@ public class PackageUtils {
         if (packageName == null) {
             packageName = firstPackageFromUserId(context, callingUid);
         }
-        return packageName;
+
+        // spoof or use real one
+        return PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
     }
 
     public static byte[] sha1bytes(byte[] bytes) {
@@ -239,7 +243,9 @@ public class PackageUtils {
         if (packageName != null && suggestedPackageName != null && !packageName.equals(suggestedPackageName)) {
             throw new SecurityException("UID [" + callingUid + "] is not related to packageName [" + suggestedPackageName + "] (seems to be " + packageName + ")");
         }
-        return packageName;
+
+        // spoof or use real one
+        return PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
     }
 
     @Nullable

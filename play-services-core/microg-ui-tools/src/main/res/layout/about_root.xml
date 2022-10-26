@@ -73,5 +73,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
+        android:divider="@null"
         tools:listitem="@android:layout/simple_list_item_2"/>
 </LinearLayout>

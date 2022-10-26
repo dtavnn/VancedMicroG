@@ -16,7 +16,7 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_settings_name">Vanced microG Settings</string>
+    <string name="gms_settings_name">Vanced microG</string>
     <string name="gms_settings_summary">Setup Vanced microG.</string>
 
     <string name="just_a_sec">Just a sec…</string>
@@ -24,7 +24,7 @@
     <string name="sorry">Sorry…</string>
     <string name="auth_before_connect">"An app on your device is trying to sign in to a Google account.
 
-If this was intentional, use the <b>Sign in</b> (or <b>Huawei</b>, if you have a device with this brand) button to connect to Google’s sign-in page, if not, press <b>Cancel</b> to go back to the application that caused this dialog to show up."</string>
+If this was intentional, use the <b>Sign in</b> (or <b>Huawei</b>, if you have a device with this brand) button to connect to Google’s sign-in page."</string>
     <string name="auth_sign_in">Sign in</string>
     <string name="auth_connecting">"Establishing a connection to Google’s servers to sign you in.
 

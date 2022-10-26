@@ -40,7 +40,6 @@ public abstract class AssistantActivity extends Activity {
         formatTitle();
         findViewById(R.id.spoof_button).setOnClickListener(v -> onHuaweiButtonClicked());
         findViewById(R.id.next_button).setOnClickListener(v -> onNextButtonClicked());
-        findViewById(R.id.back_button).setOnClickListener(v -> onBackButtonClicked());
     }
 
     @SuppressLint("WrongViewCast")
@@ -80,28 +79,11 @@ public abstract class AssistantActivity extends Activity {
         }
     }
 
-    public void setBackButtonText(@StringRes int res) {
-        setBackButtonText(getText(res));
-    }
-
-    public void setBackButtonText(CharSequence text) {
-        if (text == null) {
-            findViewById(R.id.back_button).setVisibility(View.GONE);
-        } else {
-            findViewById(R.id.back_button).setVisibility(View.VISIBLE);
-            ((Button) findViewById(R.id.back_button)).setText(text);
-        }
-    }
-
     protected void onHuaweiButtonClicked() {
 
     }
 
     protected void onNextButtonClicked() {
-
-    }
-
-    protected void onBackButtonClicked() {
 
     }
 

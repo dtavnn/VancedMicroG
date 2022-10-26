@@ -7,6 +7,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="notification_service_name">Battery Saving Warning</string>
     <string name="small_notification_service_title">Expand notification</string>
-    <string name="big_notification_service_title">Keep microG in background</string>
-    <string name="notification_service_content">Tap here to disable battery optimization for vanced microG, then restart the device to remove this notification</string>
+    <string name="big_notification_service_title">Keep Vanced microG in background</string>
+    <string name="notification_service_content">Tap here to disable battery optimization for Vanced microG, then restart the device to remove this notification</string>
 </resources>

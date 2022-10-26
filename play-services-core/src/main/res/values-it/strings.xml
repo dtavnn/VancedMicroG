@@ -25,7 +25,7 @@
     <string name="sorry">Ci scusiamo…</string>
     <string name="auth_before_connect">"Un'app sul tuo dispositivo sta tentando di accedere a un account Google.
 
-Se ciò è intenzionale, utilizza il pulsante <b>Accedi</b> (o <b>Huawei</b>, se possiedi un dispositivo con questo marchio) per connetterti alla relativa pagina di accesso Google, in caso contrario, premi <b>Annulla</b> per tornare all\'applicazione che ha richiamato questa finestra di dialogo."</string>
+Se ciò è intenzionale, utilizza il pulsante <b>Accedi</b> (o <b>Huawei</b>, se possiedi un dispositivo con questo marchio) per connetterti alla relativa pagina di accesso Google."</string>
     <string name="auth_sign_in">Accedi</string>
     <string name="auth_connecting">"Il tuo dispositivo sta stabilendo una connessione con i server di Google per eseguire l\'accesso.
 

@@ -14,16 +14,12 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <resources>
-
     <string name="about_version_str">Версія %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Всі права захищено.</string>
-
     <string name="about_root_title">Демонстрація microG UI</string>
     <string name="about_root_summary">Резюме</string>
     <string name="about_root_version">Версія v0.1.0</string>
     <string name="about_root_libraries">Використані бібліотеки</string>
-
 </resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Vanced microG 設置</string>
+    <string name="just_a_sec">請稍等一下…</string>
+    <string name="account_manager_title">管理Google帳號</string>
+    <string name="sorry">很抱歉…</string>
+    <string name="auth_before_connect">"一個在裝置上的應用正在請求登入Google帳號…
+
+如果您使用的不是華為手機, 請點<b>登入</b>(若是請點<b>華為</b>) 來開啟登入頁面…"</string>
+    <string name="auth_sign_in">登入</string>
+    <string name="auth_connecting">"正在與Google伺服器取得登入權限…
+
+請稍等幾秒鐘……"</string>
+    <string name="no_network_error_desc">"您未取得網際網路連線…
+
+這也許只是短暫性的問題
+亦可能是您的裝置未配置任何數據服務…
+請開啟行動數據或連線至Wi-Fi後重試."</string>
+    <string name="auth_general_error_desc">"與Google伺服器連線錯誤……
+
+請稍後再試."</string>
+    <string name="auth_finalize">"您的Google帳號正在儲存此裝置之登入資訊…
+
+請稍等幾分鐘……"</string>
+    <string name="perm_status_broadcast_label">接收內部狀態廣播</string>
+    <string name="perm_c2dm_receive_label">接收C2DM資訊</string>
+    <string name="perm_c2dm_send_label">傳送C2DM資訊到其他應用.</string>
+    <string name="perm_gtalk_svc_label">與Google伺服器交換並接收同步訊息</string>
+    <string name="perm_extended_access_label">授予額外權限給Google服務</string>
+    <string name="service_name_checkin">註冊Google設備</string>
+    <string name="service_name_mcs">收發雲端訊息</string>
+    <string name="service_status_enabled_short">開啟</string>
+    <string name="service_status_disabled_short">關閉</string>
+    <string name="menu_advanced">進階設置</string>
+    <string name="list_no_item_none">無</string>
+    <string name="list_item_see_all">查看全部</string>
+    <string name="network_type_mobile">行動數據</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">數據漫遊</string>
+    <string name="network_type_other">其他網絡</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">關於</string>
+    <string name="prefcat_google_services">Google 服務</string>
+    <string name="pref_more_settings">瀏覽更多</string>
+    <string name="checkin_not_registered">尚未註冊</string>
+    <string name="checkin_last_registration">最後註冊時間: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">帳戶偏好</string>
+    <string name="prefs_account_privacy">個人資訊&amp; 條款</string>
+    <string name="prefs_account_security">登入&amp; 安全性</string>
+    <string name="pref_auth_trust_google_title">信任 Google 以獲得應用權限</string>
+    <string name="pref_auth_trust_google_summary">禁用後, 向Google發送應用授權請求前會先詢問用戶.
+若禁用此功能, 某些應用將無法使用 Google 帳戶.</string>
+    <string name="pref_auth_visible_title">允許應用找尋帳戶</string>
+    <string name="pref_auth_visible_summary">啟用後, 此設備上的所有應用程序將能在未經事先授權的情況下查看您的 Google 帳戶的電子郵件地址.</string>
+    <string name="pref_add_account_title">帳戶</string>
+    <string name="pref_add_account_summary">新增 Google 帳戶</string>
+    <string name="pref_gcm_switcher_title">接收推播通知</string>
+    <string name="pref_gcm_enable_mcs_summary">雲端消息推播是許多第三方應用使用的推送通知功能 若要使用, 您必須先啟用設備註冊.</string>
+    <string name="pref_about_title">關於</string>
+    <string name="hideLauncherIcon">於桌面隱藏Vanced microG</string>
+    <string name="brand_spoof_button">華為</string>
+    <string name="pref_switcher_title">裝置註冊</string>
+    <string name="pref_checkin_enable_summary">將裝置註冊至Google服務並產生一組屬於此裝置的ID
+Vanced microG 會從註冊數據中去除
+您的 Google 帳戶名稱以外的識別位</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">狀態</string>
+    <string name="gcm_status_pref_default">預設</string>
+    <string name="gcm_status_pref_manual">手動</string>
+    <string name="gcm_status_pref_sec">幾秒</string>
+    <string name="gcm_status_pref_min">分鐘</string>
+    <string name="gcm_unregister_app">解除註冊</string>
+    <string name="gcm_no_message_yet">目前沒有收到任何訊息</string>
+    <string name="gcm_last_message_at">最新消息:<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">已註冊</string>
+    <string name="gcm_registered_since">註冊時間:<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">註銷 <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">某些應用不會自動重新註冊 和/或 不提供手動重新註冊的選項。 取消註冊後，這些應用程序可能無法正常運行。\n是否繼續?</string>
+    <string name="gcm_unregister_after_deny_message">您將已開啟推播通知之應用取消了.
+\n這將會造成您未來無法接收
+任何有關此應用的通知
+\n您確定要取消嗎?</string>
+    <string name="gcm_messages_counter">訊息: <xliff:g example="123">%1$d</xliff:g>(<xliff:g example="12345">%2$d</xliff:g>位元組)</string>
+    <string name="gcm_network_state_disconnected">連接已中斷</string>
+    <string name="gcm_network_state_connected">已連接自從 <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="pref_push_app_allow_register_title">允許註冊</string>
+    <string name="pref_push_app_allow_register_summary">允許應用註冊推播通知.</string>
+    <string name="pref_push_app_wake_for_delivery_title">在推送消息上啟動應用程序</string>
+    <string name="pref_push_app_wake_for_delivery_summary">在後台啟動應用程序以接收傳入的推送消息.</string>
+    <string name="prefcat_status_title">狀態</string>
+    <string name="prefcat_push_apps_title">使用推送通知的應用</string>
+    <string name="prefcat_push_apps_registered_title">已註冊的應用</string>
+    <string name="prefcat_push_apps_unregistered_title">未註冊的應用</string>
+    <string name="prefcat_push_networks_title">用於推送通知的網絡</string>
+    <string name="device_profile_name">裝置描述檔</string>
+    <string name="profile_name">選擇設定檔</string>
+    <string name="profile_name_native">原始</string>
+    <string name="profile_name_real">真實</string>
+    <string name="profile_name_user">自訂：%s</string>
+    <string name="profile_name_auto">自動: %s</string>
+    <string name="profile_name_system">系統: %s</string>
+    <string name="import_profile_name">匯入自訂檔:</string>
+    <string name="import_profile_summary">從文管匯入裝置設定檔</string>
+    <string name="serial_name">序號</string>
+</resources>

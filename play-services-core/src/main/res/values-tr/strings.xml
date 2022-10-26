@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Vanced microG\'yi kurun.</string>
+    <string name="just_a_sec">Sadece bir saniye…</string>
+    <string name="account_manager_title">Google Account Manager</string>
+    <string name="sorry">Afedersiniz…</string>
+    <string name="auth_before_connect">"Cihazınızdaki bir uygulama, bir Google hesabında oturum açmaya çalışıyor.
+
+Bunu bilerek yaptıysanız, Google'ın oturum açma sayfasına bağlanmak için <b>Oturum aç</b> (veya bu markaya sahip bir cihazınız varsa <b>Huawei</b>) düğmesini kullanın, değilse, Bu iletişim kutusunun görünmesine neden olan uygulamaya geri dönmek için <b>İptal</b>."</string>
+    <string name="auth_sign_in">Giriş yap</string>
+    <string name="auth_connecting">"Oturum açmanız için Google sunucularıyla bağlantı kuruluyor.
+
+ Bu birkaç saniye sürebilir."</string>
+    <string name="no_network_error_desc">"Bir ağ bağlantınız yok.
+
+ Bu geçici bir sorun olabilir veya Android cihazınız veri bağlantısına sahip değil. Bir mobil ağa bağlandığınızda veya bir Wi-Fi ağına bağlandığınızda tekrar deneyin."</string>
+    <string name="auth_general_error_desc">"Google sunucularıyla iletişim kurarken bir sorun oluştu.
+
+ Daha sonra tekrar deneyin."</string>
+    <string name="auth_finalize">"Cihazınız, bilgileri hesabınıza kaydetmek için Google ile iletişim kuruyor.
+
+ Bu birkaç dakika sürebilir."</string>
+    <string name="perm_status_broadcast_label">dahili durum yayınlarını dinle</string>
+    <string name="perm_c2dm_receive_label">c2DM mesajlarını dinle</string>
+    <string name="perm_c2dm_send_label">diğer uygulamalara C2DM mesajları gönderin</string>
+    <string name="perm_gtalk_svc_label">Google sunucularından mesaj alışverişi yapın ve senkronizasyon bildirimleri alın</string>
+    <string name="perm_extended_access_label">Google hizmetlerine erişim gerektirir</string>
+    <string name="service_name_checkin">Google cihaz kaydı</string>
+    <string name="service_name_mcs">Bulut ile mesajlaşma</string>
+    <string name="service_status_enabled_short">Açık</string>
+    <string name="service_status_disabled_short">Kapalı</string>
+    <string name="menu_advanced">Gelişmiş</string>
+    <string name="list_no_item_none">Hiçbiri</string>
+    <string name="list_item_see_all">Hepsini göster</string>
+    <string name="network_type_mobile">Mobil ağ</string>
+    <string name="network_type_wifi">Kablosuz bağlantı</string>
+    <string name="network_type_roaming">Dolaşımda</string>
+    <string name="network_type_other">Diğer ağlar</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">Hakkında</string>
+    <string name="prefcat_google_services">Google Hizmetleri</string>
+    <string name="pref_more_settings">Daha fazla</string>
+    <string name="checkin_not_registered">Kayıtlı değil</string>
+    <string name="checkin_last_registration">Son kayıt: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">Hesap tercihleri</string>
+    <string name="prefs_account_privacy">Kişisel veriler &amp; gizlilik</string>
+    <string name="prefs_account_security">Kayıt ol &amp; güvenlik</string>
+    <string name="pref_auth_trust_google_title">Uygulama izinleri için Google\'a güven</string>
+    <string name="pref_auth_trust_google_summary">Devre dışı bırakıldığında, Google\'a bir uygulama yetkilendirme isteği gönderilmeden önce kullanıcıya sorulur. Bu devre dışı bırakılırsa, bazı uygulamalar Google hesabını kullanamaz.</string>
+    <string name="pref_auth_visible_title">Uygulamaların hesapları bulmasına izin ver</string>
+    <string name="pref_auth_visible_summary">Etkinleştirildiğinde, bu cihazdaki tüm uygulamalar önceden izin almadan Google Hesaplarınızın e-posta adresini görebilir.</string>
+    <string name="pref_add_account_title">Hesap</string>
+    <string name="pref_add_account_summary">Yeni Google Hesabı</string>
+    <string name="pref_gcm_switcher_title">Anlık bildirimler alın</string>
+    <string name="pref_gcm_enable_mcs_summary">Bulut mesajlaşma, birçok üçüncü taraf uygulaması tarafından kullanılan bir anlık bildirim sağlayıcısıdır. Bunu kullanmak için cihaz kaydını etkinleştirmelisiniz.</string>
+    <string name="pref_about_title">Vanced microG hakkında</string>
+    <string name="hideLauncherIcon">Başlatıcı simgesini gizle</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">Cihazı kaydet</string>
+    <string name="pref_checkin_enable_summary">Cihazınızı Google hizmetlerine kaydeder ve benzersiz bir cihaz tanımlayıcısı oluşturur. Vanced microG, kayıt verilerinden Google hesap adınız dışındaki bitleri tanımlayan şeritler.</string>
+    <string name="pref_device_registration_android_id">Android kimliği</string>
+    <string name="pref_info_status">Durum</string>
+    <string name="gcm_status_pref_default">Varsayılan</string>
+    <string name="gcm_status_pref_manual">Rehber</string>
+    <string name="gcm_status_pref_sec">saniye</string>
+    <string name="gcm_status_pref_min">dakika</string>
+    <string name="gcm_unregister_app">Kaydınızı silin</string>
+    <string name="gcm_no_message_yet">Şu ana kadar hiç mesaj alınmadı</string>
+    <string name="gcm_last_message_at">Son mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Kayıtlı</string>
+    <string name="gcm_registered_since">Tarihinden beri kayıtlı: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Kaydı sil <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">\nBazı uygulamalar otomatik olarak yeniden kaydolmaz ve/veya bunu manuel olarak yapma seçeneği sunmaz. Bu uygulamalar, kaydı iptal ettikten sonra düzgün çalışmayabilir</string>
+    <string name="gcm_unregister_after_deny_message">\n no?</string>
+    <string name="gcm_messages_counter">&lt;/xliff:g&gt;%2$d</string>
+    <string name="gcm_network_state_disconnected">Çıkış yapıldı</string>
+</resources>

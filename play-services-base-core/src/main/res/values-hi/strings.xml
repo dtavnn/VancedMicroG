@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">बैटरी बचाने की चेतावनी</string>
+    <string name="small_notification_service_title">अधिसूचना का विस्तार करें</string>
+    <string name="big_notification_service_title">माइक्रो जी को बैकग्राउंड में रखें</string>
+    <string name="notification_service_content">वैन्ड माइक्रोजी के लिए बैटरी अनुकूलन को अक्षम करने के लिए यहां टैप करें, फिर इस अधिसूचना को हटाने के लिए डिवाइस को पुनरारंभ करें</string>
+</resources>

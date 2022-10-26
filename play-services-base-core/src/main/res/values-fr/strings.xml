@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Avertissement d\'économie de batterie</string>
+    <string name="small_notification_service_title">Élargir la notification</string>
+    <string name="big_notification_service_title">Garder microG en arrière-plan</string>
+    <string name="notification_service_content">Appuyez ici pour désactiver l\'optimisation de la batterie pour la microG vanced, puis redémarrez l\'appareil pour supprimer cette notification</string>
+</resources>

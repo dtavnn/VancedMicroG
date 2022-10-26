@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">إعداد Vanced microG.</string>
+    <string name="just_a_sec">لحظة من فضلك…</string>
+    <string name="account_manager_title">إدارة حساب Google</string>
+    <string name="sorry">عذراً…</string>
+    <string name="auth_before_connect">"يحاول أحد التطبيقات الموجودة على جهازك تسجيل الدخول إلى حساب Google.
+
+ إذا كان هذا مقصودًا ، فاستخدم زر <b> تسجيل الدخول </b> (أو <b> Huawei </b>، إذا كان لديك جهاز بهذه العلامة التجارية) للاتصال بصفحة تسجيل الدخول إلى Google."</string>
+    <string name="auth_sign_in">تسجيل الدخول</string>
+    <string name="auth_connecting">"إنشاء اتصال بخوادم Google لتسجيل دخولك.
+
+قد يستغرق هذا بضع ثوان."</string>
+    <string name="no_network_error_desc">"ليس لديك اتصال بالشبكة.
+
+ قد تكون هذه مشكلة مؤقتة أو قد لا يكون جهاز Android الخاص بك مزودًا بخدمات البيانات. حاول مرة أخرى عند الاتصال بشبكة الجوال، أو الاتصال بشبكة Wi-Fi."</string>
+    <string name="auth_general_error_desc">"حدثت مشكلة في الاتصال مع خوادم Google.
+
+حاول مرة أخرى في وقت لاحق."</string>
+    <string name="auth_finalize">"يتصل جهازك بـ Google لحفظ المعلومات في حسابك.
+
+قد يستغرق هذا بضع دقائق."</string>
+    <string name="perm_status_broadcast_label">الاستماع إلى عمليات بث الوضع الداخلي</string>
+    <string name="perm_c2dm_receive_label">الاستماع إلى رسائل C2DM</string>
+    <string name="perm_c2dm_send_label">إرسال رسائل C2DM إلى تطبيقات أخرى</string>
+    <string name="perm_gtalk_svc_label">تبادل الرسائل وتلقي إشعارات المزامنة من خوادم Google</string>
+    <string name="perm_extended_access_label">الوصول الموسع إلى خدمات Google</string>
+    <string name="service_name_checkin">تسجيل جهاز Google</string>
+    <string name="service_name_mcs">المراسلة السحابية</string>
+    <string name="service_status_enabled_short">تشغيل</string>
+    <string name="service_status_disabled_short">إيقاف</string>
+    <string name="menu_advanced">الإعدادات المُتقدمة</string>
+    <string name="list_no_item_none">بلا</string>
+    <string name="list_item_see_all">إظهار الكل</string>
+    <string name="network_type_mobile">شبكة الجوّال</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">التجوال</string>
+    <string name="network_type_other">شبكات أخرى</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">لمحة</string>
+    <string name="prefcat_google_services">خدمات Google</string>
+    <string name="pref_more_settings">المَزِيد</string>
+    <string name="checkin_not_registered">غير مُسجَّل</string>
+    <string name="checkin_last_registration">آخر تسجيل: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">تفضيلات الحساب</string>
+    <string name="prefs_account_privacy">المعلومات الشخصية &amp; الخصوصية</string>
+    <string name="prefs_account_security">تسجيل الدخول &amp; الأمان</string>
+    <string name="pref_auth_trust_google_title">ثق في Google للحصول على أذونات التطبيق</string>
+    <string name="pref_auth_trust_google_summary">عند التعطيل ، يُسأل المستخدم قبل إرسال طلب تفويض التطبيقات إلى Google. ستفشل بعض التطبيقات في استخدام حساب Google إذا تم تعطيله.</string>
+    <string name="pref_auth_visible_title">السماح للتطبيقات بالعثور على الحسابات</string>
+    <string name="pref_auth_visible_summary">عند التمكين، ستتمكن جميع التطبيقات الموجودة على هذا الجهاز من رؤية عنوان البريد الإلكتروني لحسابات Google دون إذن مسبق.</string>
+    <string name="pref_add_account_title">الحساب</string>
+    <string name="pref_add_account_summary">إضافة حساب Google</string>
+    <string name="pref_gcm_switcher_title">تلقي الإشعارات</string>
+    <string name="pref_gcm_enable_mcs_summary">المراسلة السحابية هي موفر الإشعارات المستخدم من قبل العديد من تطبيقات الطرف الثالث. لاستخدامها يجب عليك تمكين تسجيل الجهاز.</string>
+    <string name="pref_about_title">حول Vanced microG</string>
+    <string name="hideLauncherIcon">إخفاء أيقونة التطبيق من درج التطبيقات</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">تسجيل الجهاز</string>
+    <string name="pref_checkin_enable_summary">يسجل جهازك في خِدْمَات Google وينشئ معرفًا فريدًا للجهاز. Vanced microG يحدد أجزاء أخرى غير اسم حسابك في Google من بيانات التسجيل.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">الحالة</string>
+    <string name="gcm_status_pref_default">الافتراضي</string>
+    <string name="gcm_status_pref_manual">يدوي</string>
+    <string name="gcm_status_pref_sec">ثانية</string>
+    <string name="gcm_status_pref_min">دقيقة</string>
+    <string name="gcm_unregister_app">غير مسجل</string>
+    <string name="gcm_no_message_yet">لم يتم تلقي أي رسائل حتى الآن</string>
+    <string name="gcm_last_message_at">آخر رسالة: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">مُسجَّل</string>
+    <string name="gcm_registered_since">مسجل منذ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">إلغاء تسجيل <xliff:g example="F-Droid">%1$s</xliff:g>؟</string>
+    <string name="gcm_unregister_confirm_message">لا تقوم بعض التطبيقات بإعادة التسجيل تلقائيًا و/أو لا توفر خيارًا للقيام بذلك يدويًا. قد لا تعمل هذه التطبيقات بشكل صحيح بعد إلغاء التسجيل. \n هل تريد المتابعة؟</string>
+    <string name="gcm_unregister_after_deny_message">لقد رفضت تطبيق لتسجيل الإشعارات التي تم تسجيلها بالفعل.\nهل تريد إلغاء تسجيله الآن حتى لا تتلقى رسائل دفع في المستقبل؟</string>
+    <string name="gcm_messages_counter">رسائل: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> بايت)</string>
+    <string name="gcm_network_state_disconnected">غير متصل</string>
+    <string name="gcm_network_state_connected">متصل منذ <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="pref_push_app_allow_register_title">السماح بالتسجيل</string>
+    <string name="pref_push_app_allow_register_summary">السماح للتطبيق بالتسجيل للحصول على إشعارات متواصلة.</string>
+    <string name="pref_push_app_wake_for_delivery_title">بدء تشغيل التطبيق عند وصول الرسالة</string>
+    <string name="pref_push_app_wake_for_delivery_summary">بدء تشغيل التطبيق أثناء وجوده في الخلفية لتلقي الرسائل المتواصلة الواردة.</string>
+    <string name="prefcat_status_title">الحالة</string>
+    <string name="prefcat_push_apps_title">التطبيقات التي تستخدم الإشعارات</string>
+    <string name="prefcat_push_apps_registered_title">التطبيقات المسجّلة</string>
+    <string name="prefcat_push_apps_unregistered_title">التطبيقات الغير مسجلة</string>
+    <string name="prefcat_push_networks_title">الشبكات التي تستخدم لوصول الإشعارات</string>
+    <string name="device_profile_name">ملف تعريف الجهاز</string>
+    <string name="profile_name">حدد ملف التعريف</string>
+    <string name="profile_name_native">الأصلي</string>
+    <string name="profile_name_real">حقيقي</string>
+    <string name="profile_name_user">مخصص: %s</string>
+    <string name="profile_name_auto">تلقائي: %s</string>
+    <string name="profile_name_system">النظام: %s</string>
+    <string name="import_profile_name">استيراد ملف تعريف مخصص</string>
+    <string name="import_profile_summary">استيراد مِلَفّ تعريف الجهاز من مِلَفّ</string>
+    <string name="serial_name">الرقم التسلسلي</string>
+</resources>

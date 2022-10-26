@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">ব্যাটারি সংরক্ষণ সতর্কতা</string>
+    <string name="small_notification_service_title">বিজ্ঞপ্তি প্রসারিত করুন</string>
+    <string name="big_notification_service_title">microG ব্যাকগ্রাউন্ডে রাখুন</string>
+    <string name="notification_service_content">vanced microG কে ব্যাটারি অপটিমাইজেশন থেকে সরাতে এখানে ট্যাপ করুন, এরপর এই বিজ্ঞপ্তি সরাতে ফোন রিস্টার্ট করুন</string>
+</resources>

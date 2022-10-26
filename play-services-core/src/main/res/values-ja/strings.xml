@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Vended microGのセットアップ</string>
+    <string name="just_a_sec">少々お待ちください…</string>
+    <string name="account_manager_title">Google アカウントの管理</string>
+    <string name="sorry">申し訳ございません…</string>
+    <string name="auth_before_connect">"デバイス上のアプリがGoogleアカウントにサインインしようとしています。
+
+意図的な場合は、 <b>サインイン</b> (または <b>Huawei</b>) を使用してください。 Googleのサインインページに接続するには、このブランドのデバイスがある場合) ボタンをクリックします。"</string>
+    <string name="auth_sign_in">サインイン</string>
+    <string name="auth_connecting">"Googleのサーバーに接続してサインインします。
+
+これは数秒かかることがあります。"</string>
+    <string name="no_network_error_desc">"ネットワーク接続がありません。
+
+一時的な問題が発生するか、データサービス用にAndroid端末がプロビジョニングされていない可能性があります モバイルネットワークに接続したときに再度試行するか、Wi-Fiネットワークに接続してください。"</string>
+    <string name="auth_general_error_desc">"Google サーバーとの通信に問題が発生しました。
+
+後でもう一度お試しください。"</string>
+    <string name="auth_finalize">"あなたのデバイスはあなたのアカウントに情報を保存するためにGoogleに連絡しています。
+
+これは数分かかることがあります。"</string>
+    <string name="perm_status_broadcast_label">内部状態の放送を聞いてください</string>
+    <string name="perm_c2dm_receive_label">c2DMメッセージを聞く</string>
+    <string name="perm_c2dm_send_label">c2DMのメッセージを他のアプリに送信</string>
+    <string name="perm_gtalk_svc_label">メッセージの交換とGoogleサーバーからの同期通知の受信します</string>
+    <string name="perm_extended_access_label">Google サービスへの拡張アクセス</string>
+    <string name="service_name_checkin">Google デバイスの登録</string>
+    <string name="service_name_mcs">クラウドメッセージ</string>
+    <string name="service_status_enabled_short">有効</string>
+    <string name="service_status_disabled_short">無効</string>
+    <string name="menu_advanced">高度な設定</string>
+    <string name="list_no_item_none">なし</string>
+    <string name="list_item_see_all">すべて表示</string>
+    <string name="network_type_mobile">モバイルネットワーク</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">ローミング中</string>
+    <string name="network_type_other">その他のネットワーク</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">概要</string>
+    <string name="prefcat_google_services">Google サービス</string>
+    <string name="pref_more_settings">詳細</string>
+    <string name="checkin_not_registered">登録されていません</string>
+    <string name="checkin_last_registration">最終登録: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">アカウント設定</string>
+    <string name="prefs_account_privacy">個人情報 &amp; プライバシー</string>
+    <string name="prefs_account_security">サインイン &amp; セキュリティ</string>
+    <string name="pref_auth_trust_google_title">Google にアプリのアクセス許可を付与する</string>
+    <string name="pref_auth_trust_google_summary">無効にすると、アプリ認証リクエストが Google に送信される前にユーザーに要求されます。 一部のアプリケーションは、無効になっている場合、Googleアカウントを使用できません。</string>
+    <string name="pref_auth_visible_title">アプリによるアカウントの検索を許可する</string>
+    <string name="pref_auth_visible_summary">有効にすると、このデバイス上のすべてのアプリケーションは、事前承認なしでGoogleアカウントのメールアドレスを見ることができます。</string>
+    <string name="pref_add_account_title">アカウント</string>
+    <string name="pref_add_account_summary">Google アカウントを追加</string>
+    <string name="pref_gcm_switcher_title">プッシュ通知を受け取る</string>
+    <string name="pref_gcm_enable_mcs_summary">クラウドメッセージングは、多くのサードパーティアプリケーションで使用されているプッシュ通知プロバイダです。それを使用するには、デバイス登録を有効にする必要があります。</string>
+    <string name="pref_about_title">Vanced microGについて</string>
+    <string name="hideLauncherIcon">ランチャーからアイコンを隠す</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">デバイスを登録</string>
+    <string name="pref_checkin_enable_summary">デバイスをGoogleサービスに登録し、一意のデバイス識別子を作成します。 Vanced microGは、登録データからGoogleアカウント名以外の識別ビットを削除します。</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">状態</string>
+    <string name="gcm_status_pref_default">既定</string>
+    <string name="gcm_status_pref_manual">手動</string>
+    <string name="gcm_status_pref_sec">秒</string>
+    <string name="gcm_status_pref_min">分</string>
+    <string name="gcm_unregister_app">登録を解除</string>
+    <string name="gcm_no_message_yet">これまでに受信したメッセージはありません</string>
+    <string name="gcm_last_message_at">最終メッセージ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">登録済</string>
+    <string name="gcm_registered_since">登録: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> の登録解除しますか？</string>
+    <string name="gcm_unregister_confirm_message">一部のアプリは自動的に再登録しない、または手動で登録するオプションを提供しない場合があります。 登録解除後にこれらのアプリが正常に動作しない可能性があります。\n続行しますか？</string>
+    <string name="gcm_unregister_after_deny_message">既に登録されているプッシュ通知の登録を拒否しました。\n今後プッシュメッセージを受信しないように登録を解除しますか?</string>
+    <string name="gcm_messages_counter">メッセージ: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">切断されました</string>
+    <string name="gcm_network_state_connected"><xliff:g example="2 hours ago">%1$s</xliff:g>から接続しました</string>
+    <string name="pref_push_app_allow_register_title">登録を許可する</string>
+    <string name="pref_push_app_allow_register_summary">プッシュ通知の登録をアプリに許可します。</string>
+    <string name="pref_push_app_wake_for_delivery_title">プッシュメッセージでアプリを起動</string>
+    <string name="pref_push_app_wake_for_delivery_summary">バックグラウンドでアプリを起動し、受信するプッシュメッセージを受信します。</string>
+    <string name="prefcat_status_title">状態</string>
+    <string name="prefcat_push_apps_title">プッシュ通知を使用しているアプリ</string>
+    <string name="prefcat_push_apps_registered_title">登録済みのアプリ</string>
+    <string name="prefcat_push_apps_unregistered_title">未登録のアプリ</string>
+    <string name="prefcat_push_networks_title">プッシュ通知に使用するネットワーク</string>
+    <string name="device_profile_name">端末のプロファイル</string>
+    <string name="profile_name">プロファイルを選択</string>
+    <string name="profile_name_native">自国</string>
+    <string name="profile_name_real">実在する</string>
+    <string name="profile_name_user">カスタム: %s</string>
+    <string name="profile_name_auto">自動: %s</string>
+    <string name="profile_name_system">システム: %s</string>
+    <string name="import_profile_name">カスタム プロファイルをインポートする</string>
+    <string name="import_profile_summary">ファイルから端末のプロファイルをインポート</string>
+    <string name="serial_name">シリアル</string>
+</resources>

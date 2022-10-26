@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">คำเตือนการประหยัดแบตเตอรี่</string>
+    <string name="small_notification_service_title">ขยายการแจ้งเตือน</string>
+    <string name="big_notification_service_title">ให้ microG ทำงานเบื้องหลัง</string>
+    <string name="notification_service_content">แตะที่นี่เพื่อปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่สำหรับ vanced microG จากนั้นรีสตาร์ทอุปกรณ์เพื่อลบการแจ้งเตือนนี้ </string>
+</resources>

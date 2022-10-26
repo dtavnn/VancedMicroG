@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">การติดตั้ง Vanced microG.</string>
+    <string name="just_a_sec">รอสักครู่…</string>
+    <string name="account_manager_title">จัดการบัญชี Google</string>
+    <string name="sorry">ขอโทษ...</string>
+    <string name="auth_sign_in">เข้าสู่ระบบ</string>
+    <string name="auth_connecting">"กำลังสร้างการเชื่อมต่อกับเซิร์ฟเวอร์ของ Google เพื่อลงชื่อเข้าใช้ให้คุณ"</string>
+    <string name="no_network_error_desc">"คุณไม่มีการเชื่อมต่อเครือข่าย.
+
+ นี่อาจเป็นปัญหาชั่วคราวหรืออุปกรณ์ Android ของคุณอาจไม่ได้รับบริการข้อมูล ลองอีกครั้งเมื่อเชื่อมต่อกับเครือข่ายมือถือ หรือเชื่อมต่อกับเครือข่าย Wi-Fi."</string>
+    <string name="auth_general_error_desc">"เกิดปัญหาในการสื่อสารกับเซิร์ฟเวอร์ของ Google.
+
+ ลองอีกครั้งในภายหลัง."</string>
+    <string name="auth_finalize">"อุปกรณ์ของคุณกำลังติดต่อ Google เพื่อบันทึกข้อมูลลงในบัญชีของคุณ.
+
+ อาจใช้เวลาสองสามนาที."</string>
+    <string name="perm_status_broadcast_label">ฟังการถ่ายทอดสถานะภายใน</string>
+    <string name="perm_gtalk_svc_label">แลกเปลี่ยนข้อความและรับการแจ้งเตือนการซิงค์จากเซิร์ฟเวอร์ของ Google</string>
+    <string name="perm_extended_access_label">ขยายการเข้าถึงบริการของ Google</string>
+    <string name="service_name_checkin">การลงทะเบียนอุปกรณ์ Google</string>
+    <string name="service_name_mcs">การส่งข้อความบนคลาวด์ </string>
+    <string name="service_status_enabled_short">เปิด</string>
+    <string name="service_status_disabled_short">ปิด</string>
+    <string name="menu_advanced">ขั้นสูง</string>
+    <string name="list_no_item_none">None</string>
+    <string name="list_item_see_all">ดูทั้งหมด</string>
+    <string name="network_type_mobile">เครือข่ายมือถือ</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Roaming</string>
+    <string name="network_type_other">เครือข่ายอื่นๆ</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">เกี่ยวกับ</string>
+    <string name="prefcat_google_services">Google Services</string>
+    <string name="pref_more_settings">More</string>
+    <string name="checkin_not_registered">ยังไม่ได้ลงทะเบียน</string>
+    <string name="checkin_last_registration">การลงทะเบียนครั้งล่าสุด: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">การตั้งค่าบัญชี</string>
+    <string name="prefs_account_privacy">ข้อมูลส่วนตัว &amp; ความเป็นส่วนตัว</string>
+    <string name="prefs_account_security">ลงชื่อเข้าใช้ &amp; ความปลอดภัย</string>
+    <string name="pref_auth_trust_google_title">เชื่อถือ Google สำหรับการอนุญาตแอป</string>
+    <string name="pref_auth_trust_google_summary">เมื่อปิดใช้งาน ระบบจะถามผู้ใช้ก่อนที่จะส่งคำขอให้สิทธิ์แอปไปยัง Google แอปพลิเคชันบางตัวจะใช้บัญชี Google ไม่ได้หากปิดใช้งาน</string>
+    <string name="pref_auth_visible_title">อนุญาตให้แอปค้นหาบัญชี</string>
+    <string name="pref_auth_visible_summary">เมื่อเปิดใช้งาน แอปพลิเคชันทั้งหมดบนอุปกรณ์นี้จะสามารถดูที่อยู่อีเมลของบัญชี Google ของคุณโดยไม่ได้รับอนุญาตล่วงหน้า</string>
+    <string name="pref_add_account_title">บัญชี</string>
+    <string name="pref_add_account_summary">เพิ่มบัญชี Google</string>
+    <string name="pref_gcm_switcher_title">รับการแจ้งเตือนแบบพุช</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging เป็นผู้ให้บริการการแจ้งเตือนแบบพุชที่ใช้โดยแอปพลิเคชันบุคคลที่สามจำนวนมาก ในการใช้งาน คุณต้องเปิดใช้งานการลงทะเบียนอุปกรณ์ </string>
+    <string name="pref_about_title">เกี่ยวกับ Vanced microG</string>
+    <string name="hideLauncherIcon">ซ่อนไอคอนจากลั้นเชอร์</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">ลงทะเบียนอุปกรณ์ </string>
+    <string name="pref_checkin_enable_summary">ลงทะเบียนอุปกรณ์ของคุณกับบริการของ Google และสร้างตัวระบุอุปกรณ์ที่ไม่ซ้ำกัน. Vanced microG strips identifying bits อื่นที่ไม่ใช่ชื่อบัญชี Google ของคุณจากข้อมูลการลงทะเบียน.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">สถานะ:</string>
+    <string name="gcm_status_pref_default">ค่าเริ่มต้น</string>
+    <string name="gcm_status_pref_manual">คู่มือ</string>
+    <string name="gcm_status_pref_sec">วินาที</string>
+    <string name="gcm_status_pref_min">นาที</string>
+    <string name="gcm_unregister_app">ยังไม่ได้ลงทะเบียน</string>
+    <string name="gcm_no_message_yet">ยังไม่ได้รับข้อความ</string>
+    <string name="gcm_last_message_at">การลงทะเบียนครั้งล่าสุด: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">ลงทะเบียนแล้ว</string>
+    <string name="gcm_registered_since">การลงทะเบียนครั้งล่าสุด: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_message">แอพบางตัวไม่ลงทะเบียนใหม่โดยอัตโนมัติ และ/หรือ ไม่มีตัวเลือกให้ดำเนินการด้วยตนเอง. แอปเหล่านี้อาจทำงานไม่ถูกต้องหลังจากยกเลิกการลงทะเบียน.\nดำเนินการต่อหรือไม่</string>
+    <string name="gcm_unregister_after_deny_message">คุณปฏิเสธไม่ให้แอปลงทะเบียนสำหรับการแจ้งเตือนแบบพุชที่ลงทะเบียนแล้ว. \nคุณต้องการยกเลิกการลงทะเบียนตอนนี้เพื่อไม่ให้ได้รับข้อความ Push อีกในอนาคตหรือไม่</string>
+    <string name="gcm_messages_counter">ข้อความ: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">ตัดการเชื่อมต่อแล้ว</string>
+    <string name="pref_push_app_allow_register_title">อนุญาตการลงทะเบียน</string>
+    <string name="pref_push_app_allow_register_summary">อนุญาตให้แอปลงทะเบียนเพื่อรับการแจ้งเตือนแบบพุช</string>
+    <string name="pref_push_app_wake_for_delivery_title">เริ่มแอพในข้อความพุช</string>
+    <string name="pref_push_app_wake_for_delivery_summary">เริ่มแอพในขณะที่อยู่ในพื้นหลังเพื่อรับข้อความพุชที่เข้ามา</string>
+    <string name="prefcat_status_title">สถานะ:</string>
+    <string name="prefcat_push_apps_title">การแจ้งเตือนแบบพุชของแอป</string>
+    <string name="prefcat_push_apps_registered_title">ลงทะเบียนแอปแล้ว</string>
+    <string name="prefcat_push_apps_unregistered_title">ยังไม่ได้ลงทะเบียนแอป</string>
+    <string name="prefcat_push_networks_title">เครือข่ายที่จะใช้สำหรับการแจ้งเตือนแบบพุช</string>
+    <string name="device_profile_name">ข้อมูลอุปกรณ์</string>
+    <string name="profile_name">เลือกโปรไฟล์</string>
+    <string name="profile_name_user">กำหนดเอง: %s</string>
+    <string name="import_profile_name">นำเข้าโปรไฟล์ที่กำหนดเอง</string>
+    <string name="import_profile_summary">นำเข้าโปรไฟล์อุปกรณ์จากไฟล์ </string>
+</resources>

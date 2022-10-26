@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">배터리 절약 경고</string>
+    <string name="small_notification_service_title">알림 펼치기</string>
+    <string name="big_notification_service_title">microG를 백그라운드에서 유지</string>
+    <string name="notification_service_content">여기를 탭하여 vanced microG의 배터리 최적화를 비활성화한 다음 기기를 다시 시작하여 이 알림을 제거하세요</string>
+</resources>

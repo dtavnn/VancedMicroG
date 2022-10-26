@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Peringatan daya baterai</string>
+    <string name="small_notification_service_title">Perluas notifikasi</string>
+    <string name="big_notification_service_title">Izinkan microG berjalan di latar belakang</string>
+    <string name="notification_service_content">Tekan disini untuk mematikan optimasi baterai untuk vanced microG, lalu mulai ulang perangkat untuk menghapus notifikasi ini</string>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Vanced microG를 설정합니다</string>
+    <string name="just_a_sec">잠시만 기다려주십시오…</string>
+    <string name="account_manager_title">Google 계정 관리자</string>
+    <string name="sorry">죄송합니다...</string>
+    <string name="auth_before_connect">"기기의 앱이 Google 계정에 로그인을 시도하고 있습니다. 
+
+본인인 경우 <b>로그인</b> (또는 <b>화웨이</b>, 이 브랜드의 기기가 있는 경우) 버튼을 사용하면 Google 로그인 페이지에 연결합니다."</string>
+    <string name="auth_sign_in">로그인</string>
+    <string name="auth_connecting">"로그인을 위해 Google 서버에 연결합니다.
+
+몇 초 정도 걸릴 수 있습니다."</string>
+    <string name="no_network_error_desc">"네트워크에 연결되어 있지 않습니다.
+
+이는 일시적인 문제이거나 Android 기기가 데이터 서비스용으로 프로비저닝되지 않았을 수 있습니다. 모바일 네트워크에 연결되면 다시 시도하거나 Wi-Fi 네트워크에 연결하세요."</string>
+    <string name="auth_general_error_desc">"Google 서버와 통신하는 중에 문제가 발생했습니다.
+
+나중에 다시 시도하세요."</string>
+    <string name="auth_finalize">"귀하의 기기가 귀하의 계정에 정보를 저장하기 위해 Google에 접속하고 있습니다.
+
+몇 분 정도 걸릴 수 있습니다."</string>
+    <string name="perm_status_broadcast_label">내부 상태 브로드캐스팅 수신 대기</string>
+    <string name="perm_c2dm_receive_label">C2DM 메세지 수신 대기</string>
+    <string name="perm_c2dm_send_label">C2DM 메세지를 다른 앱에 전달</string>
+    <string name="perm_gtalk_svc_label">Google 서버에서 메시지 교환 및 동기화 알림 수신</string>
+    <string name="perm_extended_access_label">Google 서비스에 대한 확장된 액세스</string>
+    <string name="service_name_checkin">Google 기기 등록</string>
+    <string name="service_name_mcs">클라우드 메시징</string>
+    <string name="service_status_enabled_short">켜짐</string>
+    <string name="service_status_disabled_short">꺼짐</string>
+    <string name="menu_advanced">고급 설정</string>
+    <string name="list_no_item_none">없음</string>
+    <string name="list_item_see_all">전부 보기</string>
+    <string name="network_type_mobile">모바일 네트워크</string>
+    <string name="network_type_wifi">Wi-Fi </string>
+    <string name="network_type_roaming">로밍</string>
+    <string name="network_type_other">다른 네트워크</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">정보</string>
+    <string name="prefcat_google_services">Google 서비스</string>
+    <string name="pref_more_settings">더 보기</string>
+    <string name="checkin_not_registered">등록되지 않음</string>
+    <string name="checkin_last_registration">마지막 등록: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">계정 설정</string>
+    <string name="prefs_account_privacy">개인정보 &amp; 프라이버시</string>
+    <string name="prefs_account_security">로그인 &amp; 보안</string>
+    <string name="pref_auth_trust_google_title">앱 권한에 대한 Google 신뢰</string>
+    <string name="pref_auth_trust_google_summary">사용 중지하면 앱 승인 요청이 Google에 전송되기 전에 사용자에게 묻습니다. 일부 애플리케이션은 이 기능이 비활성화된 경우 Google 계정을 사용하지 못합니다.</string>
+    <string name="pref_auth_visible_title">앱이 계정을 찾도록 허용</string>
+    <string name="pref_auth_visible_summary">활성화하면 이 기기의 모든 애플리케이션이 사전 승인 없이 Google 계정의 이메일 주소를 볼 수 있습니다.</string>
+    <string name="pref_add_account_title">계정</string>
+    <string name="pref_add_account_summary">Google 계정 추가</string>
+    <string name="pref_gcm_switcher_title">푸시 알림 수신</string>
+    <string name="pref_gcm_enable_mcs_summary">클라우드 메시징은 많은 타사 응용 프로그램에서 사용하는 푸시 알림 공급자입니다. 그것을 사용하려면 장치 등록을 활성화해야 합니다.</string>
+    <string name="pref_about_title">Vanced microG에 대하여</string>
+    <string name="hideLauncherIcon">런처에서 아이콘 숨기기</string>
+    <string name="brand_spoof_button">화웨이</string>
+    <string name="pref_switcher_title">장치 등록</string>
+    <string name="pref_checkin_enable_summary">기기를 Google 서비스에 등록하고 고유한 기기 식별자를 만듭니다. Vanced microG는 등록 데이터에서 Google 계정 이름 이외의 식별 비트를 제거합니다.</string>
+    <string name="pref_device_registration_android_id">안드로이드 ID</string>
+    <string name="pref_info_status">상태</string>
+    <string name="gcm_status_pref_default">기본값</string>
+    <string name="gcm_status_pref_manual">수동</string>
+    <string name="gcm_status_pref_sec">초</string>
+    <string name="gcm_status_pref_min">분</string>
+    <string name="gcm_unregister_app">등록 해제</string>
+    <string name="gcm_no_message_yet">지금까지 받은 메세지가 없습니다</string>
+    <string name="gcm_last_message_at">마지막 메세지: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">등록됨</string>
+    <string name="gcm_registered_since">등록일: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">동록 해제 <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">일부 앱은 자동으로 재등록하지 않거나 수동으로 재등록할 수 있는 옵션을 제공하지 않습니다. 이러한 앱은 등록을 취소하면 제대로 작동하지 않을 수 있습니다.\n계속하시겠습니까?</string>
+    <string name="gcm_unregister_after_deny_message">이미 등록된 푸시 알림에 대한 앱 등록을 거부했습니다.\n앞으로 푸시 메시지를 받지 않도록 지금 등록을 취소하시겠습니까?</string>
+    <string name="gcm_messages_counter">메세지: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> 바이트)</string>
+    <string name="gcm_network_state_disconnected">연결 끊김</string>
+    <string name="gcm_network_state_connected">연결된 시간 <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="pref_push_app_allow_register_title">등록 허용</string>
+    <string name="pref_push_app_allow_register_summary">앱이 푸시 알림을 등록하도록 허용합니다.</string>
+    <string name="pref_push_app_wake_for_delivery_title">푸시 메시지에서 앱 시작</string>
+    <string name="pref_push_app_wake_for_delivery_summary">들어오는 푸시 메시지를 받으려면 백그라운드에서 앱을 시작하십시오.</string>
+    <string name="prefcat_status_title">상태</string>
+    <string name="prefcat_push_apps_title">푸시 알림을 사용하는 앱</string>
+    <string name="prefcat_push_apps_registered_title">등록된 앱</string>
+    <string name="prefcat_push_apps_unregistered_title">등록되지 않은 앱</string>
+    <string name="prefcat_push_networks_title">푸시 알림에 사용할 네트워크</string>
+    <string name="device_profile_name">기기 프로파일</string>
+    <string name="profile_name">프로파일 선택</string>
+    <string name="profile_name_native">네이티브</string>
+    <string name="profile_name_real">실제</string>
+    <string name="profile_name_user">사용자 지정: %s</string>
+    <string name="profile_name_auto">자동: %s</string>
+    <string name="profile_name_system">시스템: %s</string>
+    <string name="import_profile_name">사용자 지정 프로파일 불러오기</string>
+    <string name="import_profile_summary">파일로부터 기기 프로파일 불러오기</string>
+    <string name="serial_name">일련번호</string>
+</resources>

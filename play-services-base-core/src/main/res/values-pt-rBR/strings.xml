@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Aviso de carregamento da bateria</string>
+    <string name="small_notification_service_title">Expandir notificações</string>
+    <string name="big_notification_service_title">Manter o microG em segundo plano</string>
+    <string name="notification_service_content">Toque aqui para desativar a otimização de bateria para microG. Tancado e reinicie o dispositivo para remover esta notificação</string>
+</resources>

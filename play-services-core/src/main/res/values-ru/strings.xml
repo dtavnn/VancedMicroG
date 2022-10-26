@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Настроить Vanced microG.</string>
+    <string name="just_a_sec">Секундочку…</string>
+    <string name="account_manager_title">Настройки аккаунта Google</string>
+    <string name="sorry">Извините…</string>
+    <string name="auth_before_connect">"Приложение на вашем устройстве пытается войти в учётную запись Google.
+
+Если так и задумано, воспользуйтесь кнопкой <b>Войти</b> (или <b>Huawei</b>, если у вас устройство соответствующего бренда) для подключения к странице авторизации Google."</string>
+    <string name="auth_sign_in">Войти</string>
+    <string name="auth_connecting">"Устанавливаем соединение с серверами Google для авторизации.
+
+Это может занять несколько секунд."</string>
+    <string name="no_network_error_desc">"У вас нет подключения к сети.
+	
+Это может быть временной проблемой или ваше Android устройство не может подключиться к информационным сервисам. Попробуйте подключиться еще раз используя мобильный интернет или Wi-Fi сеть."</string>
+    <string name="auth_general_error_desc">"Не удалось подключиться к серверам Google.
+
+Попробуйте позже."</string>
+    <string name="auth_finalize">"Ваше устройство получает данные авторизации от Google.
+
+Это может занять несколько минут."</string>
+    <string name="perm_status_broadcast_label">прослушивать внутренние сообщения о состоянии</string>
+    <string name="perm_c2dm_receive_label">прослушивать C2DM сообщения</string>
+    <string name="perm_c2dm_send_label">отправка C2DM сообщений другим приложениям</string>
+    <string name="perm_gtalk_svc_label">обмениваться сообщениями и получать уведомления о синхронизации с серверами Google</string>
+    <string name="perm_extended_access_label">Расширенный доступ к сервисам Google</string>
+    <string name="service_name_checkin">Регистрация устройства в Google</string>
+    <string name="service_name_mcs">Cloud Messaging</string>
+    <string name="service_status_enabled_short">Вкл.</string>
+    <string name="service_status_disabled_short">Выкл.</string>
+    <string name="menu_advanced">Доп. настройки</string>
+    <string name="list_no_item_none">Пусто</string>
+    <string name="list_item_see_all">Посмотреть все</string>
+    <string name="network_type_mobile">Мобильная сеть</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Роуминг</string>
+    <string name="network_type_other">Другие сети</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">О программе</string>
+    <string name="prefcat_google_services">Сервисы Google</string>
+    <string name="pref_more_settings">Подробнее</string>
+    <string name="checkin_not_registered">Не зарегистрировано</string>
+    <string name="checkin_last_registration">Последняя регистрация: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">Настройки аккаунта</string>
+    <string name="prefs_account_privacy">Персональные данные и конфиденциальность</string>
+    <string name="prefs_account_security">Вход и безопасность</string>
+    <string name="pref_auth_trust_google_title">Доверять Google для разрешений приложений</string>
+    <string name="pref_auth_trust_google_summary">Если отключено, приложение будет спрашивать пользователя до того, как запрос авторизации будет отправлен в Google. Некоторые приложения не смогут использовать аккаунт в Google если эта опция отключена.</string>
+    <string name="pref_auth_visible_title">Разрешить приложениям поиск аккаунтов</string>
+    <string name="pref_auth_visible_summary">Когда включено, приложения на вашем устройстве могут увидеть ваш email-адрес от Google аккаунта без доп. разрешения.</string>
+    <string name="pref_add_account_title">Аккаунт</string>
+    <string name="pref_add_account_summary">Добавить аккаунт Google</string>
+    <string name="pref_gcm_switcher_title">Получать push-уведомления</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging позволяет получать пуш-уведомления от многих приложений. Чтобы использовать GCM, включите регистрацию устройства в Google.</string>
+    <string name="pref_about_title">О Vanced microG</string>
+    <string name="hideLauncherIcon">Скрыть иконку microG из меню приложений</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">Зарегистрировать устройство</string>
+    <string name="pref_checkin_enable_summary">Регистрирует ваше устройство в сервисах Google и создает уникальный идентификатор устройства. Vanced microG использует только имя аккаунта для регистрации.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">Состояние</string>
+    <string name="gcm_status_pref_default">По умолчанию</string>
+    <string name="gcm_status_pref_manual">Вручную</string>
+    <string name="gcm_status_pref_sec">секунды</string>
+    <string name="gcm_status_pref_min">минуты</string>
+    <string name="gcm_unregister_app">Отменить регистрацию</string>
+    <string name="gcm_no_message_yet">Никаких сообщений пока не получено</string>
+    <string name="gcm_last_message_at">Последнее сообщение: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Зарегистрировано</string>
+    <string name="gcm_registered_since">Зарегистрировано: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Отменить регистрацию <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Некоторые приложения не проводят перерегистрацию автоматически и/или не предлагают сделать это вручную, после отмены регистрации они могут работать некорректно.\nПродолжить?</string>
+    <string name="gcm_unregister_after_deny_message">Вы отключили push-уведомления для приложения, которое уже зарегистрировано.\nХотите ли вы отменить регистрацию для этого приложения чтобы оно не получало push-уведомления в будущем?</string>
+    <string name="gcm_messages_counter">Сообщения: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">Отключено</string>
+    <string name="gcm_network_state_connected">Подключено: <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="pref_push_app_allow_register_title">Разрешать авторизацию</string>
+    <string name="pref_push_app_allow_register_summary">Разрешить приложению регистрацию для push-уведомлений.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Запуск приложения при уведомлении</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Запуск приложения в фоне для получения уведомлений.</string>
+    <string name="prefcat_status_title">Состояние</string>
+    <string name="prefcat_push_apps_title">Приложения, использующие push-уведомления</string>
+    <string name="prefcat_push_apps_registered_title">Зарегистрированные приложения</string>
+    <string name="prefcat_push_apps_unregistered_title">Приложения без регистрации</string>
+    <string name="prefcat_push_networks_title">Тип сети для получения уведомлений</string>
+    <string name="device_profile_name">Профиль устройства</string>
+    <string name="profile_name">Выбрать профиль</string>
+    <string name="profile_name_native">Нативный</string>
+    <string name="profile_name_real">Реальный</string>
+    <string name="profile_name_user">Пользовательский: %s</string>
+    <string name="profile_name_auto">Автоматически: %s</string>
+    <string name="profile_name_system">Системный: %s</string>
+    <string name="import_profile_name">Импорт пользовательского профиля</string>
+    <string name="import_profile_summary">Импорт профиля устройства из файла</string>
+    <string name="serial_name">Serial</string>
+</resources>

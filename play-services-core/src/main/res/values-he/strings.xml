@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">הגדרת Vanced microG.</string>
+    <string name="just_a_sec">רק רגע…</string>
+    <string name="account_manager_title">ניהול חשבון גוגל</string>
+    <string name="sorry">סליחה…</string>
+    <string name="auth_sign_in">התחברות</string>
+    <string name="auth_connecting">"יצירת חיבור לשרתים של Google כדי להיכנס.
+
+ זה יכול לקחת כמה שניות."</string>
+    <string name="no_network_error_desc">"אין לך חיבור לרשת.
+
+ זו יכולה להיות בעיה זמנית או שמכשיר ה-Android שלך לא מסופק עבור שירותי נתונים. נסה שוב כאשר אתה מחובר לרשת סלולרית, או התחבר לרשת Wi-Fi."</string>
+    <string name="auth_general_error_desc">"יצירת חיבור לשרתים של Google כדי להיכנס.
+
+ זה יכול לקחת כמה שניות."</string>
+    <string name="auth_finalize">"המכשיר שלך יוצר קשר עם Google כדי לשמור מידע בחשבון שלך.
+
+ זה יכול לקחת כמה דקות."</string>
+    <string name="perm_status_broadcast_label">להאזין לשידורי סטטוס פנימיים</string>
+    <string name="perm_c2dm_receive_label">להאזין להודעות C2DM</string>
+    <string name="perm_c2dm_send_label">לשלוח הודעות C2DM לאפליקציות אחרות</string>
+    <string name="perm_gtalk_svc_label">להחליף הודעות ולקבל התראות סנכרון משרתי Google</string>
+    <string name="perm_extended_access_label">גישה מורחבת לשירותי גוגל</string>
+    <string name="service_name_checkin">רישום מכשיר Google</string>
+    <string name="service_name_mcs">העברת הודעות בענן</string>
+    <string name="service_status_enabled_short">פועל</string>
+    <string name="service_status_disabled_short">כבוי</string>
+    <string name="menu_advanced">מתקדם</string>
+    <string name="list_no_item_none">ללא</string>
+    <string name="list_item_see_all">ראה/י הכל</string>
+    <string name="network_type_mobile">רשת סלולרית</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">נדידה</string>
+    <string name="network_type_other">רשתות אחרות</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">מידע על</string>
+    <string name="prefcat_google_services">שירותי Google</string>
+    <string name="pref_more_settings">עוד</string>
+    <string name="checkin_not_registered">לא רשום</string>
+    <string name="checkin_last_registration">הרשמה אחרונה: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">העדפות חשבון</string>
+    <string name="prefs_account_privacy">נתונים אישיים &amp; פרטיות</string>
+</resources>

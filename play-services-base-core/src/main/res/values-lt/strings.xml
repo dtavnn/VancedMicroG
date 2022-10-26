@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Baterijos taupymo įspėjimas</string>
+    <string name="small_notification_service_title">Išskleisti pranešimą</string>
+    <string name="big_notification_service_title">Laikyti microG fone</string>
+    <string name="notification_service_content">Bakstelėkite čia, kad išjungtumėte microG akumuliatoriaus optimizavimą, tada iš naujo paleiskite įrenginį, kad pašalintumėte šį pranešimą</string>
+</resources>

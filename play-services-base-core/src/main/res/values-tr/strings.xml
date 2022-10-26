@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Pil tasarrufu uyarısı</string>
+    <string name="small_notification_service_title">Bildirimleri genişlet</string>
+    <string name="big_notification_service_title">MicroG arka planda çalışsın</string>
+    <string name="notification_service_content">Vanced microG için batarya optimizasyonunu devre dışı bırakmak için buraya tıklayın, daha sonra bu bildirimi silmek için cihazı yeniden başlatın</string>
+</resources>

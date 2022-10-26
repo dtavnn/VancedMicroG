@@ -14,16 +14,12 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <resources>
-
     <string name="about_version_str">Verze %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Všechna práva vyhrazena.</string>
-
     <string name="about_root_title">microG UI Demo</string>
     <string name="about_root_summary">Souhrn</string>
     <string name="about_root_version">Verze v0.1.0</string>
     <string name="about_root_libraries">Zahrnuté knihovny</string>
-
 </resources>

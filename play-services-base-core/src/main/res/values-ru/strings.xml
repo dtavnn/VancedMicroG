@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Предупреждение о работе в режиме энергосбережения</string>
+    <string name="small_notification_service_title">Развернуть уведомление</string>
+    <string name="big_notification_service_title">Держать microG в фоне</string>
+    <string name="notification_service_content">Нажмите здесь, чтобы отключить оптимизацию батареи для vanced microG, а затем перезапустите устройство, чтобы это уведомление пропало</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Cảnh báo tối ưu hóa pin</string>
+    <string name="small_notification_service_title">Mở rộng thông báo</string>
+    <string name="big_notification_service_title">Giữ microG chạy trong nền</string>
+    <string name="notification_service_content">Nhấn vào đây để tắt tối ưu hóa pin cho Vanced microG, sau đó khởi động lại thiết bị hoặc tắt thông báo để xóa thông báo này</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">सेटअप Vanced microG.</string>
+    <string name="just_a_sec">सिर्फ एक सेकंड…</string>
+    <string name="account_manager_title">गूगल खाता प्रबंधक</string>
+    <string name="sorry">माफ़ करना</string>
+    <string name="auth_before_connect">"आपके डिवाइस पर एक ऐप Google खाते में साइन इन करने का प्रयास कर रहा है।
+
+अगर ऐसा जानबूझकर किया गया था, तो Google के साइन-इन पेज से कनेक्ट करने के लिए <b>साइन इन</b> (या <b>हुआवेई</b>, अगर आपके पास इस ब्रांड का डिवाइस है) बटन का उपयोग करें।"</string>
+    <string name="auth_sign_in">साइन इन करें</string>
+    <string name="auth_connecting">"आपको साइन इन करने के लिए Google के सर्वर से कनेक्शन स्थापित करना।
+
+इसमें कुछ सेकंड लग सकते हैं"</string>
+    <string name="no_network_error_desc">"आपके पास नेटवर्क कनेक्शन नहीं है।
+
+यह एक अस्थायी समस्या हो सकती है या डेटा सेवाओं के लिए आपके Android डिवाइस का प्रावधान नहीं किया जा सकता है। मोबाइल नेटवर्क से कनेक्ट होने पर पुन: प्रयास करें, या W. से कनेक्ट करें"</string>
+    <string name="auth_general_error_desc">"Google सर्वर से संचार करने में एक समस्या थी.
+
+बाद में पुन: प्रयास।"</string>
+    <string name="auth_finalize">"आपके खाते में जानकारी सहेजने के लिए आपका उपकरण Google से संपर्क कर रहा है। इसमें कुछ मिनट लग सकते हैं"</string>
+    <string name="perm_status_broadcast_label">आंतरिक स्थिति प्रसारण सुनें</string>
+    <string name="perm_c2dm_receive_label">c2dm संदेश सुनें</string>
+    <string name="perm_c2dm_send_label">अन्य ऐप्स को C2DM संदेश भेजें</string>
+    <string name="perm_gtalk_svc_label">संदेशों का आदान-प्रदान करें और Google सर्वर से समन्वयन सूचनाएं प्राप्त करें</string>
+    <string name="perm_extended_access_label">Google सेवाओं तक विस्तारित पहुंच</string>
+    <string name="service_name_checkin">गूगल डिवाइस पंजीकरण</string>
+    <string name="service_name_mcs">क्लाउड मैसेजिंग</string>
+    <string name="service_status_enabled_short">चालू करें</string>
+    <string name="service_status_disabled_short">बंद करें</string>
+    <string name="menu_advanced">उन्नत</string>
+    <string name="list_no_item_none">कोई भी नहीं</string>
+    <string name="list_item_see_all">सभी देखें</string>
+    <string name="network_type_mobile">मोबाइल नेटवर्क</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">रोमिंग</string>
+    <string name="network_type_other">अन्य नेटवर्क</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">हमारे बारे में</string>
+    <string name="prefcat_google_services">Google सेवाएं</string>
+    <string name="pref_more_settings">अधिक</string>
+    <string name="checkin_not_registered">पंजीकृत नहीं</string>
+    <string name="checkin_last_registration">अंतिम पंजीकरण: <xliff:g example="कल, दोपहर 02:20">%1$s</xliff:g></string>
+    <string name="prefs_account">खाता प्राथमिकताएं</string>
+    <string name="prefs_account_privacy">व्यक्तिगत जानकारी &amp; गोपनीयता</string>
+    <string name="prefs_account_security">साइन इन करें &amp; सुरक्षा</string>
+    <string name="pref_auth_trust_google_title">ऐप अनुमतियों के लिए Google पर भरोसा करें</string>
+    <string name="pref_auth_trust_google_summary">अक्षम होने पर, Google को ऐप्स प्राधिकरण अनुरोध भेजे जाने से पहले उपयोगकर्ता से पूछा जाता है। यदि इसे अक्षम किया जाता है तो कुछ एप्लिकेशन Google खाते का उपयोग करने में विफल हो जाएंगे।</string>
+    <string name="pref_auth_visible_title">ऐप्स को खाते ढूंढने दें</string>
+    <string name="pref_auth_visible_summary">सक्षम होने पर, इस उपकरण के सभी एप्लिकेशन पूर्व प्राधिकरण के बिना आपके Google खातों का ईमेल पता देख सकेंगे।</string>
+    <string name="pref_add_account_title">खाता</string>
+    <string name="pref_add_account_summary">Google खाता जोड़ें</string>
+    <string name="pref_gcm_switcher_title">पुश सूचनाएं प्राप्त करें</string>
+    <string name="pref_gcm_enable_mcs_summary">क्लाउड मैसेजिंग एक पुश नोटिफिकेशन प्रदाता है जिसका उपयोग कई तृतीय-पक्ष एप्लिकेशन द्वारा किया जाता है। इसका उपयोग करने के लिए आपको डिवाइस पंजीकरण सक्षम करना होगा।</string>
+    <string name="pref_about_title">Vanced microG के बारे में</string>
+    <string name="hideLauncherIcon">लॉन्चर से आइकन छुपाएं</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">रजिस्टर डिवाइस</string>
+    <string name="pref_checkin_enable_summary">आपके उपकरण को Google सेवाओं में पंजीकृत करता है और एक अद्वितीय उपकरण पहचानकर्ता बनाता है। पंजीकरण डेटा से आपके Google खाते के नाम के अलावा अन्य बिट्स की पहचान करने वाली 
+ Vanced microG स्ट्रिप्स।</string>
+    <string name="pref_device_registration_android_id">एंड्रॉयड ID</string>
+    <string name="pref_info_status">स्थिति </string>
+    <string name="gcm_status_pref_default">डिफॉल्ट</string>
+    <string name="gcm_status_pref_manual">स्वयं</string>
+    <string name="gcm_status_pref_sec">सेकंड्स</string>
+    <string name="gcm_status_pref_min">मिनट</string>
+    <string name="gcm_unregister_app">अपंजीकृत</string>
+    <string name="gcm_no_message_yet">अब तक कोई संदेश प्राप्त नहीं हुआ</string>
+    <string name="gcm_last_message_at">अंतिम पंजीकरण: <xliff:g example="कल, दोपहर 02:20">%1$s</xliff:g></string>
+    <string name="gcm_registered">रजिस्टर हो गया</string>
+    <string name="gcm_registered_since">अंतिम पंजीकरण: <xliff:g example="कल, दोपहर 02:20">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">अपंजीकृत <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">कुछ ऐप्स स्वचालित रूप से पुन: पंजीकृत नहीं होते हैं और/या मैन्युअल रूप से ऐसा करने का विकल्प प्रदान नहीं करते हैं। हो सकता है कि पंजीकरण रद्द करने के बाद ये ऐप्स ठीक से काम न करें।\nजारी रखें?</string>
+    <string name="gcm_unregister_after_deny_message">आपने पहले से पंजीकृत पुश सूचनाओं के लिए पंजीकरण करने के लिए एक ऐप को अस्वीकार कर दिया है। क्या आप इसे अभी अपंजीकृत करना चाहते हैं ताकि भविष्य में इसे पुश संदेश प्राप्त न हो?</string>
+    <string name="gcm_messages_counter">संदेश: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> बाइट्स)</string>
+    <string name="gcm_network_state_disconnected">डिसकनेक्ट हो गया है</string>
+    <string name="gcm_network_state_connected"><xliff:g example="2 घंटे पहले">%1$s</xliff:g> से जुड़ा हुआ है</string>
+    <string name="pref_push_app_allow_register_title">पंजीकरण की अनुमति दें</string>
+    <string name="pref_push_app_allow_register_summary">ऐप को पुश नोटिफिकेशन के लिए रजिस्टर करने दें।</string>
+    <string name="pref_push_app_wake_for_delivery_title">पुश संदेश पर ऐप प्रारंभ करें </string>
+    <string name="pref_push_app_wake_for_delivery_summary">आने वाले पुश संदेशों को प्राप्त करने के लिए पृष्ठभूमि में रहते हुए ऐप को प्रारंभ करें।</string>
+    <string name="prefcat_status_title"> स्थिति</string>
+    <string name="prefcat_push_apps_title">पुश नोटिफिकेशन का उपयोग करने वाले ऐप्स</string>
+    <string name="prefcat_push_apps_registered_title">पंजीकृत ऐप्स</string>
+    <string name="prefcat_push_apps_unregistered_title">अपंजीकृत ऐप्स</string>
+    <string name="prefcat_push_networks_title">पुश सूचनाओं के लिए उपयोग किए जाने वाले नेटवर्क</string>
+    <string name="device_profile_name">डिवाइस प्रोफ़ाइल</string>
+    <string name="profile_name">प्रोफ़ाइल का चयन करें</string>
+    <string name="profile_name_native">मूल निवासी</string>
+    <string name="profile_name_real">असली</string>
+    <string name="profile_name_user">कस्टम: %s</string>
+    <string name="profile_name_auto">स्वचालित: %s</string>
+    <string name="profile_name_system">सिस्टम: %s</string>
+    <string name="import_profile_name">कस्टम प्रोफ़ाइल आयात करें</string>
+    <string name="import_profile_summary">फ़ाइल से डिवाइस प्रोफ़ाइल आयात करें</string>
+    <string name="serial_name">क्रम संख्या</string>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Наладзіць Vanced microG.</string>
+    <string name="just_a_sec">Секунду…</string>
+    <string name="account_manager_title">Кіраванне уліковымі запісамі Google</string>
+    <string name="sorry">Прабачце…</string>
+    <string name="auth_before_connect">"Гэта праграма на вашай дупе спрабуе падключыцца да вашага ўліковага пенiсу Google.
+
+Для працягу, націсніце <b>САСАТЬ ХУЙ</b> (ці <b>веахуй</b>, калі ваша гавна ад гэтага брэнда) каб патрапіць на старонку аўтарызацыі Google. Для скасавання, націсніце <b>ЗАЛУПА</b> для вяртання ў праграму, якая запытала доступ."</string>
+    <string name="auth_sign_in">Увайсці</string>
+    <string name="auth_connecting">"Усталёўваем злучэнне з серверамі Google для аўтарызацыі.
+
+Гэта можа заняць некалькі секунд."</string>
+    <string name="no_network_error_desc">"Няма злучэння з сеткай.
+
+Гэта можа быць часовая праблема ці ваша прылада не мае доступу да сеткі. Паспрабуйце падключыцца ячшэ раз праз мабільную сетку ці Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Не атрымалася падключыцца да сервераў Google. 
+
+Паспрабуйце пазней."</string>
+    <string name="auth_finalize">"Ваша прылада атрымлівае інфармацыю аўтарызацыі ад Google. 
+
+Гэта можа заняць некалькі хвілін."</string>
+    <string name="perm_status_broadcast_label">слушац гавна залупа хуй</string>
+    <string name="perm_c2dm_receive_label">слушать пенiс хуй гавно залупа лайно навоз</string>
+    <string name="perm_c2dm_send_label">адправляць хуй в дупу разраба</string>
+    <string name="perm_gtalk_svc_label">абменiваць гавно на навоз из серверов Google</string>
+    <string name="perm_extended_access_label">Спаліць булачнага прэзідэнта</string>
+    <string name="service_name_checkin">Зліў дадзеных у КДБ</string>
+    <string name="service_name_mcs">Прадам анус</string>
+    <string name="service_status_enabled_short">заблакавана на тэрыторыі рэспублікі Беларусь</string>
+    <string name="service_status_disabled_short">рашыстаў спаліць</string>
+    <string name="menu_advanced">слава Украіне</string>
+    <string name="list_no_item_none">анал з красуняй</string>
+    <string name="list_item_see_all">пакажы пуціна</string>
+    <string name="network_type_mobile">5G гэта каб усіх чыпіраваць</string>
+    <string name="network_type_wifi">інтэрнэт ён нам і нахуй не нужон</string>
+    <string name="network_type_roaming">роўмінг сісь хай</string>
+    <string name="network_type_other">ствары сваю сетку уебок</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">Гандон</string>
+    <string name="prefcat_google_services">сэрвісы інвалідаў</string>
+    <string name="pref_more_settings">менш</string>
+    <string name="checkin_not_registered">ваша грамадзянства анулявана</string>
+    <string name="checkin_last_registration">апошні дзень у СІЗА: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">спальвай грамадзянства</string>
+    <string name="prefs_account_privacy">мы ўжо прадалі дадзеныя ў &amp; ФСБ и КГБ</string>
+    <string name="prefs_account_security">сядзь у &amp; турму</string>
+    <string name="pref_auth_trust_google_title">не давярай спецслужбам Беларусі</string>
+    <string name="pref_auth_trust_google_summary">калі вы аддаліце Беларусь і Расію ў рукі Украіны. То Ваша жыццё стане нашмат лепшым. А рашысты згараць у пекле. Калі Вы не зробіце гэта, то Вам гамон.</string>
+    <string name="pref_auth_visible_title">Дазволіць ебать Вас у дупу</string>
+    <string name="pref_auth_visible_summary">Калі Вас ебут у дупу, Вы можаце замовіць дадатковыя паслугі: больш анальнай змазкі, гандляроў, гукаў з Гачимучи, здымку гей порна.</string>
+    <string name="pref_add_account_title">Красуні</string>
+    <string name="pref_add_account_summary">Дадаць чорных красунь</string>
+    <string name="pref_gcm_switcher_title">Атрымліваць позвы з ваенкамата</string>
+    <string name="pref_gcm_enable_mcs_summary">PornHUB лепшая платформа для прагляду відэа. Толькі там Вы знойдзеце свае самыя любімыя відэа: порна з жывёламі, еблю з неграмі, самых сэксуальных дзяўчынак, гей парыва, еблю Лукашэнку з Пуціным і многае іншае!</string>
+    <string name="pref_about_title">Пра палацы Лукашэнкі</string>
+    <string name="hideLauncherIcon">Уцячы ад пентагона</string>
+    <string name="brand_spoof_button">Гаўно</string>
+    <string name="pref_switcher_title">Зарэгістраваць ухіліста</string>
+    <string name="pref_checkin_enable_summary">Зліўшы Рашыста ў СБУ, дае Вам магчымасць з\'ехаць з замежнай краіны і зажыць, як нармальны чалавек. Таксама ў падарунак Вы атрымаеце адсутнасць санкцый, прыгожых дзяўчынак, новую тэхніку, дом, карту VISA / Mastercard і многае іншае.</string>
+    <string name="pref_device_registration_android_id">Ваш ID у спецслужбах</string>
+    <string name="pref_info_status">Підарас</string>
+    <string name="gcm_status_pref_default">Шлюшка</string>
+    <string name="gcm_status_pref_manual">Еблан</string>
+    <string name="gcm_status_pref_sec">Дзесяцігоддзі</string>
+    <string name="gcm_status_pref_min">Стагоддзі</string>
+    <string name="gcm_unregister_app">НАХУЙ ІДЫ</string>
+    <string name="gcm_no_message_yet">Няма долбаебов нацыкаў побач</string>
+    <string name="gcm_last_message_at">Последний высер <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Прададзены ў КДБ</string>
+    <string name="gcm_registered_since">Продан начиная с: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">У турме <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Некаторыя адбітыя дауны, не могуць самі думаць галавой, без выспятка па ёй. Уебать іх ці адправіць на лячэнне? \n Ваш выбар?</string>
+    <string name="gcm_unregister_after_deny_message">Вы звязалася з долбаебамі, якія згвалцяць Вам мозг. \nЖадаеце забіць іх нахуй блядзь?</string>
+    <string name="gcm_messages_counter">Артыкул: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">Забанены нахуй</string>
+    <string name="gcm_network_state_connected">У СІЗА з <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+</resources>

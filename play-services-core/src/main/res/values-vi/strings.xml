@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Thiết lập Vanced microG.</string>
+    <string name="just_a_sec">Hãy đợi giây lát…</string>
+    <string name="account_manager_title">Quản lý tài khoản Google</string>
+    <string name="sorry">Xin lỗi…</string>
+    <string name="auth_before_connect">"Một ứng dụng nào đó trên thiết bị của bạn đang yêu cầu đăng nhập vào tài khoản Google.
+
+Nếu điều này do bạn thực hiện, hãy sử dụng nút <b>Đăng nhập</b> (hoặc <b>Huawei</b>, nếu bạn có thiết bị hãng này) để kết nối đến máy chủ đăng nhập của Google, nếu không, nhấn <b>Hủy</b> để quay lại ứng dụng khiến hội thoại này xuất hiện."</string>
+    <string name="auth_sign_in">Đăng nhập</string>
+    <string name="auth_connecting">"Đang thiết lập kết nối đến máy chủ của Google để đăng nhập cho bạn.
+
+Điều này có thể mất vài phút."</string>
+    <string name="no_network_error_desc">"Bạn không có kết nối mạng.
+
+Đây có thể là vấn đề tạm thời trên thiết bị Android của bạn có thể không được cấp phép cho các dịch vụ dữ liệu. Thử lại khi bạn có kết nối mạng di động hoặc kết nối tới mạng Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Đã xảy ra sự cố khi giao tiếp với máy chủ của Google.
+
+Hãy thử lại sau."</string>
+    <string name="auth_finalize">"Thiết bị của bạn đang kết nối với Google để lưu thông tin vào tài khoản của bạn.
+
+Điều này có thể mất vài phút."</string>
+    <string name="perm_status_broadcast_label">nghe tình trạng nội bộ của các chương trình phát sóng</string>
+    <string name="perm_c2dm_receive_label">nghe tin nhắn C2DM</string>
+    <string name="perm_c2dm_send_label">gửi tin nhắn C2DM đến các ứng dụng khác</string>
+    <string name="perm_gtalk_svc_label">trao đổi tin nhắn và nhận thông báo đồng bộ hóa từ máy chủ Google</string>
+    <string name="perm_extended_access_label">Quyền truy cập vào các dịch vụ của Google</string>
+    <string name="service_name_checkin">Đăng ký thiết bị Google</string>
+    <string name="service_name_mcs">Nhắn tin qua đám mây</string>
+    <string name="service_status_enabled_short">Bật</string>
+    <string name="service_status_disabled_short">Tắt</string>
+    <string name="menu_advanced">Nâng cao</string>
+    <string name="list_no_item_none">Trống</string>
+    <string name="list_item_see_all">Xem tất cả</string>
+    <string name="network_type_mobile">Mạng di động</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Chuyển vùng</string>
+    <string name="network_type_other">Các mạng khác</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">Thông tin</string>
+    <string name="prefcat_google_services">Dịch vụ Google</string>
+    <string name="pref_more_settings">Khác</string>
+    <string name="checkin_not_registered">Chưa được đăng ký</string>
+    <string name="checkin_last_registration">Lần đăng ký cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">Tùy chọn tài khoản</string>
+    <string name="prefs_account_privacy">Thông tin cá nhân &amp; riêng tư</string>
+    <string name="prefs_account_security">Đăng nhập &amp; bảo mật</string>
+    <string name="pref_auth_trust_google_title">Tin tưởng Google cho các quyền ứng dụng</string>
+    <string name="pref_auth_trust_google_summary">Khi bị vô hiệu hóa, người dùng sẽ được hỏi trước khi yêu cầu ủy quyền ứng dụng được gửi tới Google. Một số ứng dụng sẽ không sử dụng được tài khoản Google nếu tính năng này bị vô hiệu hóa.</string>
+    <string name="pref_auth_visible_title">Cho phép ứng dụng tìm tài khoản</string>
+    <string name="pref_auth_visible_summary">Khi được bật, tất cả các ứng dụng trên thiết bị này sẽ có thể xem địa chỉ email trong Tài khoản Google của bạn mà không cần ủy quyền trước.</string>
+    <string name="pref_add_account_title">Tài khoản</string>
+    <string name="pref_add_account_summary">Thêm tài khoản Google</string>
+    <string name="pref_gcm_switcher_title">Nhận thông báo đẩy</string>
+    <string name="pref_gcm_enable_mcs_summary">Thông báo qua đám mây là một nhà cung cấp thông báo đẩy được nhiều ứng dụng của bên thứ ba sử dụng. Để sử dụng nó, bạn phải kích hoạt đăng ký thiết bị.</string>
+    <string name="pref_about_title">Giới thiệu về Vanced microG</string>
+    <string name="hideLauncherIcon">Ẩn biểu tượng khỏi màn hình chính</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">Đăng ký thiết bị</string>
+    <string name="pref_checkin_enable_summary">Đăng ký thiết bị của bạn với các dịch vụ của Google và tạo một mã nhận dạng thiết bị duy nhất. Vanced microG tách một ít thông tin nhận dạng không phải tên tài khoản Google của bạn từ dữ liệu đăng ký.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">Trạng thái</string>
+    <string name="gcm_status_pref_default">Mặc định</string>
+    <string name="gcm_status_pref_manual">Thủ công</string>
+    <string name="gcm_status_pref_sec">giây</string>
+    <string name="gcm_status_pref_min">phút</string>
+    <string name="gcm_unregister_app">Hủy đăng ký</string>
+    <string name="gcm_no_message_yet">Không nhận được tin nhắn nào đến nay</string>
+    <string name="gcm_last_message_at">Tin nhắn cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Đã đăng ký</string>
+    <string name="gcm_registered_since">Đã đăng ký từ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Hủy đăng ký <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Một số ứng dụng không tự động đăng ký lại và / hoặc không cung cấp tùy chọn để thực hiện việc này theo cách thủ công. Các ứng dụng này có thể không hoạt động bình thường sau khi hủy đăng ký.\nTiếp tục?</string>
+    <string name="gcm_unregister_after_deny_message">Bạn đã từ chối một ứng dụng đăng ký nhận thông báo đẩy đã được đăng ký.\nBạn có muốn hủy đăng ký ngay bây giờ để ứng dụng không nhận được thông báo đẩy trong tương lai không?</string>
+    <string name="gcm_messages_counter">Tin nhắn: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">Ngắt kết nối</string>
+    <string name="gcm_network_state_connected">Được kết nối từ <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="pref_push_app_allow_register_title">Cho phép đăng ký</string>
+    <string name="pref_push_app_allow_register_summary">Cho phép ứng dụng đăng ký nhận thông báo đẩy.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Khởi động ứng dụng từ tin nhắn đẩy</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Khởi động ứng dụng ở chế độ nền để nhận các tin nhắn đẩy đến.</string>
+    <string name="prefcat_status_title">Trạng thái</string>
+    <string name="prefcat_push_apps_title">Ứng dụng sử dụng thông báo đẩy</string>
+    <string name="prefcat_push_apps_registered_title">Ứng dụng đã đăng ký</string>
+    <string name="prefcat_push_apps_unregistered_title">Ứng dụng chưa đăng ký</string>
+    <string name="prefcat_push_networks_title">Mạng sử dụng cho thông báo đẩy</string>
+    <string name="device_profile_name">Hồ sơ thiết bị</string>
+    <string name="profile_name">Chọn hồ sơ</string>
+    <string name="profile_name_native">Gốc</string>
+    <string name="profile_name_real">Thật</string>
+    <string name="profile_name_user">Tuỳ chỉnh: %s</string>
+    <string name="profile_name_auto">Tự động: %s</string>
+    <string name="profile_name_system">Hệ thống: %s</string>
+    <string name="import_profile_name">Nhập hồ sơ cấu hình tùy chỉnh</string>
+    <string name="import_profile_summary">Nhập cấu hình thiết bị từ tệp</string>
+    <string name="serial_name">Số sêri</string>
+</resources>

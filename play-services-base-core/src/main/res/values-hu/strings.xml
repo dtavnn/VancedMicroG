@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Akkumulátorkímélő figyelmeztetés</string>
+    <string name="small_notification_service_title">Értesítés bővítése</string>
+    <string name="big_notification_service_title">Tartsa a microG-t a háttérben</string>
+    <string name="notification_service_content">Koppintson ide az akkumulátor-optimalizálás letiltásához a vanced microG számára, majd indítsa újra a készüléket az értesítés eltávolításához</string>
+</resources>

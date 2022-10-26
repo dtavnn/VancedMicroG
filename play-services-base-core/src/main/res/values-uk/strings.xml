@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="notification_service_name">Попередження про економію батареї</string>
+    <string name="small_notification_service_title">Розгорнути сповіщення</string>
+    <string name="big_notification_service_title">Тримайте microG у фоновому режимі</string>
+    <string name="notification_service_content">Торкніться тут, щоб вимкнути оптимізацію акумулятора для vanced microG, а потім перезапустіть пристрій, щоб видалити це сповіщення</string>
+</resources>

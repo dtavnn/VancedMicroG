@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_summary">Nustatyti Vanced microG.</string>
+    <string name="just_a_sec">Šiek tiek palaukite…</string>
+    <string name="account_manager_title">Google paskyros valdytojas</string>
+    <string name="sorry">Atsiprašome…</string>
+    <string name="auth_before_connect">"Programa jūsų įrenginyje bando prisijungti prie Google paskyros.
+
+Jei tai buvo tyčia, naudokite mygtuką <b>Sign in</b> (or <b>Huawei</b>, jei turite šio prekės ženklo įrenginį), kad prisijungtumėte prie Google prisijungimo puslapio."</string>
+    <string name="auth_sign_in">Prisijungti</string>
+    <string name="auth_connecting">"Užmezgamas ryšys su Google serveriais, kad galėtumėte prisijungti.
+
+Tai gali užtrukti kelias sekundes."</string>
+    <string name="no_network_error_desc">"Neturite tinklo ryšio.
+
+Tai gali būti laikina problema arba jūsų Android įrenginys gali būti nesuteiktas duomenų paslaugoms. Bandykite dar kartą prisijungę prie mobiliojo ryšio tinklo arba prisijunkite prie Wi-Fi tinklo."</string>
+    <string name="auth_general_error_desc">"Bendraujant su Google serveriais kilo problema.
+
+Pabandyti dar kartą vėliau."</string>
+    <string name="auth_finalize">"Jūsų įrenginys susisiekia su Google, kad išsaugotų informaciją paskyroje.
+
+Tai gali užtrukti keletą minučių."</string>
+    <string name="perm_status_broadcast_label">klausytis vidinių būsenų transliacijų</string>
+    <string name="perm_c2dm_receive_label">klausytis C2DM žinučių</string>
+    <string name="perm_c2dm_send_label">siųsti C2DM pranešimus į kitas programas</string>
+    <string name="perm_gtalk_svc_label">keistis pranešimais ir gauti sinchronizavimo pranešimus iš Google serverių</string>
+    <string name="perm_extended_access_label">Išplėstinė prieiga prie Google paslaugų</string>
+    <string name="service_name_checkin">Google įrenginio registracija</string>
+    <string name="service_name_mcs">Pranešimai iš debesies</string>
+    <string name="service_status_enabled_short">Įjungta</string>
+    <string name="service_status_disabled_short">Išjungta</string>
+    <string name="menu_advanced">Papildomi</string>
+    <string name="list_no_item_none">Nieko</string>
+    <string name="list_item_see_all">Peržiūrėti visus</string>
+    <string name="network_type_mobile">Mobilusis tinklas</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Tarptinklinis ryšys</string>
+    <string name="network_type_other">Kiti tinklai</string>
+    <!-- Settings strings -->
+    <string name="prefcat_about">Apie</string>
+    <string name="prefcat_google_services">Google paslaugos</string>
+    <string name="pref_more_settings">Daugiau</string>
+    <string name="checkin_not_registered">Neregistruota</string>
+    <string name="checkin_last_registration">Paskutinė registracija: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">Paskyros nuostatos</string>
+    <string name="prefs_account_privacy">Asmeninė informacijos &amp; privatumas</string>
+    <string name="pref_add_account_title">Paskyra</string>
+    <string name="pref_add_account_summary">Pridėti Google paskyrą</string>
+    <string name="pref_gcm_switcher_title">Gauti aktyvuosius pranešimus</string>
+    <string name="pref_about_title">Apie Vanced microG</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">Registruoti įrenginį</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">Būsena</string>
+    <string name="gcm_status_pref_default">Numatytasis</string>
+    <string name="gcm_status_pref_manual">Vartotojo vadovas</string>
+    <string name="gcm_status_pref_sec">sekundės</string>
+    <string name="gcm_status_pref_min">minutės</string>
+    <string name="gcm_unregister_app">Išregistruoti</string>
+    <string name="gcm_last_message_at">Paskutinė žinutė: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Užregistruota</string>
+    <string name="gcm_registered_since">Užregistruota nuo: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_network_state_disconnected">Atjungtas</string>
+    <string name="prefcat_status_title">Būsena</string>
+    <string name="prefcat_push_apps_registered_title">Registruotos programos</string>
+    <string name="prefcat_push_apps_unregistered_title">Neregistruotos programos</string>
+    <string name="device_profile_name">Įrenginio profilis</string>
+    <string name="profile_name">Pasirinkite profilį</string>
+    <string name="profile_name_native">Vietinis</string>
+    <string name="profile_name_real">Realus</string>
+    <string name="profile_name_auto">Automatiškai: %s</string>
+    <string name="profile_name_system">Sistema: %s</string>
+    <string name="serial_name">Serijinis numeris</string>
+</resources>

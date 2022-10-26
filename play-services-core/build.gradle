@@ -52,6 +52,7 @@ android {
     defaultConfig {
         versionName version
         versionCode appVersionCode
+        resConfigs 'xxhdpi'
 
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk

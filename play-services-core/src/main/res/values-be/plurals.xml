@@ -14,12 +14,12 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources>
-    <string name="about_version_str">الإصدار %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
-    <string name="about_default_license">جميع الحقوق محفوظة.</string>
-    <string name="about_root_title">عرض تجريبي لواجهة مستخدم MicroG</string>
-    <string name="about_root_summary">مُلخّص</string>
-    <string name="about_root_version">الإصدار v0.1.0</string>
-    <string name="about_root_libraries">المكتبات المتضمنة</string>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> аўтарызаваная праграма</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> аўтарызаваных праграм</item>
+    </plurals>
+
 </resources>

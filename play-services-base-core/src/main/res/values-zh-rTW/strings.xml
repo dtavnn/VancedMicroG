@@ -5,8 +5,8 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="notification_service_name">電池最佳化警示</string>
-    <string name="small_notification_service_title">展開通知</string>
+    <string name="small_notification_service_title">展開完整通知</string>
     <string name="big_notification_service_title">讓microG在背景執行</string>
     <string name="notification_service_content">點擊此通知來關閉Vanced microG的電池最佳化
-關閉後重新啟動手機已移除此通知</string>
+關閉後重新啟動手機以移除此通知</string>
 </resources>

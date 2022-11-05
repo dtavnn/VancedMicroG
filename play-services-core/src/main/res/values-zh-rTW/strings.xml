@@ -42,8 +42,8 @@
     <string name="perm_c2dm_send_label">傳送C2DM資訊到其他應用.</string>
     <string name="perm_gtalk_svc_label">與Google伺服器交換並接收同步訊息</string>
     <string name="perm_extended_access_label">授予額外權限給Google服務</string>
-    <string name="service_name_checkin">註冊Google設備</string>
-    <string name="service_name_mcs">收發雲端訊息</string>
+    <string name="service_name_checkin">Google 裝置註冊</string>
+    <string name="service_name_mcs">連網通知推播</string>
     <string name="service_status_enabled_short">開啟</string>
     <string name="service_status_disabled_short">關閉</string>
     <string name="menu_advanced">進階設置</string>
@@ -66,18 +66,18 @@
     <string name="pref_auth_trust_google_summary">禁用後, 向Google發送應用授權請求前會先詢問用戶.
 若禁用此功能, 某些應用將無法使用 Google 帳戶.</string>
     <string name="pref_auth_visible_title">允許應用找尋帳戶</string>
-    <string name="pref_auth_visible_summary">啟用後, 此設備上的所有應用程序將能在未經事先授權的情況下查看您的 Google 帳戶的電子郵件地址.</string>
+    <string name="pref_auth_visible_summary">啟用後, 此裝置上的所有應用程式將能在未經事先授權的情況下查看您 Google 帳戶的電子郵件地址.</string>
     <string name="pref_add_account_title">帳戶</string>
     <string name="pref_add_account_summary">新增 Google 帳戶</string>
-    <string name="pref_gcm_switcher_title">接收推播通知</string>
-    <string name="pref_gcm_enable_mcs_summary">雲端消息推播是許多第三方應用使用的推送通知功能 若要使用, 您必須先啟用設備註冊.</string>
-    <string name="pref_about_title">關於</string>
-    <string name="hideLauncherIcon">於桌面隱藏Vanced microG</string>
+    <string name="pref_gcm_switcher_title">接收應用的推播通知</string>
+    <string name="pref_gcm_enable_mcs_summary">連網通知推播是第三方應用推送通知的方式, 若欲啟用, 您必須先註冊裝置.</string>
+    <string name="pref_about_title">關於 Vanced microG</string>
+    <string name="hideLauncherIcon">於桌面隱藏 Vanced microG</string>
     <string name="brand_spoof_button">華為</string>
     <string name="pref_switcher_title">裝置註冊</string>
-    <string name="pref_checkin_enable_summary">將裝置註冊至Google服務並產生一組屬於此裝置的ID
-Vanced microG 會從註冊數據中去除
-您的 Google 帳戶名稱以外的識別位</string>
+    <string name="pref_checkin_enable_summary">開啟後將產生一組屬於此裝置的識別碼 
+Vanced microG 會把 Google 帳戶名稱以外的識別位
+從註冊資訊中移除</string>
     <string name="pref_device_registration_android_id">Android ID</string>
     <string name="pref_info_status">狀態</string>
     <string name="gcm_status_pref_default">預設</string>
@@ -86,7 +86,7 @@ Vanced microG 會從註冊數據中去除
     <string name="gcm_status_pref_min">分鐘</string>
     <string name="gcm_unregister_app">解除註冊</string>
     <string name="gcm_no_message_yet">目前沒有收到任何訊息</string>
-    <string name="gcm_last_message_at">最新消息:<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_last_message_at">最新訊息:<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">已註冊</string>
     <string name="gcm_registered_since">註冊時間:<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title">註銷 <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
@@ -97,20 +97,20 @@ Vanced microG 會從註冊數據中去除
 \n您確定要取消嗎?</string>
     <string name="gcm_messages_counter">訊息: <xliff:g example="123">%1$d</xliff:g>(<xliff:g example="12345">%2$d</xliff:g>位元組)</string>
     <string name="gcm_network_state_disconnected">連接已中斷</string>
-    <string name="gcm_network_state_connected">已連接自從 <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">已連接自: <xliff:g example="2 hours ago">%1$s</xliff:g></string>
     <string name="pref_push_app_allow_register_title">允許註冊</string>
     <string name="pref_push_app_allow_register_summary">允許應用註冊推播通知.</string>
-    <string name="pref_push_app_wake_for_delivery_title">在推送消息上啟動應用程序</string>
-    <string name="pref_push_app_wake_for_delivery_summary">在後台啟動應用程序以接收傳入的推送消息.</string>
+    <string name="pref_push_app_wake_for_delivery_title">應用啟動時推送通知</string>
+    <string name="pref_push_app_wake_for_delivery_summary">在後台啟動應用以接收推送通知.</string>
     <string name="prefcat_status_title">狀態</string>
-    <string name="prefcat_push_apps_title">使用推送通知的應用</string>
+    <string name="prefcat_push_apps_title">使用推播通知的應用</string>
     <string name="prefcat_push_apps_registered_title">已註冊的應用</string>
     <string name="prefcat_push_apps_unregistered_title">未註冊的應用</string>
     <string name="prefcat_push_networks_title">用於推送通知的網絡</string>
     <string name="device_profile_name">裝置描述檔</string>
     <string name="profile_name">選擇設定檔</string>
     <string name="profile_name_native">原始</string>
-    <string name="profile_name_real">真實</string>
+    <string name="profile_name_real">真機</string>
     <string name="profile_name_user">自訂：%s</string>
     <string name="profile_name_auto">自動: %s</string>
     <string name="profile_name_system">系統: %s</string>

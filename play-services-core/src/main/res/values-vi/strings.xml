@@ -21,7 +21,7 @@
     <string name="sorry">Xin lỗi…</string>
     <string name="auth_before_connect">"Một ứng dụng nào đó trên thiết bị của bạn đang yêu cầu đăng nhập vào tài khoản Google.
 
-Nếu điều này do bạn thực hiện, hãy sử dụng nút <b>Đăng nhập</b> (hoặc <b>Huawei</b>, nếu bạn có thiết bị hãng này) để kết nối đến máy chủ đăng nhập của Google, nếu không, nhấn <b>Hủy</b> để quay lại ứng dụng khiến hội thoại này xuất hiện."</string>
+Nếu điều này do bạn thực hiện, hãy sử dụng nút <b>Đăng nhập</b> (hoặc <b>Huawei</b> nếu bạn có thiết bị hãng này) để kết nối đến máy chủ đăng nhập của Google. Nếu không, nhấn <b>Hủy</b> để quay lại ứng dụng khiến hộp thoại này xuất hiện."</string>
     <string name="auth_sign_in">Đăng nhập</string>
     <string name="auth_connecting">"Đang thiết lập kết nối đến máy chủ của Google để đăng nhập cho bạn.
 
@@ -39,9 +39,9 @@ Hãy thử lại sau."</string>
     <string name="perm_c2dm_receive_label">nghe tin nhắn C2DM</string>
     <string name="perm_c2dm_send_label">gửi tin nhắn C2DM đến các ứng dụng khác</string>
     <string name="perm_gtalk_svc_label">trao đổi tin nhắn và nhận thông báo đồng bộ hóa từ máy chủ Google</string>
-    <string name="perm_extended_access_label">Quyền truy cập vào các dịch vụ của Google</string>
+    <string name="perm_extended_access_label">Quyền truy cập mở rộng vào các dịch vụ của Google</string>
     <string name="service_name_checkin">Đăng ký thiết bị Google</string>
-    <string name="service_name_mcs">Nhắn tin qua đám mây</string>
+    <string name="service_name_mcs">Thông báo đẩy qua đám mây</string>
     <string name="service_status_enabled_short">Bật</string>
     <string name="service_status_disabled_short">Tắt</string>
     <string name="menu_advanced">Nâng cao</string>
@@ -67,29 +67,29 @@ Hãy thử lại sau."</string>
     <string name="pref_add_account_title">Tài khoản</string>
     <string name="pref_add_account_summary">Thêm tài khoản Google</string>
     <string name="pref_gcm_switcher_title">Nhận thông báo đẩy</string>
-    <string name="pref_gcm_enable_mcs_summary">Thông báo qua đám mây là một nhà cung cấp thông báo đẩy được nhiều ứng dụng của bên thứ ba sử dụng. Để sử dụng nó, bạn phải kích hoạt đăng ký thiết bị.</string>
+    <string name="pref_gcm_enable_mcs_summary">Thông báo đẩy qua đám mây hay Cloud Messaging là một nhà cung cấp dịch vụ thông báo đẩy được nhiều ứng dụng bên thứ ba tin dùng. Để sử dụng nó, bạn phải kích hoạt Đăng ký thiết bị.</string>
     <string name="pref_about_title">Giới thiệu về Vanced microG</string>
-    <string name="hideLauncherIcon">Ẩn biểu tượng khỏi màn hình chính</string>
+    <string name="hideLauncherIcon">Ẩn biểu tượng khỏi launcher</string>
     <string name="brand_spoof_button">Huawei</string>
     <string name="pref_switcher_title">Đăng ký thiết bị</string>
     <string name="pref_checkin_enable_summary">Đăng ký thiết bị của bạn với các dịch vụ của Google và tạo một mã nhận dạng thiết bị duy nhất. Vanced microG tách một ít thông tin nhận dạng không phải tên tài khoản Google của bạn từ dữ liệu đăng ký.</string>
-    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_device_registration_android_id">ID Android</string>
     <string name="pref_info_status">Trạng thái</string>
     <string name="gcm_status_pref_default">Mặc định</string>
     <string name="gcm_status_pref_manual">Thủ công</string>
     <string name="gcm_status_pref_sec">giây</string>
     <string name="gcm_status_pref_min">phút</string>
     <string name="gcm_unregister_app">Hủy đăng ký</string>
-    <string name="gcm_no_message_yet">Không nhận được tin nhắn nào đến nay</string>
-    <string name="gcm_last_message_at">Tin nhắn cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_no_message_yet">Không nhận được thông báo nào đến nay</string>
+    <string name="gcm_last_message_at">Thông báo cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">Đã đăng ký</string>
     <string name="gcm_registered_since">Đã đăng ký từ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title">Hủy đăng ký <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
     <string name="gcm_unregister_confirm_message">Một số ứng dụng không tự động đăng ký lại và / hoặc không cung cấp tùy chọn để thực hiện việc này theo cách thủ công. Các ứng dụng này có thể không hoạt động bình thường sau khi hủy đăng ký.\nTiếp tục?</string>
     <string name="gcm_unregister_after_deny_message">Bạn đã từ chối một ứng dụng đăng ký nhận thông báo đẩy đã được đăng ký.\nBạn có muốn hủy đăng ký ngay bây giờ để ứng dụng không nhận được thông báo đẩy trong tương lai không?</string>
-    <string name="gcm_messages_counter">Tin nhắn: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_messages_counter">Thông báo: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> byte)</string>
     <string name="gcm_network_state_disconnected">Ngắt kết nối</string>
-    <string name="gcm_network_state_connected">Được kết nối từ <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">Đã kết nối từ <xliff:g example="2 hours ago">%1$s</xliff:g></string>
     <string name="pref_push_app_allow_register_title">Cho phép đăng ký</string>
     <string name="pref_push_app_allow_register_summary">Cho phép ứng dụng đăng ký nhận thông báo đẩy.</string>
     <string name="pref_push_app_wake_for_delivery_title">Khởi động ứng dụng từ tin nhắn đẩy</string>

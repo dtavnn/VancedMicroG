@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="gms_settings_summary">Vanced microG\'yi kurun.</string>
     <string name="just_a_sec">Sadece bir saniye…</string>
-    <string name="account_manager_title">Google Account Manager</string>
+    <string name="account_manager_title">Google Hesap Yöneticisi</string>
     <string name="sorry">Afedersiniz…</string>
     <string name="auth_before_connect">"Cihazınızdaki bir uygulama, bir Google hesabında oturum açmaya çalışıyor.
 
@@ -83,10 +83,30 @@ Bunu bilerek yaptıysanız, Google'ın oturum açma sayfasına bağlanmak için 
     <string name="gcm_no_message_yet">Şu ana kadar hiç mesaj alınmadı</string>
     <string name="gcm_last_message_at">Son mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">Kayıtlı</string>
-    <string name="gcm_registered_since">Tarihinden beri kayıtlı: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since"><xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g> tarihinden beri kayıtlı</string>
     <string name="gcm_unregister_confirm_title">Kaydı sil <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
     <string name="gcm_unregister_confirm_message">\nBazı uygulamalar otomatik olarak yeniden kaydolmaz ve/veya bunu manuel olarak yapma seçeneği sunmaz. Bu uygulamalar, kaydı iptal ettikten sonra düzgün çalışmayabilir</string>
-    <string name="gcm_unregister_after_deny_message">\n no?</string>
+    <string name="gcm_unregister_after_deny_message">Halihazırda kayıtlı olan anlık bildirimler için bir uygulamanın kaydını reddettiniz.\nİleride push mesajları almaması için şimdi kaydını silmek istiyor musunuz?</string>
     <string name="gcm_messages_counter">&lt;/xliff:g&gt;%2$d</string>
-    <string name="gcm_network_state_disconnected">Çıkış yapıldı</string>
+    <string name="gcm_network_state_disconnected">Bağlantı kesildi</string>
+    <string name="gcm_network_state_connected">&lt;xliff:g example="2 hours ago"&gt; önce bağlandı</string>
+    <string name="pref_push_app_allow_register_title">Kayda izin ver</string>
+    <string name="pref_push_app_allow_register_summary">Uygulamanın anlık bildirimleri için kaydolmasına izin ver.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Anlık mesaj geldiğinde uygulamayı başlat</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Gelen anlık mesajları almak için uygulamayı arka planda başlatın.</string>
+    <string name="prefcat_status_title">Durum</string>
+    <string name="prefcat_push_apps_title">Anlık mesajları kullanan uygulamalar</string>
+    <string name="prefcat_push_apps_registered_title">Kaydolmuş uygulamalar</string>
+    <string name="prefcat_push_apps_unregistered_title">Kaydolmamış uygulamalar</string>
+    <string name="prefcat_push_networks_title">Anlık bildirimleri kullanan ağlar</string>
+    <string name="device_profile_name">Cihaz profili</string>
+    <string name="profile_name">Profil seç</string>
+    <string name="profile_name_native">Yerel</string>
+    <string name="profile_name_real">Gerçek</string>
+    <string name="profile_name_user">Özel: %s</string>
+    <string name="profile_name_auto">Otomatik: %s</string>
+    <string name="profile_name_system">Sistem: %s</string>
+    <string name="import_profile_name">Özel profil aktar</string>
+    <string name="import_profile_summary">Cihaza dosyadan içe aktar</string>
+    <string name="serial_name">Seri</string>
 </resources>

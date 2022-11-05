@@ -14,12 +14,18 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
 <resources>
-    <string name="about_version_str">الإصدار %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
-    <string name="about_default_license">جميع الحقوق محفوظة.</string>
-    <string name="about_root_title">عرض تجريبي لواجهة مستخدم MicroG</string>
-    <string name="about_root_summary">مُلخّص</string>
-    <string name="about_root_version">الإصدار v0.1.0</string>
-    <string name="about_root_libraries">المكتبات المتضمنة</string>
+
+    <string-array name="gcm_network_config_names" translatables="false">
+        <item>@string/service_status_disabled_short</item>
+        <item>@string/gcm_status_pref_default</item>
+        <item>Ping intervalas: 2 minučių</item>
+        <item>Ping intervalas: 5 minučių</item>
+        <item>Ping intervalas: 10 minučių</item>
+        <item>Ping intervalas: 15 minučių</item>
+        <item>Ping intervalas: 20 minučių</item>
+        <item>Ping intervalas: 30 minučių</item>
+    </string-array>
+
 </resources>

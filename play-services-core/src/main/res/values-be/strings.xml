@@ -19,9 +19,9 @@
     <string name="just_a_sec">Секунду…</string>
     <string name="account_manager_title">Кіраванне уліковымі запісамі Google</string>
     <string name="sorry">Прабачце…</string>
-    <string name="auth_before_connect">"Гэта праграма на вашай дупе спрабуе падключыцца да вашага ўліковага пенiсу Google.
+    <string name="auth_before_connect">"Гэта праграма на вашай прыладзе спрабуе падключыцца да вашага ўліковага запісу Google.
 
-Для працягу, націсніце <b>САСАТЬ ХУЙ</b> (ці <b>веахуй</b>, калі ваша гавна ад гэтага брэнда) каб патрапіць на старонку аўтарызацыі Google. Для скасавання, націсніце <b>ЗАЛУПА</b> для вяртання ў праграму, якая запытала доступ."</string>
+Для працягу, націсніце <b>УВАЙСЦІ</b> (ці <b>HUAWEI</b>, калі ваша прылада ад гэтага брэнда) каб патрапіць на старонку аўтарызацыі Google."</string>
     <string name="auth_sign_in">Увайсці</string>
     <string name="auth_connecting">"Усталёўваем злучэнне з серверамі Google для аўтарызацыі.
 
@@ -35,10 +35,13 @@
     <string name="auth_finalize">"Ваша прылада атрымлівае інфармацыю аўтарызацыі ад Google. 
 
 Гэта можа заняць некалькі хвілін."</string>
-    <string name="perm_status_broadcast_label">слушац гавна залупа хуй</string>
-    <string name="perm_c2dm_receive_label">слушать пенiс хуй гавно залупа лайно навоз</string>
-    <string name="perm_c2dm_send_label">адправляць хуй в дупу разраба</string>
-    <string name="perm_gtalk_svc_label">абменiваць гавно на навоз из серверов Google</string>
+    <string name="perm_status_broadcast_label">слухаць унутраныя паведамленні аб стане трансляцыі</string>
+    <string name="perm_c2dm_receive_label">слухаць C2DM паведамленні</string>
+    <string name="perm_c2dm_send_label">адпраўка C2DM паведамленняў іншым праграмам</string>
+    <string name="perm_gtalk_svc_label">абменьвацца паведамленнямі і атрымліваць апавяшчэнні аб сінхранізацыі з серверамі Google</string>
+    <string name="perm_extended_access_label">Пашыраны доступ да сэрвісаў Google</string>
+    <string name="service_name_checkin">Рэгістрацыя прылады ў Google</string>
+    <string name="service_name_mcs">Cloud Messaging</string>
     <string name="service_status_enabled_short">Укл.</string>
     <string name="service_status_disabled_short">Выкл.</string>
     <string name="menu_advanced">Пашыраныя</string>
@@ -51,4 +54,59 @@
     <!-- Settings strings -->
     <string name="prefcat_about">Інфармацыя</string>
     <string name="prefcat_google_services">Сэрвісы Google</string>
+    <string name="pref_more_settings">Болей</string>
+    <string name="checkin_not_registered">Не зарэгістравана</string>
+    <string name="checkin_last_registration">Апошняя рэгістрацыя: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="prefs_account">Налады уліковага запіса</string>
+    <string name="prefs_account_privacy">Асабістыя даныя і прыватнасць</string>
+    <string name="prefs_account_security">Уваход і бяспека</string>
+    <string name="pref_auth_trust_google_title">Давяраць Google для дазволаў праграм</string>
+    <string name="pref_auth_trust_google_summary">Калі адключана, праграма будзе пытаць у карыстальніка да таго, як запыт аўтарызацыі будзе адасланы ў Google. Некаторыя праграмы не змогуць выкарыстоўваць уліковы запіс Google, калі гэта налада адключана.</string>
+    <string name="pref_auth_visible_title">Дазваляць праграмам пошук уліковых запісаў</string>
+    <string name="pref_auth_visible_summary">Калі ўключана, праграмы на вашай прыладзе могуць убачыць ваш email уліковага запіса Google без дадатковага дазволу.</string>
+    <string name="pref_add_account_title">Уліковы запіс</string>
+    <string name="pref_add_account_summary">Дадаць уліковы запіс Google</string>
+    <string name="pref_gcm_switcher_title">Атрымліваць push-апавяшчэнні</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging дазваляе атрымліваць апавяшчэнні ад многіх праграм. Каб выкарыстоўваць GCM, уключыце рэгістрацыю прылады ў Google.</string>
+    <string name="pref_about_title">Пра Vanced microG</string>
+    <string name="hideLauncherIcon">Схаваць іконку microG з меню праграм</string>
+    <string name="brand_spoof_button">Huawei</string>
+    <string name="pref_switcher_title">Зарэгістраваць прыладу</string>
+    <string name="pref_checkin_enable_summary">Рэгіструе вашу прыладу ў сэрвісах Google і стварае ўнікальны ідэнтыфікатар прылады. Vanced microG выкарыстоўвае толькі імя ўліковага запісу для рэгістрацыі.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_info_status">Стан</string>
+    <string name="gcm_status_pref_default">Прадвызначана</string>
+    <string name="gcm_status_pref_manual">Ручна</string>
+    <string name="gcm_status_pref_sec">секунды</string>
+    <string name="gcm_status_pref_min">хвіліны</string>
+    <string name="gcm_unregister_app">Скасаваць рэгістрацыю</string>
+    <string name="gcm_no_message_yet">Паведамленні не атрымоўваліся</string>
+    <string name="gcm_last_message_at">Апошняя рэгістрацыя: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Зарэгістравана</string>
+    <string name="gcm_registered_since">Зарэгістравана: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Адмяніць рэгістрацыю <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Некаторыя праграмы не падтрымліваць аўтаматычную перарэгістрацыю ці прапануюць зрабіць гэта самастыйна, пасля скасавання рэгістрацыі яны могуць працаваць некарэктна.\nПрацягнуць?</string>
+    <string name="gcm_unregister_after_deny_message">Вы адключылі апавяшчэнні для праграмы, якая ўжо зарэгістравана.\n Вы жадаеце скасаваць рэгістрацыю для гэтай праграмы, каб яно не атрымлівала апавяшчэнні ў будучыні?</string>
+    <string name="gcm_messages_counter">Паведамлення: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> байтаў)</string>
+    <string name="gcm_network_state_disconnected">Алключана</string>
+    <string name="gcm_network_state_connected">Падключана з <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="pref_push_app_allow_register_title">Дазволіць аўтарызацыю</string>
+    <string name="pref_push_app_allow_register_summary">Дазволіць праграме рэгістрацыю для апавяшчэнняў.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Запуск праграмы з дапамогай апавяшчэння</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Запуск праграмы ў фоне для атрымання апавяшчэнняў.</string>
+    <string name="prefcat_status_title">Стан</string>
+    <string name="prefcat_push_apps_title">Праграмы, якія выкарыстоўваюць апавяшчэнні</string>
+    <string name="prefcat_push_apps_registered_title">Зарэгістраваныя праграмы</string>
+    <string name="prefcat_push_apps_unregistered_title">Незарэгістраваныя праграмы</string>
+    <string name="prefcat_push_networks_title">Тып сеткі для апавяшчэнняў</string>
+    <string name="device_profile_name">Профіль прылады</string>
+    <string name="profile_name">Абраць профіль</string>
+    <string name="profile_name_native">Натыўны</string>
+    <string name="profile_name_real">Рэальны</string>
+    <string name="profile_name_user">Уласны: %s</string>
+    <string name="profile_name_auto">Аўтаматычна: %s</string>
+    <string name="profile_name_system">Сістэмны: %s</string>
+    <string name="import_profile_name">Імпарт карыстальніцкага профілю</string>
+    <string name="import_profile_summary">Імпарт профілю прылады з файла</string>
+    <string name="serial_name">Серыйны</string>
 </resources>

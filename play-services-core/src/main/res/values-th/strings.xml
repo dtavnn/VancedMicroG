@@ -72,13 +72,13 @@
     <string name="gcm_status_pref_manual">คู่มือ</string>
     <string name="gcm_status_pref_sec">วินาที</string>
     <string name="gcm_status_pref_min">นาที</string>
-    <string name="gcm_unregister_app">ยังไม่ได้ลงทะเบียน</string>
+    <string name="gcm_unregister_app">ยกเลิกการลงทะเบียน</string>
     <string name="gcm_no_message_yet">ยังไม่ได้รับข้อความ</string>
     <string name="gcm_last_message_at">การลงทะเบียนครั้งล่าสุด: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">ลงทะเบียนแล้ว</string>
     <string name="gcm_registered_since">การลงทะเบียนครั้งล่าสุด: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_message">แอพบางตัวไม่ลงทะเบียนใหม่โดยอัตโนมัติ และ/หรือ ไม่มีตัวเลือกให้ดำเนินการด้วยตนเอง. แอปเหล่านี้อาจทำงานไม่ถูกต้องหลังจากยกเลิกการลงทะเบียน.\nดำเนินการต่อหรือไม่</string>
-    <string name="gcm_unregister_after_deny_message">คุณปฏิเสธไม่ให้แอปลงทะเบียนสำหรับการแจ้งเตือนแบบพุชที่ลงทะเบียนแล้ว. \nคุณต้องการยกเลิกการลงทะเบียนตอนนี้เพื่อไม่ให้ได้รับข้อความ Push อีกในอนาคตหรือไม่</string>
+    <string name="gcm_unregister_after_deny_message">คุณปฏิเสธไม่ให้แอปลงทะเบียนสำหรับการแจ้งเตือนแบบพุชที่ลงทะเบียนแล้ว. \nคุณต้องการการลงทะเบียนตอนนี้เพื่อไม่ให้ได้รับข้อความ Push อีกในอนาคตหรือไม่</string>
     <string name="gcm_messages_counter">ข้อความ: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
     <string name="gcm_network_state_disconnected">ตัดการเชื่อมต่อแล้ว</string>
     <string name="pref_push_app_allow_register_title">อนุญาตการลงทะเบียน</string>
@@ -88,11 +88,13 @@
     <string name="prefcat_status_title">สถานะ:</string>
     <string name="prefcat_push_apps_title">การแจ้งเตือนแบบพุชของแอป</string>
     <string name="prefcat_push_apps_registered_title">ลงทะเบียนแอปแล้ว</string>
-    <string name="prefcat_push_apps_unregistered_title">ยังไม่ได้ลงทะเบียนแอป</string>
+    <string name="prefcat_push_apps_unregistered_title">ยกเลิกการลงทะเบียนแอป</string>
     <string name="prefcat_push_networks_title">เครือข่ายที่จะใช้สำหรับการแจ้งเตือนแบบพุช</string>
     <string name="device_profile_name">ข้อมูลอุปกรณ์</string>
     <string name="profile_name">เลือกโปรไฟล์</string>
     <string name="profile_name_user">กำหนดเอง: %s</string>
+    <string name="profile_name_auto">อัตโนมัติ: %s</string>
+    <string name="profile_name_system">ระบบ: %s</string>
     <string name="import_profile_name">นำเข้าโปรไฟล์ที่กำหนดเอง</string>
     <string name="import_profile_summary">นำเข้าโปรไฟล์อุปกรณ์จากไฟล์ </string>
 </resources>

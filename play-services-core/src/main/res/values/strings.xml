@@ -16,8 +16,9 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_settings_name">Vanced microG</string>
+    <string name="gms_settings_name">Google</string>
     <string name="gms_settings_summary">Setup Vanced microG.</string>
+    <string name="vanced_settings_name">Vanced microG</string>
 
     <string name="just_a_sec">Just a sec…</string>
     <string name="account_manager_title">Google Account Manager</string>

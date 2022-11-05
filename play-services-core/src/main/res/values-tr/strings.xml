@@ -87,9 +87,9 @@ Bunu bilerek yaptıysanız, Google'ın oturum açma sayfasına bağlanmak için 
     <string name="gcm_unregister_confirm_title">Kaydı sil <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
     <string name="gcm_unregister_confirm_message">\nBazı uygulamalar otomatik olarak yeniden kaydolmaz ve/veya bunu manuel olarak yapma seçeneği sunmaz. Bu uygulamalar, kaydı iptal ettikten sonra düzgün çalışmayabilir</string>
     <string name="gcm_unregister_after_deny_message">Halihazırda kayıtlı olan anlık bildirimler için bir uygulamanın kaydını reddettiniz.\nİleride push mesajları almaması için şimdi kaydını silmek istiyor musunuz?</string>
-    <string name="gcm_messages_counter">&lt;/xliff:g&gt;%2$d</string>
+    <string name="gcm_messages_counter">Mesaj: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
     <string name="gcm_network_state_disconnected">Bağlantı kesildi</string>
-    <string name="gcm_network_state_connected">&lt;xliff:g example="2 hours ago"&gt; önce bağlandı</string>
+    <string name="gcm_network_state_connected"><xliff:g example="2 hours ago">%1$s</xliff:g> önce bağlandı</string>
     <string name="pref_push_app_allow_register_title">Kayda izin ver</string>
     <string name="pref_push_app_allow_register_summary">Uygulamanın anlık bildirimleri için kaydolmasına izin ver.</string>
     <string name="pref_push_app_wake_for_delivery_title">Anlık mesaj geldiğinde uygulamayı başlat</string>

@@ -21,7 +21,6 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
-import android.os.Build;
 import android.util.Log;
 
 import java.util.HashMap;
@@ -56,11 +55,7 @@ public class GServicesProvider extends ContentProvider {
     }
 
     private String getCallingPackageName() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            return getCallingPackage();
-        } else {
-            return "unknown";
-        }
+        return getCallingPackage();
     }
 
     @Override

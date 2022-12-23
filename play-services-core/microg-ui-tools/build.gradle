@@ -18,7 +18,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion androidCompileSdk
-    buildToolsVersion '30.0.3'
+    buildToolsVersion androidBuildVersionTools
 
     defaultConfig {
         minSdkVersion androidMinSdk
@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'androidx.preference:preference:1.2.0'
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "androidx.preference:preference:$preferenceVersion"
 }
 

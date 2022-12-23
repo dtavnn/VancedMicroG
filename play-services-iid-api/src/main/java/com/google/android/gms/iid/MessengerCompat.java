@@ -16,9 +16,6 @@
 
 package com.google.android.gms.iid;
 
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.LOLLIPOP;
-
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
@@ -29,23 +26,15 @@ import android.os.Parcelable;
 import android.os.RemoteException;
 
 public class MessengerCompat implements Parcelable {
-    private Messenger messenger;
+    private final Messenger messenger;
     private IMessengerCompat messengerCompat;
 
     public MessengerCompat(IBinder binder) {
-        if (SDK_INT >= LOLLIPOP) {
-            messenger = new Messenger(binder);
-        } else {
-            messengerCompat = IMessengerCompat.Stub.asInterface(binder);
-        }
+        messenger = new Messenger(binder);
     }
 
     public MessengerCompat(Handler handler) {
-        if (SDK_INT >= LOLLIPOP) {
-            messenger = new Messenger(handler);
-        } else {
-            messengerCompat = new IMessengerCompatImpl(handler);
-        }
+        messenger = new Messenger(handler);
     }
 
     @Override
@@ -59,7 +48,7 @@ public class MessengerCompat implements Parcelable {
     }
 
     public IBinder getBinder() {
-        return messenger != null ? messenger.getBinder() : messengerCompat.asBinder();
+        return messenger.getBinder();
     }
 
     @Override
@@ -68,8 +57,7 @@ public class MessengerCompat implements Parcelable {
     }
 
     public void send(Message message) throws RemoteException {
-        if (messenger != null) messenger.send(message);
-        else messengerCompat.send(message);
+        messenger.send(message);
     }
 
     @Override

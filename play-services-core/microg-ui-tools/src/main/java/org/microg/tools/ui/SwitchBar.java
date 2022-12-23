@@ -17,10 +17,7 @@
 
 package org.microg.tools.ui;
 
-import static android.os.Build.VERSION.SDK_INT;
-
 import android.content.Context;
-import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.SpannableStringBuilder;
@@ -70,9 +67,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         LayoutInflater.from(context).inflate(R.layout.switch_bar, this);
 
         mTextView = (TextView) findViewById(R.id.switch_text);
-        if (SDK_INT > Build.VERSION_CODES.JELLY_BEAN) {
-            mTextView.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
-        }
+        mTextView.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
         mLabel = getResources().getString(R.string.abc_capital_off);
         mSummarySpan = new TextAppearanceSpan(context, androidx.appcompat.R.style.TextAppearance_AppCompat_Widget_Switch);
         updateText();
@@ -81,9 +76,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         // Prevent onSaveInstanceState() to be called as we are managing the state of the Switch
         // on our own
         mSwitch.setSaveEnabled(false);
-        if (SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            mSwitch.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
-        }
+        mSwitch.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
 
         addOnSwitchChangeListener((switchView, isChecked) -> setTextViewLabel(isChecked));
 
@@ -121,37 +114,10 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         mSwitch.setChecked(checked);
     }
 
-    public void setCheckedInternal(boolean checked) {
-        setTextViewLabel(checked);
-        mSwitch.setCheckedInternal(checked);
-    }
-
-    public boolean isChecked() {
-        return mSwitch.isChecked();
-    }
-
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
         mTextView.setEnabled(enabled);
         mSwitch.setEnabled(enabled);
-    }
-
-    public final ToggleSwitch getSwitch() {
-        return mSwitch;
-    }
-
-    public void show() {
-        if (!isShowing()) {
-            setVisibility(View.VISIBLE);
-            mSwitch.setOnCheckedChangeListener(this);
-        }
-    }
-
-    public void hide() {
-        if (isShowing()) {
-            setVisibility(View.GONE);
-            mSwitch.setOnCheckedChangeListener(null);
-        }
     }
 
     public boolean isShowing() {
@@ -183,13 +149,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         mSwitchChangeListeners.add(listener);
     }
 
-    public void removeOnSwitchChangeListener(OnSwitchChangeListener listener) {
-        if (!mSwitchChangeListeners.contains(listener)) {
-            throw new IllegalStateException("Cannot remove OnSwitchChangeListener");
-        }
-        mSwitchChangeListeners.remove(listener);
-    }
-
     static class SavedState extends BaseSavedState {
         boolean checked;
         boolean visible;
@@ -214,6 +173,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
             out.writeValue(visible);
         }
 
+        @NonNull
         @Override
         public String toString() {
             return "SwitchBar.SavedState{"

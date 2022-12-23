@@ -16,10 +16,6 @@
 
 package org.microg.gms.common;
 
-import static android.os.Build.VERSION.SDK_INT;
-import static org.microg.gms.common.Constants.GMS_PACKAGE_NAME;
-import static org.microg.gms.common.Constants.GMS_PACKAGE_SIGNATURE_SHA1;
-
 import android.app.ActivityManager;
 import android.app.Application;
 import android.app.PendingIntent;
@@ -40,11 +36,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static android.os.Build.VERSION.SDK_INT;
+import static org.microg.gms.common.Constants.GMS_PACKAGE_NAME;
+import static org.microg.gms.common.Constants.GMS_PACKAGE_SIGNATURE_SHA1;
+import static org.microg.gms.common.Constants.GMS_SECONDARY_PACKAGE_SIGNATURE_SHA1;
+
 public class PackageUtils {
 
     private static final String GOOGLE_PLATFORM_KEY = GMS_PACKAGE_SIGNATURE_SHA1;
-    private static final String GOOGLE_LEGACY_KEY = "58e1c4133f7441ec3d2c270270a14802da47ba0e"; // Seems to be no longer used.
-    private static final String[] GOOGLE_PRIMARY_KEYS = {GOOGLE_PLATFORM_KEY, "24bb24c05e47e0aefa68a58a766179d9b613a600", "afb0fed5eeaebdd86f56a97742f4b6b33ef59875", "61226bdb57cc32c8a2a9ef71f7bc9548e95dcc0b", "3a82b5ee26bc46bf68113d920e610cd090198d4a"};
+    private static final String GOOGLE_PLATFORM_KEY_2 = GMS_SECONDARY_PACKAGE_SIGNATURE_SHA1;
+    private static final String GOOGLE_APP_KEY = "24bb24c05e47e0aefa68a58a766179d9b613a600";
+    private static final String[] GOOGLE_PRIMARY_KEYS = {GOOGLE_PLATFORM_KEY, GOOGLE_PLATFORM_KEY_2, GOOGLE_APP_KEY};
 
     private static final Map<String, String> KNOWN_GOOGLE_PACKAGES;
 
@@ -278,11 +280,7 @@ public class PackageUtils {
     @SuppressWarnings("deprecation")
     public static String packageFromPendingIntent(PendingIntent pi) {
         if (pi == null) return null;
-        if (SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            return pi.getTargetPackage();
-        } else {
-            return pi.getCreatorPackage();
-        }
+        return pi.getCreatorPackage();
     }
 
     public static String getProcessName() {
@@ -290,7 +288,7 @@ public class PackageUtils {
             return Application.getProcessName();
         try {
             Class<?> activityThread = Class.forName("android.app.ActivityThread");
-            String methodName = android.os.Build.VERSION.SDK_INT >= 18 ? "currentProcessName" : "currentPackageName";
+            String methodName = "currentProcessName";
             Method getProcessName = activityThread.getDeclaredMethod(methodName);
             return (String) getProcessName.invoke(null);
         } catch (Exception e) {

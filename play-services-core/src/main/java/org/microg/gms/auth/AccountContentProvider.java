@@ -54,10 +54,8 @@ public class AccountContentProvider extends ContentProvider {
     @Nullable
     @Override
     public Bundle call(String method, String arg, Bundle extras) {
-        String suggestedPackageName = null;
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
-            suggestedPackageName = getCallingPackage();
-        }
+        String suggestedPackageName;
+        suggestedPackageName = getCallingPackage();
         String packageName = PackageUtils.getAndCheckCallingPackage(getContext(), suggestedPackageName);
         Log.d(TAG, "Call " + method + " from " + packageName + " with arg " + arg);
         if (!PackageUtils.callerHasExtendedAccess(getContext())) {
@@ -73,9 +71,7 @@ public class AccountContentProvider extends ContentProvider {
             Account[] accounts = null;
             if (arg != null && (arg.equals(DEFAULT_ACCOUNT_TYPE) || arg.startsWith(DEFAULT_ACCOUNT_TYPE + "."))) {
                 AccountManager am = AccountManager.get(getContext());
-                if (Build.VERSION.SDK_INT >= 18) {
-                    accounts = am.getAccountsByTypeForPackage(arg, packageName);
-                }
+                accounts = am.getAccountsByTypeForPackage(arg, packageName);
                 if (accounts == null || accounts.length == 0) {
                     accounts = am.getAccountsByType(arg);
                 }

@@ -16,8 +16,6 @@
 
 package org.microg.gms.common;
 
-import static android.os.Build.VERSION.SDK_INT;
-import static android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 import static org.microg.gms.common.Constants.GMS_PACKAGE_NAME;
 
 import android.annotation.SuppressLint;
@@ -36,6 +34,7 @@ import java.util.Set;
 public class MultiConnectionKeeper {
     private static final String TAG = "GmsMultiConKeeper";
 
+    @SuppressLint("StaticFieldLeak")
     private static MultiConnectionKeeper INSTANCE;
 
     private final Context context;
@@ -137,9 +136,7 @@ public class MultiConnectionKeeper {
                 intent = gmsIntent;
             }
             int flags = Context.BIND_AUTO_CREATE;
-            if (SDK_INT >= ICE_CREAM_SANDWICH) {
-                flags |= Context.BIND_ADJUST_WITH_ACTIVITY;
-            }
+            flags |= Context.BIND_ADJUST_WITH_ACTIVITY;
             bound = context.bindService(intent, serviceConnection, flags);
             if (!bound) {
                 context.unbindService(serviceConnection);
@@ -148,10 +145,6 @@ public class MultiConnectionKeeper {
 
         public boolean isBound() {
             return bound;
-        }
-
-        public IBinder getBinder() {
-            return binder;
         }
 
         public void unbind() {

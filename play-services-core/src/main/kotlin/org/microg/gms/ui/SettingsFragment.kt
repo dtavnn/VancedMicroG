@@ -42,13 +42,9 @@ class SettingsFragment : ResourceSettingsFragment() {
         findPreference<Preference>(PREF_ABOUT)?.summary = getString(R.string.about_version_str, AboutFragment.getSelfVersion(context))
 
         findPreference<SwitchPreferenceCompat>(SettingsContract.CheckIn.HIDE_LAUNCHER_ICON)?.apply {
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                setOnPreferenceChangeListener { _, newValue ->
-                    requireActivity().hideIcon(newValue as Boolean)
-                    true
-                }
-            } else {
-                preferenceScreen.removePreference(this)
+            setOnPreferenceChangeListener { _, newValue ->
+                requireActivity().hideIcon(newValue as Boolean)
+                true
             }
 
         }

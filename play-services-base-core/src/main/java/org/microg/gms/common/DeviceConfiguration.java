@@ -101,15 +101,7 @@ public class DeviceConfiguration {
     @SuppressWarnings({"deprecation", "InlinedApi"})
     private static List<String> getNativePlatforms() {
         List<String> nativePlatforms;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return Arrays.asList(Build.SUPPORTED_ABIS);
-        } else {
-            nativePlatforms = new ArrayList<>();
-            nativePlatforms.add(Build.CPU_ABI);
-            if (Build.CPU_ABI2 != null && !Build.CPU_ABI2.equals("unknown"))
-                nativePlatforms.add(Build.CPU_ABI2);
-            return nativePlatforms;
-        }
+        return Arrays.asList(Build.SUPPORTED_ABIS);
     }
 
     private static void addEglExtensions(Set<String> glExtensions) {

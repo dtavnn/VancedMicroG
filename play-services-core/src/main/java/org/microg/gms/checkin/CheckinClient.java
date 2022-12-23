@@ -80,7 +80,8 @@ public class CheckinClient {
                                              DeviceIdentifier deviceIdent, PhoneInfo phoneInfo,
                                              LastCheckinInfo checkinInfo, Locale locale,
                                              List<Account> accounts, Boolean brandSpoof) {
-        CheckinRequest.Builder builder = new CheckinRequest.Builder()
+        CheckinRequest.Builder builder;
+        builder = new CheckinRequest.Builder()
                 .accountCookie(new ArrayList<>())
                 .androidId(checkinInfo.getAndroidId())
                 .checkin(new CheckinRequest.Checkin.Builder()
@@ -102,7 +103,7 @@ public class CheckinClient {
                         .cellOperator(phoneInfo.cellOperator)
                         .event(Collections.singletonList(new CheckinRequest.Checkin.Event.Builder()
                                 .tag(checkinInfo.getAndroidId() == 0 ? "event_log_start" : "system_update")
-                                .value(checkinInfo.getAndroidId() == 0 ? null : "1536,0,-1,NULL")
+                                .value_(checkinInfo.getAndroidId() == 0 ? null : "1536,0,-1,NULL")
                                 .timeMs(new Date().getTime())
                                 .build()))
                         .lastCheckinMs(checkinInfo.getLastCheckin())

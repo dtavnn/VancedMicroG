@@ -11,12 +11,10 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import androidx.annotation.IdRes
-import androidx.annotation.RequiresApi
 import androidx.navigation.NavController
 import androidx.navigation.navOptions
 import androidx.navigation.ui.R
@@ -41,7 +39,6 @@ fun NavController.navigate(context: Context, @IdRes resId: Int, args: Bundle? = 
     } else null)
 }
 
-@RequiresApi(Build.VERSION_CODES.M)
 fun Context.hideIcon(hide: Boolean) {
     packageManager.setComponentEnabledSetting(
             ComponentName.createRelative(this, "org.microg.gms.ui.SettingsActivityLauncher"),

@@ -18,12 +18,8 @@ package com.google.android.gms.common.data;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
-import android.database.AbstractWindowedCursor;
-import android.database.CharArrayBuffer;
 import android.database.Cursor;
 import android.database.CursorWindow;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcel;
 
@@ -45,9 +41,6 @@ import java.util.Map;
  */
 @PublicApi(until = "1")
 public class DataHolder extends AutoSafeParcelable implements Closeable {
-    @SafeParceled(1000)
-    private final int versionCode = 1;
-
     @SafeParceled(1)
     private final String[] columns;
 
@@ -69,13 +62,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
     protected static final int FIELD_TYPE_STRING = 3;
     protected static final int FIELD_TYPE_BLOB = 4;
 
-    private DataHolder() {
-        columns = null;
-        windows = null;
-        statusCode = 0;
-        metadata = null;
-    }
-
     /**
      * Creates a data holder with the specified data.
      *
@@ -90,17 +76,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
         this.statusCode = statusCode;
         this.metadata = metadata;
         validateContents();
-    }
-
-    /**
-     * Creates a data holder wrapping the provided cursor, with provided status code and metadata.
-     *
-     * @param cursor     The cursor containing the data.
-     * @param statusCode The status code of this {@link DataHolder}.
-     * @param metadata   The metadata associated with this {@link DataHolder} (may be null).
-     */
-    public DataHolder(AbstractWindowedCursor cursor, int statusCode, Bundle metadata) {
-        this(cursor.getColumnNames(), createCursorWindows(cursor), statusCode, metadata);
     }
 
     /**
@@ -135,48 +110,10 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
         return builder(columns, null);
     }
 
-    /**
-     * @param statusCode The status code of this {@link DataHolder}.
-     * @param metadata   The metadata associated with this {@link DataHolder} (may be null).
-     * @return An empty {@link DataHolder} object with the given status and metadata.
-     */
-    public static DataHolder empty(int statusCode, Bundle metadata) {
-        return new DataHolder(new String[0], new CursorWindow[0], statusCode, metadata);
-    }
-
-    /**
-     * @param statusCode The status code of this {@link DataHolder}.
-     * @return An empty {@link DataHolder} object with the given status and null metadata.
-     */
-    public static DataHolder empty(int statusCode) {
-        return empty(statusCode, null);
-    }
-
     @SuppressWarnings("deprecation")
     @SuppressLint({"NewApi", "ObsoleteSdkInt"})
     static int getCursorType(Cursor cursor, int i) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            return cursor.getType(i);
-        }
-        if (cursor instanceof AbstractWindowedCursor) {
-            CursorWindow cursorWindow = ((AbstractWindowedCursor) cursor).getWindow();
-            int pos = cursor.getPosition();
-            int type = -1;
-            if (cursorWindow.isNull(pos, i)) {
-                type = FIELD_TYPE_NULL;
-            } else if (cursorWindow.isLong(pos, i)) {
-                type = FIELD_TYPE_INTEGER;
-            } else if (cursorWindow.isFloat(pos, i)) {
-                type = FIELD_TYPE_FLOAT;
-            } else if (cursorWindow.isString(pos, i)) {
-                type = FIELD_TYPE_STRING;
-            } else if (cursorWindow.isBlob(pos, i)) {
-                type = FIELD_TYPE_BLOB;
-            }
-
-            return type;
-        }
-        throw new RuntimeException("Unsupported cursor on this platform!");
+        return cursor.getType(i);
     }
 
     /**
@@ -192,20 +129,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
                 }
             }
         }
-    }
-
-    /**
-     * Copies the String content in the given column at the provided position into a {@link CharArrayBuffer}.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @param dataOut     The {@link CharArrayBuffer} to copy into.
-     */
-    public void copyToBuffer(String column, int row, int windowIndex, CharArrayBuffer dataOut) {
-        throw new RuntimeException("Not yet available");
     }
 
     @SuppressWarnings("deprecation")
@@ -301,34 +224,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
     }
 
     /**
-     * Retrieves the boolean value for a given column at the provided position.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @return The boolean value in that column.
-     */
-    public boolean getBoolean(String column, int row, int windowIndex) {
-        return windows[windowIndex].getLong(row, columnIndices.get(column)) == 1;
-    }
-
-    /**
-     * Retrieves the byte array value for a given column at the provided position.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @return The byte array value in that column.
-     */
-    public byte[] getByteArray(String column, int row, int windowIndex) {
-        return windows[windowIndex].getBlob(row, columnIndices.get(column));
-    }
-
-    /**
      * Gets the number of rows in the data holder.
      *
      * @return the number of rows in the data holder.
@@ -344,38 +239,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
     }
 
     /**
-     * Retrieves the integer value for a given column at the provided position.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @return The integer value in that column.
-     */
-    public int getInteger(String column, int row, int windowIndex) {
-        return windows[windowIndex].getInt(row, columnIndices.get(column));
-    }
-
-    /**
-     * Retrieves the long value for a given column at the provided position.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @return The long value in that column.
-     */
-    public long getLong(String column, int row, int windowIndex) {
-        return windows[windowIndex].getLong(row, columnIndices.get(column));
-    }
-
-    public int getStatusCode() {
-        return statusCode;
-    }
-
-    /**
      * Retrieves the string value for a given column at the provided position.
      * This will throw an {@link IllegalArgumentException} if the column does not exist, the
      * position is invalid, or the data holder has been closed.
@@ -387,42 +250,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
      */
     public String getString(String column, int row, int windowIndex) {
         return windows[windowIndex].getString(row, columnIndices.get(column));
-    }
-
-    /**
-     * Returns whether the given column at the provided position contains null.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @return Whether the column value is null at this position.
-     */
-    public boolean isNull(String column, int row, int windowIndex) {
-        return windows[windowIndex].isNull(row, columnIndices.get(column));
-    }
-
-    public boolean isClosed() {
-        synchronized (this) {
-            return closed;
-        }
-    }
-
-    /**
-     * Retrieves the column data at the provided position as a URI if possible, checking for null values.
-     * This will throw an {@link IllegalArgumentException} if the column does not exist, the
-     * position is invalid, or the data holder has been closed.
-     *
-     * @param column      The column to retrieve.
-     * @param row         The row to retrieve the data from.
-     * @param windowIndex Index of the cursor window to extract the data from.
-     * @return The column data as a URI, or null if not present.
-     */
-    public Uri parseUri(String column, int row, int windowIndex) {
-        String string = getString(column, row, windowIndex);
-        if (string != null) return Uri.parse(string);
-        return null;
     }
 
     @Override
@@ -486,18 +313,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
          */
         public int getCount() {
             return rows.size();
-        }
-
-        /**
-         * Sort the rows in this builder based on the standard data type comparisons for the value in the provided column.
-         * Calling this multiple times with the same column will not change the sort order of the builder.
-         * Note that any data which is added after this call will not be sorted.
-         *
-         * @param sortColumn The column to sort the rows in this builder by.
-         * @return {@link DataHolder.Builder} to continue construction.
-         */
-        public Builder sort(String sortColumn) {
-            throw new RuntimeException("Not yet implemented");
         }
 
         /**

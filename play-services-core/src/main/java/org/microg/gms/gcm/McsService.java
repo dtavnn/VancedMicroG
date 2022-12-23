@@ -39,7 +39,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
-import android.os.Messenger;
 import android.os.Parcelable;
 import android.os.PowerManager;
 import android.os.SystemClock;
@@ -178,7 +177,7 @@ public class McsService extends Service implements Handler.Callback {
         heartbeatIntent = PendingIntent.getService(this, 0, new Intent(ACTION_HEARTBEAT, null, this, McsService.class), 0);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         powerManager = (PowerManager) getSystemService(POWER_SERVICE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission("android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST") == PackageManager.PERMISSION_GRANTED) {
+        if (checkSelfPermission("android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST") == PackageManager.PERMISSION_GRANTED) {
             try {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                     Class<?> powerExemptionManagerClass = Class.forName("android.os.PowerExemptionManager");
@@ -267,11 +266,7 @@ public class McsService extends Service implements Handler.Callback {
         long delay = getCurrentDelay();
         logd(context, "Scheduling reconnect in " + delay / 1000 + " seconds...");
         PendingIntent pi = PendingIntent.getBroadcast(context, 1, new Intent(ACTION_RECONNECT, null, context, TriggerReceiver.class), 0);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
-        } else {
-            alarmManager.set(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
-        }
+        alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
     }
 
     public void scheduleHeartbeat(Context context) {
@@ -282,18 +277,8 @@ public class McsService extends Service implements Handler.Callback {
             closeAll();
         }
         logd(context, "Scheduling heartbeat in " + heartbeatMs / 1000 + " seconds...");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            // This is supposed to work even when running in idle and without battery optimization disabled
-            alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs, heartbeatIntent);
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            // With KitKat, the alarms become inexact by default, but with the newly available setWindow we can get inexact alarms with guarantees.
-            // Schedule the alarm to fire within the interval [heartbeatMs/3*4, heartbeatMs]
-            alarmManager.setWindow(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs / 4 * 3, heartbeatMs / 4,
-                    heartbeatIntent);
-        } else {
-            alarmManager.set(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs, heartbeatIntent);
-        }
-
+        // This is supposed to work even when running in idle and without battery optimization disabled
+        alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs, heartbeatIntent);
     }
 
     public synchronized static long getCurrentDelay() {
@@ -339,7 +324,6 @@ public class McsService extends Service implements Handler.Callback {
         String messageId = intent.getStringExtra(EXTRA_MESSAGE_ID);
         String collapseKey = intent.getStringExtra(EXTRA_COLLAPSE_KEY);
 
-        Messenger messenger = intent.getParcelableExtra(EXTRA_MESSENGER);
         intent.removeExtra(EXTRA_MESSENGER);
 
         Parcelable app = intent.getParcelableExtra(EXTRA_APP);
@@ -357,16 +341,8 @@ public class McsService extends Service implements Handler.Callback {
         }
         intent.removeExtra(EXTRA_APP);
 
-        int ttl;
         try {
-            if (intent.hasExtra(EXTRA_TTL)) {
-                ttl = Integer.parseInt(intent.getStringExtra(EXTRA_TTL));
-                if (ttl < 0 || ttl > maxTtl) {
-                    ttl = maxTtl;
-                }
-            } else {
-                ttl = maxTtl;
-            }
+            intent.hasExtra(EXTRA_TTL);
         } catch (NumberFormatException e) {
             // TODO: error TtlUnsupported
             Log.w(TAG, e);
@@ -404,7 +380,7 @@ public class McsService extends Service implements Handler.Callback {
             if (!key.startsWith("google.")) {
                 Object val = extras.get(key);
                 if (val instanceof String) {
-                    appData.add(new AppData.Builder().key(key).value((String) val).build());
+                    appData.add(new AppData.Builder().key(key).value_((String) val).build());
                 }
             }
         }
@@ -545,7 +521,7 @@ public class McsService extends Service implements Handler.Callback {
                 .resource(Long.toString(info.getAndroidId()))
                 .user(Long.toString(info.getAndroidId()))
                 .use_rmq2(true)
-                .setting(Collections.singletonList(new Setting.Builder().name("new_vc").value("1").build()))
+                .setting(Collections.singletonList(new Setting.Builder().name("new_vc").value_("1").build()))
                 .received_persistent_id(GcmPrefs.get(this).getLastPersistedIds())
                 .build();
     }
@@ -569,7 +545,7 @@ public class McsService extends Service implements Handler.Callback {
         }
         if (msg.token != null) intent.putExtra(EXTRA_COLLAPSE_KEY, msg.token);
         for (AppData appData : msg.app_data) {
-            intent.putExtra(appData.key, appData.value);
+            intent.putExtra(appData.key, appData.value_);
         }
 
         String receiverPermission = null;
@@ -622,7 +598,7 @@ public class McsService extends Service implements Handler.Callback {
             } catch (Exception e) {
                 Log.e(TAG, "Error adding app" + packageName + " to the temp allowlist.", e);
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        } else {
             try {
                 if (getUserIdMethod != null && addPowerSaveTempWhitelistAppMethod != null && deviceIdleController != null) {
                     int userId = (int) getUserIdMethod.invoke(null, getPackageManager().getApplicationInfo(packageName, 0).uid);
@@ -644,7 +620,7 @@ public class McsService extends Service implements Handler.Callback {
                         .sent(System.currentTimeMillis() / 1000)
                         .ttl(0)
                         .category(SELF_CATEGORY)
-                        .app_data(Collections.singletonList(new AppData.Builder().key(IDLE_NOTIFICATION).value("false").build()));
+                        .app_data(Collections.singletonList(new AppData.Builder().key(IDLE_NOTIFICATION).value_("false").build()));
                 if (inputStream.newStreamIdAvailable()) {
                     msgResponse.last_stream_id_received(inputStream.getStreamId());
                 }
@@ -717,7 +693,7 @@ public class McsService extends Service implements Handler.Callback {
                     IqStanza.Builder iq = new IqStanza.Builder()
                             .type(IqStanza.IqType.SET)
                             .id("")
-                            .extension(new Extension.Builder().id(13).data(ByteString.EMPTY).build()) // StreamAck
+                            .extension(new Extension.Builder().id(13).data_(ByteString.EMPTY).build()) // StreamAck
                             .status(0L);
                     if (inputStream.newStreamIdAvailable()) {
                         iq.last_stream_id_received(inputStream.getStreamId());

@@ -87,7 +87,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:multiArch="true"
-        android:theme="@style/Theme.AppCompat.DayNight"
+        android:theme="@style/AppTheme"
         android:networkSecurityConfig="@xml/network_security_config">
 
         <library android:name="com.mgoogle.android.gms" />
@@ -309,7 +309,7 @@
             android:process=":ui"
             android:roundIcon="@mipmap/ic_launcher"
             android:taskAffinity="org.microg.gms.settings"
-            android:theme="@style/Theme.AppCompat.DayNight">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -339,7 +339,7 @@
             android:process=":ui"
             android:targetActivity="org.microg.gms.ui.SettingsActivity"
             android:taskAffinity="org.microg.gms.settings"
-            android:theme="@style/Theme.AppCompat.DayNight">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>

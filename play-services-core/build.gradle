@@ -34,6 +34,7 @@ dependencies {
     implementation "androidx.preference:preference-ktx:$preferenceVersion"
 
     implementation 'org.microg.gms:conscrypt-gmscore:2.5.2'
+    implementation "com.google.android.material:material:$materialVersion"
 
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"

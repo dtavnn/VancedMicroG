@@ -19,9 +19,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation 'com.squareup.wire:wire-runtime:4.4.2'
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation 'androidx.webkit:webkit:1.5.0'
+    implementation "com.squareup.wire:wire-runtime:$wireVersion"
+    implementation "de.hdodenhof:circleimageview:$circleimageviewVersion"
+    implementation "androidx.webkit:webkit:$webkitVersion"
 
     implementation project(':play-services-base-core')
     implementation project(':play-services-core-proto')
@@ -30,24 +30,24 @@ dependencies {
     implementation project(':play-services-tasks')
 
     // AndroidX UI
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "androidx.preference:preference-ktx:$preferenceVersion"
 
     implementation 'org.microg.gms:conscrypt-gmscore:2.5.2'
 
     // Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
-    implementation 'androidx.lifecycle:lifecycle-service:2.5.1'
-    implementation 'com.android.volley:volley:1.2.1'
+    implementation "androidx.lifecycle:lifecycle-service:$lifecycleVersion"
+    implementation "com.android.volley:volley:$volleyVersion"
 
     api project(':play-services-basement')
 }
 
 android {
     compileSdkVersion androidCompileSdk
-    buildToolsVersion '30.0.3'
+    buildToolsVersion androidBuildVersionTools
 
     defaultConfig {
         versionName version

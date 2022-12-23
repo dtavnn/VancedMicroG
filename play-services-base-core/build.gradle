@@ -10,15 +10,15 @@ apply plugin: 'signing'
 
 dependencies {
     api project(':play-services-basement')
-    api 'androidx.lifecycle:lifecycle-service:2.5.1'
+    api "androidx.lifecycle:lifecycle-service:$lifecycleVersion"
 
-    implementation 'androidx.annotation:annotation:1.5.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20'
+    implementation "androidx.annotation:annotation:$annotationVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 }
 
 android {
     compileSdkVersion androidCompileSdk
-    buildToolsVersion '30.0.3'
+    buildToolsVersion androidBuildVersionTools
 
     defaultConfig {
         versionName version

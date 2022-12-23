@@ -42,12 +42,30 @@ buildscript {
     }
 }
 
+def execResult(...args) {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine args
+        standardOutput = stdout
+    }
+    return stdout.toString()
+}
+
+def gmsVersion = "22.49.13"
+def gmsVersionCode = Integer.parseInt(gmsVersion.replaceAll('\\.', ''))
+
+def ourVersionBase = "0.2.26"
+def ourVersionMinor = 52
+
+def ourVersionCode = gmsVersionCode * 1000 + ourVersionMinor
+def ourVersionName = "$ourVersionBase.$gmsVersionCode"
+
 allprojects {
     apply plugin: 'idea'
 
     group = 'org.microg.gms'
-    version = "0.2.25.224113"
-    ext.appVersionCode = 224113003
+    version = ourVersionName
+    ext.appVersionCode = ourVersionCode
     ext.isReleaseVersion = false
 }
 

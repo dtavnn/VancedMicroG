@@ -5,8 +5,6 @@
 
 package org.microg.gms.profile
 
-import android.annotation.TargetApi
-
 object Build {
     @JvmField
     var BOARD: String? = null
@@ -24,7 +22,6 @@ object Build {
     var CPU_ABI2: String? = null
 
     @JvmField
-    @TargetApi(21)
     var SUPPORTED_ABIS: Array<String> = emptyArray()
 
     @JvmField

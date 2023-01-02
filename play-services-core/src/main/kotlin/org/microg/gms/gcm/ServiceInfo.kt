@@ -36,14 +36,16 @@ class ServiceInfoReceiver : BroadcastReceiver() {
             context.sendOrderedBroadcast(Intent(ACTION_SERVICE_INFO_RESPONSE).apply {
                 setPackage(context.packageName)
                 val prefs = GcmPrefs.get(context)
-                val info = ServiceInfo(
-                        configuration = prefs.toConfiguration(),
+                val info = prefs?.let {
+                    ServiceInfo(
+                        configuration = it.toConfiguration(),
                         connected = McsService.isConnected(context),
                         startTimestamp = McsService.getStartTimestamp(),
                         learntMobileInterval = prefs.learntMobileInterval,
                         learntWifiInterval = prefs.learntWifiInterval,
                         learntOtherInterval = prefs.learntOtherInterval
-                )
+                    )
+                }
                 putExtra(EXTRA_SERVICE_INFO, info)
             }, null)
         } catch (e: Exception) {

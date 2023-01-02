@@ -32,7 +32,11 @@ object ProfileManager {
     private fun getSystemProfileFile(): File = File("/system/etc/microg_device_profile.xml")
     private fun getProfileResId(context: Context, profile: String) = context.resources.getIdentifier("${context.packageName}:xml/profile_$profile".lowercase(Locale.US), null, null)
 
-    fun getConfiguredProfile(context: Context): String = SettingsContract.getSettings(context, Profile.getContentUri(context), arrayOf(Profile.PROFILE)) { it.getString(0) } ?: PROFILE_AUTO
+    fun getConfiguredProfile(context: Context): String = Profile.getContentUri(context)?.let {
+        SettingsContract.getSettings(context,
+            it, arrayOf(Profile.PROFILE)) { it.getString(0) }
+    }
+        ?: PROFILE_AUTO
 
     fun getAutoProfile(context: Context): String {
         if (hasProfile(context, PROFILE_SYSTEM) && isAutoProfile(context, PROFILE_SYSTEM)) return PROFILE_SYSTEM
@@ -115,8 +119,14 @@ object ProfileManager {
     }
 
     private fun getProfile(context: Context) = getConfiguredProfile(context).let { if (it != PROFILE_AUTO) it else getAutoProfile(context) }
-    private fun getSerialFromSettings(context: Context): String? = SettingsContract.getSettings(context, Profile.getContentUri(context), arrayOf(Profile.SERIAL)) { it.getString(0) }
-    private fun saveSerial(context: Context, serial: String) = SettingsContract.setSettings(context, Profile.getContentUri(context)) { put(Profile.SERIAL, serial) }
+    private fun getSerialFromSettings(context: Context): String? =
+        Profile.getContentUri(context)?.let {
+            SettingsContract.getSettings(context,
+                it, arrayOf(Profile.SERIAL)) { it.getString(0) }
+        }
+    private fun saveSerial(context: Context, serial: String) =
+        Profile.getContentUri(context)
+            ?.let { SettingsContract.setSettings(context, it) { put(Profile.SERIAL, serial) } }
 
     private fun randomSerial(template: String, prefixLength: Int = (template.length / 2).coerceAtMost(6)): String {
         val serial = StringBuilder()
@@ -294,9 +304,11 @@ object ProfileManager {
         val changed = getProfile(context) != profile
         val newProfile = profile ?: PROFILE_AUTO
         val newSerial = if (changed) getSerial(context, newProfile, true) else getSerial(context)
-        SettingsContract.setSettings(context, Profile.getContentUri(context)) {
-            put(Profile.PROFILE, newProfile)
-            if (changed) put(Profile.SERIAL, newSerial)
+        Profile.getContentUri(context)?.let {
+            SettingsContract.setSettings(context, it) {
+                put(Profile.PROFILE, newProfile)
+                if (changed) put(Profile.SERIAL, newSerial)
+            }
         }
         if (changed && activeProfile != null) applyProfile(context, newProfile, newSerial)
     }

@@ -14,9 +14,5 @@
  * limitations under the License.
  */
 
-package org.microg.gms.kotlin
+package com.google.android.gms.dynamic
 
-import com.google.android.gms.dynamic.IObjectWrapper
-import com.google.android.gms.dynamic.ObjectWrapper
-
-inline fun <reified T> IObjectWrapper?.unwrap(): T? = ObjectWrapper.unwrapTyped(this, T::class.java)

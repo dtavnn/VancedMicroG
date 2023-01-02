@@ -12,8 +12,7 @@ object SettingsContract {
 
     object CheckIn {
         private const val id = "check-in"
-        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
-        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+        fun getContentUri(context: Context): Uri? = Uri.withAppendedPath(getAuthorityUri(context), id)
 
         const val ENABLED = "checkin_enable_service"
         const val ANDROID_ID = "androidId"
@@ -44,8 +43,7 @@ object SettingsContract {
 
     object Gcm {
         private const val id = "gcm"
-        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
-        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+        fun getContentUri(context: Context): Uri? = Uri.withAppendedPath(getAuthorityUri(context), id)
 
         const val FULL_LOG = "gcm_full_log"
         const val LAST_PERSISTENT_ID = "gcm_last_persistent_id"
@@ -76,8 +74,7 @@ object SettingsContract {
 
     object Auth {
         private const val id = "auth"
-        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
-        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+        fun getContentUri(context: Context): Uri? = Uri.withAppendedPath(getAuthorityUri(context), id)
 
         const val TRUST_GOOGLE = "auth_manager_trust_google"
         const val VISIBLE = "auth_manager_visible"
@@ -90,8 +87,7 @@ object SettingsContract {
 
     object Profile {
         private const val id = "profile"
-        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
-        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+        fun getContentUri(context: Context): Uri? = Uri.withAppendedPath(getAuthorityUri(context), id)
 
         const val PROFILE = "device_profile"
         const val SERIAL = "device_profile_serial"

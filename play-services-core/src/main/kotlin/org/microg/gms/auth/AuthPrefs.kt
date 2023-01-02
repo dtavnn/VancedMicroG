@@ -7,16 +7,20 @@ import org.microg.mgms.settings.SettingsContract.Auth
 object AuthPrefs {
 
     @JvmStatic
-    fun isTrustGooglePermitted(context: Context): Boolean {
-        return SettingsContract.getSettings(context, Auth.getContentUri(context), arrayOf(Auth.TRUST_GOOGLE)) { c ->
-            c.getInt(0) != 0
+    fun isTrustGooglePermitted(context: Context): Boolean? {
+        return Auth.getContentUri(context)?.let {
+            SettingsContract.getSettings(context, it, arrayOf(Auth.TRUST_GOOGLE)) { c ->
+                c.getInt(0) != 0
+            }
         }
     }
 
     @JvmStatic
-    fun isAuthVisible(context: Context): Boolean {
-        return SettingsContract.getSettings(context, Auth.getContentUri(context), arrayOf(Auth.VISIBLE)) { c ->
-            c.getInt(0) != 0
+    fun isAuthVisible(context: Context): Boolean? {
+        return Auth.getContentUri(context)?.let {
+            SettingsContract.getSettings(context, it, arrayOf(Auth.VISIBLE)) { c ->
+                c.getInt(0) != 0
+            }
         }
     }
 

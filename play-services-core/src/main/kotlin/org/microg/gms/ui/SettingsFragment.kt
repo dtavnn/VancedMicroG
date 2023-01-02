@@ -69,7 +69,7 @@ class SettingsFragment : ResourceSettingsFragment() {
             findPreference<Preference>(PREF_GCM)?.setSummary(R.string.service_status_disabled_short)
         }
 
-        findPreference<Preference>(PREF_CHECKIN)?.setSummary(if (CheckinPrefs.isEnabled(context)) R.string.service_status_enabled_short else R.string.service_status_disabled_short)
+        findPreference<Preference>(PREF_CHECKIN)?.setSummary(if (CheckinPrefs.isEnabled(context) == true) R.string.service_status_enabled_short else R.string.service_status_disabled_short)
     }
 
     companion object {

@@ -18,7 +18,6 @@ package com.google.android.gms.common;
 
 import android.app.Activity;
 import android.app.PendingIntent;
-import android.content.Intent;
 import android.content.IntentSender;
 import android.text.TextUtils;
 
@@ -239,35 +238,6 @@ public class ConnectionResult {
         }
     }
 
-    /**
-     * Indicates the type of error that interrupted connection.
-     *
-     * @return the error code, or {@link #SUCCESS} if no error occurred.
-     */
-    public int getErrorCode() {
-        return statusCode;
-    }
-
-    /**
-     * Returns an error message for connection result.
-     *
-     * @return the message
-     */
-    public String getErrorMessage() {
-        return message;
-    }
-
-    /**
-     * A pending intent to resolve the connection failure. This intent can be started with
-     * {@link Activity#startIntentSenderForResult(IntentSender, int, Intent, int, int, int)} to
-     * present UI to solve the issue.
-     *
-     * @return The pending intent to resolve the connection failure.
-     */
-    public PendingIntent getResolution() {
-        return pendingIntent;
-    }
-
     @Override
     public int hashCode() {
         return Arrays.hashCode(new Object[]{statusCode, pendingIntent, message});
@@ -281,15 +251,6 @@ public class ConnectionResult {
      */
     public boolean hasResolution() {
         return statusCode != 0 && pendingIntent != null;
-    }
-
-    /**
-     * Returns {@code true} if the connection was successful.
-     *
-     * @return {@code true} if the connection was successful, {@code false} if there was an error.
-     */
-    public boolean isSuccess() {
-        return statusCode == 0;
     }
 
     /**

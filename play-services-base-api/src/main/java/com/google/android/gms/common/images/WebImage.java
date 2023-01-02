@@ -18,6 +18,8 @@ package com.google.android.gms.common.images;
 
 import android.net.Uri;
 
+import androidx.annotation.NonNull;
+
 import org.microg.safeparcel.AutoSafeParcelable;
 import org.microg.safeparcel.SafeParceled;
 
@@ -58,7 +60,9 @@ public class WebImage extends AutoSafeParcelable {
         return height;
     }
 
+    @NonNull
     public String toString() {
-        return String.format(Locale.getDefault(), "Image %dx%d %s", width, height, uri.toString());
+        assert uri != null;
+        return String.format(Locale.getDefault(), "Image %dx%d %s", width, height, uri);
     }
 }

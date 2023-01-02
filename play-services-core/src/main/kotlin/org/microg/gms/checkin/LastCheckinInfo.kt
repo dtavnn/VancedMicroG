@@ -39,7 +39,7 @@ data class LastCheckinInfo(
 
     companion object {
         @JvmStatic
-        fun read(context: Context): LastCheckinInfo {
+        fun read(context: Context): LastCheckinInfo? {
             val projection = arrayOf(
                 CheckIn.ANDROID_ID,
                 CheckIn.DIGEST,
@@ -48,35 +48,43 @@ data class LastCheckinInfo(
                 CheckIn.VERSION_INFO,
                 CheckIn.DEVICE_DATA_VERSION_INFO,
             )
-            return SettingsContract.getSettings(context, CheckIn.getContentUri(context), projection) { c ->
-                LastCheckinInfo(
-                    androidId = c.getLong(0),
-                    digest = c.getString(1),
-                    lastCheckin = c.getLong(2),
-                    securityToken = c.getLong(3),
-                    versionInfo = c.getString(4),
-                    deviceDataVersionInfo = c.getString(5),
-                )
+            return CheckIn.getContentUri(context)?.let {
+                SettingsContract.getSettings(context, it, projection) { c ->
+                    LastCheckinInfo(
+                        androidId = c.getLong(0),
+                        digest = c.getString(1),
+                        lastCheckin = c.getLong(2),
+                        securityToken = c.getLong(3),
+                        versionInfo = c.getString(4),
+                        deviceDataVersionInfo = c.getString(5),
+                    )
+                }
             }
         }
 
         @JvmStatic
-        fun clear(context: Context) = SettingsContract.setSettings(context, CheckIn.getContentUri(context)) {
-            put(CheckIn.ANDROID_ID, 0L)
-            put(CheckIn.DIGEST, CheckIn.INITIAL_DIGEST)
-            put(CheckIn.LAST_CHECK_IN, 0L)
-            put(CheckIn.SECURITY_TOKEN, 0L)
-            put(CheckIn.VERSION_INFO, "")
-            put(CheckIn.DEVICE_DATA_VERSION_INFO, "")
-        }
+        fun clear(context: Context) =
+            CheckIn.getContentUri(context)?.let {
+                SettingsContract.setSettings(context, it) {
+                    put(CheckIn.ANDROID_ID, 0L)
+                    put(CheckIn.DIGEST, CheckIn.INITIAL_DIGEST)
+                    put(CheckIn.LAST_CHECK_IN, 0L)
+                    put(CheckIn.SECURITY_TOKEN, 0L)
+                    put(CheckIn.VERSION_INFO, "")
+                    put(CheckIn.DEVICE_DATA_VERSION_INFO, "")
+                }
+            }
     }
 
-    fun write(context: Context) = SettingsContract.setSettings(context, CheckIn.getContentUri(context)) {
-        put(CheckIn.ANDROID_ID, androidId)
-        put(CheckIn.DIGEST, digest)
-        put(CheckIn.LAST_CHECK_IN, lastCheckin)
-        put(CheckIn.SECURITY_TOKEN, securityToken)
-        put(CheckIn.VERSION_INFO, versionInfo)
-        put(CheckIn.DEVICE_DATA_VERSION_INFO, deviceDataVersionInfo)
-    }
+    fun write(context: Context) =
+        CheckIn.getContentUri(context)?.let {
+            SettingsContract.setSettings(context, it) {
+            put(CheckIn.ANDROID_ID, androidId)
+            put(CheckIn.DIGEST, digest)
+            put(CheckIn.LAST_CHECK_IN, lastCheckin)
+            put(CheckIn.SECURITY_TOKEN, securityToken)
+            put(CheckIn.VERSION_INFO, versionInfo)
+            put(CheckIn.DEVICE_DATA_VERSION_INFO, deviceDataVersionInfo)
+        }
+        }
 }

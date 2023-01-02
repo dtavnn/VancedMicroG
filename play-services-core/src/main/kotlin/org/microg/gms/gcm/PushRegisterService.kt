@@ -6,6 +6,7 @@
 
 package org.microg.gms.gcm
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
@@ -29,30 +30,32 @@ import kotlin.coroutines.suspendCoroutine
 private const val TAG = "GmsGcmRegister"
 
 private suspend fun ensureCheckinIsUpToDate(context: Context) {
-    if (!CheckinPrefs.isEnabled(context)) throw RuntimeException("Checkin disabled")
-    val lastCheckin = LastCheckinInfo.read(context).lastCheckin
-    if (lastCheckin < System.currentTimeMillis() - CheckinService.MAX_VALID_CHECKIN_AGE) {
-        val resultData: Bundle = suspendCoroutine { continuation ->
-            val intent = Intent(context, CheckinService::class.java)
-            val continued = AtomicBoolean(false)
-            intent.putExtra(CheckinService.EXTRA_RESULT_RECEIVER, object : ResultReceiver(null) {
-                override fun onReceiveResult(resultCode: Int, resultData: Bundle?) {
-                    if (continued.compareAndSet(false, true)) continuation.resume(resultData ?: Bundle.EMPTY)
-                }
-            })
-            ForegroundServiceContext(context).startService(intent)
-            Handler().postDelayed({
-                if (continued.compareAndSet(false, true)) continuation.resume(Bundle.EMPTY)
-            }, 10000L)
-        }
-        if (resultData.getLong(CheckinService.EXTRA_NEW_CHECKIN_TIME, 0L) + lastCheckin == 0L) {
-            throw RuntimeException("No checkin available")
+    if (!CheckinPrefs.isEnabled(context)!!) throw RuntimeException("Checkin disabled")
+    val lastCheckin = LastCheckinInfo.read(context)?.lastCheckin
+    if (lastCheckin != null) {
+        if (lastCheckin < System.currentTimeMillis() - CheckinService.MAX_VALID_CHECKIN_AGE) {
+            val resultData: Bundle = suspendCoroutine { continuation ->
+                val intent = Intent(context, CheckinService::class.java)
+                val continued = AtomicBoolean(false)
+                intent.putExtra(CheckinService.EXTRA_RESULT_RECEIVER, object : ResultReceiver(null) {
+                    override fun onReceiveResult(resultCode: Int, resultData: Bundle?) {
+                        if (continued.compareAndSet(false, true)) continuation.resume(resultData ?: Bundle.EMPTY)
+                    }
+                })
+                ForegroundServiceContext(context).startService(intent)
+                Handler().postDelayed({
+                    if (continued.compareAndSet(false, true)) continuation.resume(Bundle.EMPTY)
+                }, 10000L)
+            }
+            if (resultData.getLong(CheckinService.EXTRA_NEW_CHECKIN_TIME, 0L) + lastCheckin == 0L) {
+                throw RuntimeException("No checkin available")
+            }
         }
     }
 }
 
-private suspend fun ensureAppRegistrationAllowed(context: Context, database: GcmDatabase, packageName: String) {
-    if (!GcmPrefs.get(context).isEnabled) throw RuntimeException("GCM disabled")
+private fun ensureAppRegistrationAllowed(context: Context, database: GcmDatabase, packageName: String) {
+    if (!GcmPrefs.get(context)?.isEnabled!!) throw RuntimeException("GCM disabled")
     val app = database.getApp(packageName)
     if (app?.allowRegister == false) {
         throw RuntimeException("Push permission not granted to $packageName")
@@ -65,7 +68,7 @@ suspend fun completeRegisterRequest(context: Context, database: GcmDatabase, req
 
 private val Intent.requestId: String?
     get() {
-        val kidString = getStringExtra(GcmConstants.EXTRA_KID) ?: return null
+        val kidString = getStringExtra(EXTRA_KID) ?: return null
         if (kidString.startsWith("|")) {
             val kid = kidString.split("\\|".toRegex()).toTypedArray()
             if (kid.size >= 3 && "ID" == kid[1]) {
@@ -242,6 +245,7 @@ internal class PushRegisterHandler(private val context: Context, private val dat
     }
 
     private val selfAuthIntent: PendingIntent
+        @SuppressLint("UnspecifiedImmutableFlag")
         get() {
             val intent = Intent()
             intent.setPackage("com.google.example.invalidpackage")

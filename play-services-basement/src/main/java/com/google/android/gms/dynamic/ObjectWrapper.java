@@ -35,7 +35,7 @@ public class ObjectWrapper<T> extends IObjectWrapper.Stub {
             return null;
         }
         if (obj instanceof ObjectWrapper) {
-            return ((ObjectWrapper) obj).t;
+            return ((ObjectWrapper<?>) obj).t;
         }
         IBinder binder = obj.asBinder();
         Field[] fields = binder.getClass().getDeclaredFields();
@@ -95,6 +95,6 @@ public class ObjectWrapper<T> extends IObjectWrapper.Stub {
     }
 
     public static <T> ObjectWrapper<T> wrap(T t) {
-        return new ObjectWrapper<T>(t);
+        return new ObjectWrapper<>(t);
     }
 }

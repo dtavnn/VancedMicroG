@@ -6,6 +6,7 @@
 
 package org.microg.mgms.settings
 
+import android.annotation.SuppressLint
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.content.Context
@@ -27,6 +28,7 @@ import java.io.File
  * All settings access should go through this [ContentProvider],
  * because it provides safe access from different processes which normal [SharedPreferences] don't.
  */
+@SuppressLint("DiscouragedPrivateApi")
 class SettingsProvider : ContentProvider() {
     companion object {
         const val INTERVAL = 1 * 60 * 1000 // 1 minute
@@ -165,9 +167,9 @@ class SettingsProvider : ContentProvider() {
             Gcm.NETWORK_ROAMING -> Integer.parseInt(preferences.getString(key, "0") ?: "0")
             Gcm.NETWORK_OTHER -> Integer.parseInt(preferences.getString(key, "0") ?: "0")
 
-            Gcm.LEARNT_MOBILE -> preferences.getInt(key, Companion.INTERVAL)
-            Gcm.LEARNT_WIFI -> preferences.getInt(key, Companion.INTERVAL)
-            Gcm.LEARNT_OTHER -> preferences.getInt(key, Companion.INTERVAL)
+            Gcm.LEARNT_MOBILE -> preferences.getInt(key, INTERVAL)
+            Gcm.LEARNT_WIFI -> preferences.getInt(key, INTERVAL)
+            Gcm.LEARNT_OTHER -> preferences.getInt(key, INTERVAL)
 
             else -> throw IllegalArgumentException("Unknown key: $key")
         }
@@ -271,12 +273,8 @@ class SettingsProvider : ContentProvider() {
     }
 
     private fun getSettingsString(key: String, def: String? = null): String? = listOf(preferences, systemDefaultPreferences).getString(key, def)
-    private fun getSettingsInt(key: String, def: Int): Int = listOf(preferences, systemDefaultPreferences).getInt(key, def)
-    private fun getSettingsLong(key: String, def: Long): Long = listOf(preferences, systemDefaultPreferences).getLong(key, def)
 
     private fun List<SharedPreferences?>.getString(key: String, def: String?): String? = foldRight(def) { preferences, defValue -> preferences?.getString(key, defValue) ?: defValue }
-    private fun List<SharedPreferences?>.getInt(key: String, def: Int): Int = foldRight(def) { preferences, defValue -> preferences?.getInt(key, defValue) ?: defValue }
-    private fun List<SharedPreferences?>.getLong(key: String, def: Long): Long = foldRight(def) { preferences, defValue -> preferences?.getLong(key, defValue) ?: defValue }
     private fun List<SharedPreferences?>.getBoolean(key: String, def: Boolean): Boolean = foldRight(def) { preferences, defValue -> preferences?.getBoolean(key, defValue) ?: defValue }
     private fun List<SharedPreferences?>.getBooleanAsInt(key: String, def: Boolean): Int = if (getBoolean(key, def)) 1 else 0
 }

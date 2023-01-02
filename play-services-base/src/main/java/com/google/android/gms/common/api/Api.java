@@ -16,10 +16,6 @@
 
 package com.google.android.gms.common.api;
 
-import android.accounts.Account;
-
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-
 import org.microg.gms.common.PublicApi;
 import org.microg.gms.common.api.ApiClientBuilder;
 
@@ -69,35 +65,6 @@ public final class Api<O extends Api.ApiOptions> {
         interface NotRequiredOptions extends ApiOptions {
         }
 
-        /**
-         * {@link ApiOptions} implementation for {@link Api}s that do not take any options.
-         */
-        @PublicApi
-        final class NoOptions implements NotRequiredOptions {
-        }
-
-        /**
-         * Base interface for {@link ApiOptions} that are optional.
-         */
-        @PublicApi
-        interface Optional extends HasOptions, NotRequiredOptions {
-        }
-
-        /**
-         * An interface for {@link ApiOptions} that include an account.
-         */
-        @PublicApi
-        interface HasAccountOptions extends HasOptions, NotRequiredOptions {
-            Account getAccount();
-        }
-
-        /**
-         * An interface for {@link ApiOptions} that includes a {@link GoogleSignInAccount}
-         */
-        @PublicApi
-        interface HasGoogleSignInAccountOptions extends HasOptions {
-            GoogleSignInAccount getGoogleSignInAccount();
-        }
     }
 
 }

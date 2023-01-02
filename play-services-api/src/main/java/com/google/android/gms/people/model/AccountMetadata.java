@@ -17,24 +17,8 @@
 package com.google.android.gms.people.model;
 
 import org.microg.safeparcel.AutoSafeParcelable;
-import org.microg.safeparcel.SafeParceled;
 
 public class AccountMetadata extends AutoSafeParcelable {
 
-    @SafeParceled(1)
-    private final int versionCode = 2;
-
-    @SafeParceled(2)
-    public boolean hasGooglePlus = true;
-
-    @SafeParceled(3)
-    public boolean hasFeature2 = true;
-
-    @SafeParceled(4)
-    public boolean hasFeature3 = true;
-
-    @SafeParceled(5)
-    public boolean hasFeature4 = true;
-
-    public static Creator<AccountMetadata> CREATOR = new AutoCreator<AccountMetadata>(AccountMetadata.class);
+    public static Creator<AccountMetadata> CREATOR = new AutoCreator<>(AccountMetadata.class);
 }

@@ -12,7 +12,5 @@ import org.microg.safeparcel.AutoSafeParcelable;
 public class HasCababilitiesRequest extends AutoSafeParcelable {
     @Field(1)
     public Account account;
-    @Field(2)
-    public String[] capabilities;
     public static final Creator<HasCababilitiesRequest> CREATOR = new AutoCreator<>(HasCababilitiesRequest.class);
 }

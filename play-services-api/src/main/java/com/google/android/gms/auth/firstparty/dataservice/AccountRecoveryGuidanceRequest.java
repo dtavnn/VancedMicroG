@@ -24,8 +24,6 @@ import org.microg.safeparcel.SafeParceled;
 
 public class AccountRecoveryGuidanceRequest extends AutoSafeParcelable {
 
-    @SafeParceled(1)
-    private final int versionCode = 1;
     @SafeParceled(2)
     @Deprecated
     public final String accountName;
@@ -42,5 +40,5 @@ public class AccountRecoveryGuidanceRequest extends AutoSafeParcelable {
         this.account = account;
     }
 
-    public static final Creator<AccountRecoveryGuidanceRequest> CREATOR = new AutoCreator<AccountRecoveryGuidanceRequest>(AccountRecoveryGuidanceRequest.class);
+    public static final Creator<AccountRecoveryGuidanceRequest> CREATOR = new AutoCreator<>(AccountRecoveryGuidanceRequest.class);
 }

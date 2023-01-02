@@ -14,7 +14,5 @@ public class GetHubTokenRequest extends AutoSafeParcelable {
     public String service;
     @Field(3)
     public String packageName;
-    @Field(4)
-    public int callerUid;
     public static final Creator<GetHubTokenRequest> CREATOR = new AutoCreator<>(GetHubTokenRequest.class);
 }

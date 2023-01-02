@@ -26,20 +26,6 @@ public interface GooglePlayServicesClient {
 
     boolean isConnected();
 
-    boolean isConnecting();
-
-    void registerConnectionCallbacks(ConnectionCallbacks listener);
-
-    boolean isConnectionCallbacksRegistered(ConnectionCallbacks listener);
-
-    void unregisterConnectionCallbacks(ConnectionCallbacks listener);
-
-    void registerConnectionFailedListener(OnConnectionFailedListener listener);
-
-    boolean isConnectionFailedListenerRegistered(OnConnectionFailedListener listener);
-
-    void unregisterConnectionFailedListener(OnConnectionFailedListener listener);
-
     @Deprecated
     interface OnConnectionFailedListener {
 

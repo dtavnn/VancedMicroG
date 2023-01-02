@@ -21,104 +21,55 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
 
-import androidx.fragment.app.FragmentActivity;
-
-import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.Status;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 public class GoogleApiClientImpl implements GoogleApiClient {
     private static final String TAG = "GmsApiClientImpl";
 
-    private final Context context;
-    private final Looper looper;
-    private final ApiClientSettings clientSettings;
-    private final Map<Api, Api.ApiOptions> apis = new HashMap<>();
     private final Map<Api, ApiClient> apiConnections = new HashMap<>();
     private final Set<ConnectionCallbacks> connectionCallbacks = new HashSet<>();
     private final Set<OnConnectionFailedListener> connectionFailedListeners = new HashSet<>();
-    private final int clientId;
-    private final ConnectionCallbacks baseConnectionCallbacks = new ConnectionCallbacks() {
-        @Override
-        public void onConnected(Bundle connectionHint) {
-            Log.d(TAG, "ConnectionCallbacks : onConnected()");
-            for (ConnectionCallbacks callback : connectionCallbacks) {
-                callback.onConnected(connectionHint);
-            }
-        }
-
-        @Override
-        public void onConnectionSuspended(int cause) {
-            Log.d(TAG, "ConnectionCallbacks : onConnectionSuspended()");
-            for (ConnectionCallbacks callback : connectionCallbacks) {
-                callback.onConnectionSuspended(cause);
-            }
-        }
-    };
-    private final OnConnectionFailedListener baseConnectionFailedListener = result -> {
-        Log.d(TAG, "OnConnectionFailedListener : onConnectionFailed()");
-        for (OnConnectionFailedListener listener : connectionFailedListeners) {
-            listener.onConnectionFailed(result);
-        }
-    };
-    private int usageCounter = 0;
     private boolean shouldDisconnect = false;
 
     public GoogleApiClientImpl(Context context, Looper looper, ApiClientSettings clientSettings,
                                Map<Api, Api.ApiOptions> apis,
                                Set<ConnectionCallbacks> connectionCallbacks,
-                               Set<OnConnectionFailedListener> connectionFailedListeners, int clientId) {
-        this.context = context;
-        this.looper = looper;
-        this.clientSettings = clientSettings;
-        this.apis.putAll(apis);
+                               Set<OnConnectionFailedListener> connectionFailedListeners) {
         this.connectionCallbacks.addAll(connectionCallbacks);
         this.connectionFailedListeners.addAll(connectionFailedListeners);
-        this.clientId = clientId;
 
         for (Api api : apis.keySet()) {
+            ConnectionCallbacks baseConnectionCallbacks = new ConnectionCallbacks() {
+                @Override
+                public void onConnected(Bundle connectionHint) {
+                    Log.d(TAG, "ConnectionCallbacks : onConnected()");
+                    for (ConnectionCallbacks callback : connectionCallbacks) {
+                        callback.onConnected(connectionHint);
+                    }
+                }
+
+                @Override
+                public void onConnectionSuspended(int cause) {
+                    Log.d(TAG, "ConnectionCallbacks : onConnectionSuspended()");
+                    for (ConnectionCallbacks callback : connectionCallbacks) {
+                        callback.onConnectionSuspended(cause);
+                    }
+                }
+            };
+            OnConnectionFailedListener baseConnectionFailedListener = result -> {
+                Log.d(TAG, "OnConnectionFailedListener : onConnectionFailed()");
+                for (OnConnectionFailedListener listener : connectionFailedListeners) {
+                    listener.onConnectionFailed(result);
+                }
+            };
             apiConnections.put(api, api.getBuilder().build(apis.get(api), context, looper, clientSettings, baseConnectionCallbacks, baseConnectionFailedListener));
         }
-    }
-
-    public synchronized void incrementUsageCounter() {
-        usageCounter++;
-    }
-
-    public synchronized void decrementUsageCounter() {
-        usageCounter--;
-        if (shouldDisconnect) disconnect();
-    }
-
-    public Looper getLooper() {
-        return looper;
-    }
-
-    public ApiClient getApiConnection(Api api) {
-        return apiConnections.get(api);
-    }
-
-    @Override
-    public ConnectionResult blockingConnect() {
-        return null;
-    }
-
-    @Override
-    public ConnectionResult blockingConnect(long timeout, TimeUnit unit) {
-        return null;
-    }
-
-    @Override
-    public PendingResult<Status> clearDefaultAccountAndReconnect() {
-        return null;
     }
 
     @Override
@@ -141,14 +92,10 @@ public class GoogleApiClientImpl implements GoogleApiClient {
 
     @Override
     public synchronized void disconnect() {
-        if (usageCounter > 0) {
-            shouldDisconnect = true;
-        } else {
-            Log.d(TAG, "disconnect()");
-            for (ApiClient connection : apiConnections.values()) {
-                if (connection.isConnected()) {
-                    connection.disconnect();
-                }
+        Log.d(TAG, "disconnect()");
+        for (ApiClient connection : apiConnections.values()) {
+            if (connection.isConnected()) {
+                connection.disconnect();
             }
         }
     }
@@ -181,13 +128,6 @@ public class GoogleApiClientImpl implements GoogleApiClient {
     }
 
     @Override
-    public synchronized void reconnect() {
-        Log.d(TAG, "reconnect()");
-        disconnect();
-        connect();
-    }
-
-    @Override
     public void registerConnectionCallbacks(ConnectionCallbacks listener) {
         connectionCallbacks.add(listener);
     }
@@ -198,17 +138,8 @@ public class GoogleApiClientImpl implements GoogleApiClient {
     }
 
     @Override
-    public void stopAutoManager(FragmentActivity lifecycleActivity) throws IllegalStateException {
-
-    }
-
-    @Override
     public void unregisterConnectionCallbacks(ConnectionCallbacks listener) {
         connectionCallbacks.remove(listener);
     }
 
-    @Override
-    public void unregisterConnectionFailedListener(OnConnectionFailedListener listener) {
-        connectionFailedListeners.remove(listener);
-    }
 }

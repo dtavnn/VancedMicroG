@@ -25,8 +25,6 @@ import org.microg.safeparcel.SafeParceled;
 // TODO
 public class TokenRequest extends AutoSafeParcelable{
 
-    @SafeParceled(1)
-    private final int versionCode = 4;
     @SafeParceled(3)
     public String accountName;
     @SafeParceled(4)
@@ -40,5 +38,5 @@ public class TokenRequest extends AutoSafeParcelable{
         return new Account(accountName, accountType);
     }
 
-    public static final Creator<TokenRequest> CREATOR = new AutoCreator<TokenRequest>(TokenRequest.class);
+    public static final Creator<TokenRequest> CREATOR = new AutoCreator<>(TokenRequest.class);
 }

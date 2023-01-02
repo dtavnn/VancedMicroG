@@ -14,17 +14,11 @@ import org.microg.safeparcel.AutoSafeParcelable;
 @PublicApi
 public class IdToken extends AutoSafeParcelable {
 
-    @Field(1000)
-    private final int versionCode = 1;
-
     @Field(1)
-    private String accountType;
+    private final String accountType;
 
     @Field(2)
-    private String id;
-
-    private IdToken() {
-    }
+    private final String id;
 
     public IdToken(String accountType, String id) {
         this.accountType = accountType;
@@ -38,12 +32,5 @@ public class IdToken extends AutoSafeParcelable {
         return accountType;
     }
 
-    /**
-     * Returns the ID token, formatted according to the rules defined by the account type.
-     */
-    public String getIdToken() {
-        return id;
-    }
-
-    public static final Creator<IdToken> CREATOR = new AutoCreator<IdToken>(IdToken.class);
+    public static final Creator<IdToken> CREATOR = new AutoCreator<>(IdToken.class);
 }

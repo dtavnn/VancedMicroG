@@ -17,20 +17,8 @@
 package com.google.android.gms.people.internal;
 
 import org.microg.safeparcel.AutoSafeParcelable;
-import org.microg.safeparcel.SafeParceled;
 
 public class ParcelableLoadImageOptions extends AutoSafeParcelable {
-    @SafeParceled(1000)
-    private final int versionCode = 1;
 
-    @SafeParceled(1)
-    public int imageSize;
-
-    @SafeParceled(2)
-    public int avatarOptions;
-
-    @SafeParceled(3)
-    public boolean useLargePictureForCp2Images;
-
-    public static final Creator<ParcelableLoadImageOptions> CREATOR = new AutoCreator<ParcelableLoadImageOptions>(ParcelableLoadImageOptions.class);
+    public static final Creator<ParcelableLoadImageOptions> CREATOR = new AutoCreator<>(ParcelableLoadImageOptions.class);
 }

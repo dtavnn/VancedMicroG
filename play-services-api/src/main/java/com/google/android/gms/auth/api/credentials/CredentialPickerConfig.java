@@ -8,24 +8,20 @@
 
 package com.google.android.gms.auth.api.credentials;
 
+import androidx.annotation.NonNull;
+
 import org.microg.gms.common.PublicApi;
 import org.microg.safeparcel.AutoSafeParcelable;
 
 @PublicApi
 public class CredentialPickerConfig extends AutoSafeParcelable {
 
-    @Field(1000)
-    private final int versionCode = 1;
-
     @Field(1)
-    private boolean showAddAccountButton;
+    private final boolean showAddAccountButton;
     @Field(2)
-    private boolean showCancelButton;
+    private final boolean showCancelButton;
     @Field(3)
-    private boolean forNewAccount;
-
-    private CredentialPickerConfig() {
-    }
+    private final boolean forNewAccount;
 
     public CredentialPickerConfig(boolean showAddAccountButton, boolean showCancelButton, boolean forNewAccount) {
         this.showAddAccountButton = showAddAccountButton;
@@ -41,14 +37,7 @@ public class CredentialPickerConfig extends AutoSafeParcelable {
         return forNewAccount;
     }
 
-    public boolean shouldShowAddAccountButton() {
-        return showAddAccountButton;
-    }
-
-    public boolean shouldShowCancelButton() {
-        return showCancelButton;
-    }
-
+    @NonNull
     @Override
     public String toString() {
         return "CredentialPickerConfig{" +
@@ -57,39 +46,22 @@ public class CredentialPickerConfig extends AutoSafeParcelable {
                 '}';
     }
 
-    public class Builder {
-        private boolean showAddAccountButton;
-        private boolean showCancelButton;
-        private boolean forNewAccount;
+    public static class Builder {
+        private final boolean showAddAccountButton;
+        private final boolean showCancelButton;
+        private final boolean forNewAccount;
+
+        public Builder(boolean showAddAccountButton, boolean showCancelButton, boolean forNewAccount) {
+            this.showAddAccountButton = showAddAccountButton;
+            this.showCancelButton = showCancelButton;
+            this.forNewAccount = forNewAccount;
+        }
 
         public CredentialPickerConfig build() {
             return new CredentialPickerConfig(showAddAccountButton, showCancelButton, forNewAccount);
         }
 
-        /**
-         * Sets whether the hint request is for a new account sign-up flow.
-         */
-        public Builder setForNewAccount(boolean forNewAccount) {
-            this.forNewAccount = forNewAccount;
-            return this;
-        }
-
-        /**
-         * Sets whether the add account button should be shown in credential picker dialog.
-         */
-        public Builder setShowAddAccountButton(boolean showAddAccountButton) {
-            this.showAddAccountButton = showAddAccountButton;
-            return this;
-        }
-
-        /**
-         * Sets whether the cancel button should be shown in credential picker dialog.
-         */
-        public Builder setShowCancelButton(boolean showCancelButton) {
-            this.showCancelButton = showCancelButton;
-            return this;
-        }
     }
 
-    public static final Creator<CredentialPickerConfig> CREATOR = new AutoCreator<CredentialPickerConfig>(CredentialPickerConfig.class);
+    public static final Creator<CredentialPickerConfig> CREATOR = new AutoCreator<>(CredentialPickerConfig.class);
 }

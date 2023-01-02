@@ -16,19 +16,9 @@
 
 package com.google.android.gms.auth.firstparty.dataservice;
 
-import com.google.android.gms.auth.firstparty.shared.AccountCredentials;
-import com.google.android.gms.auth.firstparty.shared.CaptchaSolution;
-
 import org.microg.safeparcel.AutoSafeParcelable;
-import org.microg.safeparcel.SafeParceled;
 
 public class ConfirmCredentialsRequest extends AutoSafeParcelable {
-    @SafeParceled(1)
-    private final int versionCode = 1;
-    @SafeParceled(2)
-    public AccountCredentials accountCredentials;
-    @SafeParceled(3)
-    public CaptchaSolution captchaSolution;
 
-    public static final Creator<ConfirmCredentialsRequest> CREATOR = new AutoCreator<ConfirmCredentialsRequest>(ConfirmCredentialsRequest.class);
+    public static final Creator<ConfirmCredentialsRequest> CREATOR = new AutoCreator<>(ConfirmCredentialsRequest.class);
 }

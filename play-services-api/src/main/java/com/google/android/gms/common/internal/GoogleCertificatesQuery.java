@@ -27,12 +27,18 @@ import org.microg.safeparcel.SafeParceled;
 
 public class GoogleCertificatesQuery extends AutoSafeParcelable {
     @SafeParceled(1)
-    private String packageName;
+    private final String packageName;
     @SafeParceled(2)
-    private IBinder certDataBinder;
+    private final IBinder certDataBinder;
     private CertData certData;
     @SafeParceled(3)
-    private boolean allowNonRelease;
+    private final boolean allowNonRelease;
+
+    public GoogleCertificatesQuery(String packageName, IBinder certDataBinder, boolean allowNonRelease) {
+        this.packageName = packageName;
+        this.certDataBinder = certDataBinder;
+        this.allowNonRelease = allowNonRelease;
+    }
 
     public String getPackageName() {
         return packageName;

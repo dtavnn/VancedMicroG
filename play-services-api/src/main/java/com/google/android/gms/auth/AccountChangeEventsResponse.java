@@ -17,20 +17,11 @@
 package com.google.android.gms.auth;
 
 import org.microg.safeparcel.AutoSafeParcelable;
-import org.microg.safeparcel.SafeParceled;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class AccountChangeEventsResponse extends AutoSafeParcelable {
-    @SafeParceled(1)
-    private final int versionCode = 1;
-    @SafeParceled(value = 2, subClass = AccountChangeEvent.class)
-    private final List<AccountChangeEvent> events;
 
     public AccountChangeEventsResponse() {
-        events = new ArrayList<AccountChangeEvent>();
     }
 
-    public static Creator<AccountChangeEventsResponse> CREATOR = new AutoCreator<AccountChangeEventsResponse>(AccountChangeEventsResponse.class);
+    public static Creator<AccountChangeEventsResponse> CREATOR = new AutoCreator<>(AccountChangeEventsResponse.class);
 }

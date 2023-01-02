@@ -17,19 +17,8 @@
 package com.google.android.gms.auth.firstparty.shared;
 
 import org.microg.safeparcel.AutoSafeParcelable;
-import org.microg.safeparcel.SafeParceled;
 
 public class AppDescription extends AutoSafeParcelable {
-    @SafeParceled(1)
-    private final int versionCode = 1;
-    @SafeParceled(2)
-    public int callingUid;
-    @SafeParceled(3)
-    public String sessiondId;
-    @SafeParceled(4)
-    public String sessiondSig;
-    @SafeParceled(5)
-    public String callingPkg;
 
-    public static final Creator<AppDescription> CREATOR = new AutoCreator<AppDescription>(AppDescription.class);
+    public static final Creator<AppDescription> CREATOR = new AutoCreator<>(AppDescription.class);
 }

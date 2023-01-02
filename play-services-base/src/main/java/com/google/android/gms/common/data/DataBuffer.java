@@ -16,6 +16,8 @@
 
 package com.google.android.gms.common.data;
 
+import androidx.annotation.NonNull;
+
 import com.google.android.gms.common.api.Releasable;
 
 import org.microg.gms.common.PublicApi;
@@ -28,11 +30,8 @@ import java.util.Iterator;
 @PublicApi
 public abstract class DataBuffer<T> implements Releasable, Iterable<T> {
 
-    private final DataHolder dataHolder;
-
     @PublicApi(exclude = true)
-    public DataBuffer(DataHolder dataHolder) {
-        this.dataHolder = dataHolder;
+    public DataBuffer() {
     }
 
     /**
@@ -44,20 +43,6 @@ public abstract class DataBuffer<T> implements Releasable, Iterable<T> {
     }
 
     /**
-     * Get the item at the specified position. Note that the objects returned from subsequent
-     * invocations of this method for the same position may not be identical objects, but will be
-     * equal in value.
-     *
-     * @param position The position of the item to retrieve.
-     * @return the item at {@code position} in this buffer.
-     */
-    public abstract T get(int position);
-
-    public int getCount() {
-        return dataHolder == null ? 0 : dataHolder.getCount();
-    }
-
-    /**
      * @deprecated {@link #release()} is idempotent, and so is safe to call multiple times
      */
     @Deprecated
@@ -65,6 +50,7 @@ public abstract class DataBuffer<T> implements Releasable, Iterable<T> {
         return false;
     }
 
+    @NonNull
     @Override
     public Iterator<T> iterator() {
         return null;
@@ -78,12 +64,4 @@ public abstract class DataBuffer<T> implements Releasable, Iterable<T> {
 
     }
 
-    /**
-     * In order to use this one should correctly override setDataRow(int) in his DataBufferRef
-     * implementation. Be careful: there will be single DataBufferRef while iterating.
-     * If you are not sure - DO NOT USE this iterator.
-     */
-    public Iterator<T> singleRefIterator() {
-        return null;
-    }
 }

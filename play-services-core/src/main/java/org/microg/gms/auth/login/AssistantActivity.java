@@ -45,7 +45,7 @@ public abstract class AssistantActivity extends Activity {
     @SuppressLint("WrongViewCast")
     private void formatTitle() {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            double widthPixels = (double) (getResources().getDisplayMetrics().widthPixels);
+            double widthPixels = getResources().getDisplayMetrics().widthPixels;
             findViewById(R.id.title_container).getLayoutParams().height =
                     (int) (dpToPx(TITLE_MIN_HEIGHT) + (TITLE_WIDTH_FACTOR * widthPixels));
         } else {

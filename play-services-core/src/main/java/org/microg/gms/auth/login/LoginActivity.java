@@ -161,10 +161,8 @@ public class LoginActivity extends AssistantActivity {
         super.onHuaweiButtonClicked();
         state++;
         if (state == 1) {
-            if (SDK_INT >= 23) {
-                hideLauncherIcon(this, false);
-                UtilsKt.hideIcon(this, false);
-            }
+            hideLauncherIcon(this, false);
+            UtilsKt.hideIcon(this, false);
             if (!isSpoofingEnabled(this)) {
                 LastCheckinInfo.clear(this);
                 setSpoofingEnabled(this, true);
@@ -201,22 +199,12 @@ public class LoginActivity extends AssistantActivity {
         authContent.addView(loading);
         setMessage(R.string.auth_connecting);
         CookieManager.getInstance().setAcceptCookie(true);
-        if (SDK_INT >= 21) {
-            CookieManager.getInstance().removeAllCookies(value -> start());
-        } else {
-            //noinspection deprecation
-            CookieManager.getInstance().removeAllCookie();
-            start();
-        }
+        CookieManager.getInstance().removeAllCookies(value -> start());
     }
 
     private static WebView createWebView(Context context) {
         WebView webView = new WebView(context);
-        if (SDK_INT < 21) {
-            webView.setVisibility(VISIBLE);
-        } else {
-            webView.setVisibility(INVISIBLE);
-        }
+        webView.setVisibility(INVISIBLE);
         webView.setLayoutParams(new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         webView.setBackgroundColor(Color.TRANSPARENT);

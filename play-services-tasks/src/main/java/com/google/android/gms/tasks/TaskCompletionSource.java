@@ -84,14 +84,11 @@ public class TaskCompletionSource<TResult> {
      * Completes the Task with the specified exception, unless the Task has already completed.
      * If the Task has already completed, the call does nothing.
      *
-     * @return {@code true} if the exception was set successfully, {@code false} otherwise
      */
-    public boolean trySetException(Exception e) {
+    public void trySetException(Exception e) {
         try {
             setException(e);
-            return true;
         } catch (DuplicateTaskCompletionException ignored) {
-            return false;
         }
     }
 
@@ -108,14 +105,11 @@ public class TaskCompletionSource<TResult> {
      * Completes the Task with the specified result, unless the Task has already completed.
      * If the Task has already completed, the call does nothing.
      *
-     * @return {@code true} if the result was set successfully, {@code false} otherwise
      */
-    public boolean trySetResult(TResult result) {
+    public void trySetResult(TResult result) {
         try {
             setResult(result);
-            return true;
         } catch (DuplicateTaskCompletionException ignored) {
-            return false;
         }
     }
 }

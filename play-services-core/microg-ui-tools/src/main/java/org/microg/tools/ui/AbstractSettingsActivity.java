@@ -6,12 +6,12 @@ import android.view.ViewGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+
+import java.util.Objects;
 
 public abstract class AbstractSettingsActivity extends AppCompatActivity {
     protected boolean showHomeAsUp = false;
     protected int preferencesResource = 0;
-    private ViewGroup customBarContainer;
     protected int customBarLayout = 0;
     protected SwitchBar switchBar;
 
@@ -20,38 +20,18 @@ public abstract class AbstractSettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         if (showHomeAsUp) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         }
 
         switchBar = (SwitchBar) findViewById(R.id.switch_bar);
 
-        customBarContainer = (ViewGroup) findViewById(R.id.custom_bar);
+        ViewGroup customBarContainer = (ViewGroup) findViewById(R.id.custom_bar);
         if (customBarLayout != 0) {
             customBarContainer.addView(getLayoutInflater().inflate(customBarLayout, customBarContainer, false));
         }
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_wrapper, getFragment())
-                .commit();
-    }
-
-    public void setCustomBarLayout(int layout) {
-        customBarLayout = layout;
-        if (customBarContainer != null) {
-            customBarContainer.removeAllViews();
-            customBarContainer.addView(getLayoutInflater().inflate(customBarLayout, customBarContainer, false));
-        }
-    }
-
-    public SwitchBar getSwitchBar() {
-        return switchBar;
-    }
-
-    public void replaceFragment(Fragment fragment) {
-        getSupportFragmentManager().beginTransaction()
-                .addToBackStack("root")
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .replace(R.id.content_wrapper, fragment)
                 .commit();
     }
 

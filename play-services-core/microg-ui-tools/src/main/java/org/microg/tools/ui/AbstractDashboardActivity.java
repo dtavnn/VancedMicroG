@@ -66,32 +66,11 @@ public abstract class AbstractDashboardActivity extends AppCompatActivity {
         resetConditionViews();
     }
 
-    protected void addAllConditions(Condition[] conditions) {
-        for (Condition condition : conditions) {
-            addCondition(condition);
-        }
-    }
-
-    protected void addCondition(Condition condition) {
-        conditions.add(condition);
-        if (conditionContainer == null) return;
-        if (condition.isEvaluated()) {
-            addConditionToView(condition);
-        } else {
-            evaluateConditionAsync(condition);
-        }
-    }
-
     private synchronized void addConditionToView(Condition condition) {
         for (int i = 0; i < conditionContainer.getChildCount(); i++) {
             if (conditionContainer.getChildAt(i).getTag() == condition) return;
         }
         conditionContainer.addView(condition.createView(this, conditionContainer));
-    }
-
-    protected void clearConditions() {
-        conditions.clear();
-        resetConditionViews();
     }
 
     protected Fragment getFragment() {

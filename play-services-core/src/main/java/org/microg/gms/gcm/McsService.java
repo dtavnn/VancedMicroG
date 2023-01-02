@@ -76,6 +76,7 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.net.ssl.SSLContext;
@@ -165,7 +166,7 @@ public class McsService extends Service implements Handler.Callback {
     }
 
     private static void logd(Context context, String msg) {
-        if (context == null || GcmPrefs.get(context).isGcmLogEnabled()) Log.d(TAG, msg);
+        if (context == null || Objects.requireNonNull(GcmPrefs.get(context)).isGcmLogEnabled()) Log.d(TAG, msg);
     }
 
     @Override
@@ -197,6 +198,7 @@ public class McsService extends Service implements Handler.Callback {
                         deviceIdleController = Class.forName("android.os.IDeviceIdleController$Stub")
                                 .getMethod("asInterface", IBinder.class).invoke(null, binder);
                         getUserIdMethod = UserHandle.class.getMethod("getUserId", int.class);
+                        assert deviceIdleController != null;
                         addPowerSaveTempWhitelistAppMethod = deviceIdleController.getClass()
                                 .getMethod("addPowerSaveTempWhitelistApp", String.class, long.class, int.class, String.class);
                     }
@@ -239,7 +241,7 @@ public class McsService extends Service implements Handler.Callback {
             return false;
         }
         // consider connection to be dead if we did not receive an ack within 90s to our ping
-        int heartbeatMs = GcmPrefs.get(context).getHeartbeatMsFor(activeNetworkPref);
+        int heartbeatMs = Objects.requireNonNull(GcmPrefs.get(context)).getHeartbeatMsFor(activeNetworkPref);
         // if disabled for active network, heartbeatMs will be -1
         if (heartbeatMs < 0) {
             closeAll();
@@ -249,7 +251,7 @@ public class McsService extends Service implements Handler.Callback {
             long timeSinceLastPing = SystemClock.elapsedRealtime() - lastHeartbeatPingElapsedRealtime;
             if (noAckReceived && timeSinceLastPing > HEARTBEAT_ACK_AFTER_PING_TIMEOUT_MS) {
                 logd(null, "No heartbeat for " + timeSinceLastPing / 1000 + "s, connection assumed to be dead after 90s");
-                GcmPrefs.get(context).learnTimeout(context, activeNetworkPref);
+                Objects.requireNonNull(GcmPrefs.get(context)).learnTimeout(context, activeNetworkPref);
                 return false;
             }
         }
@@ -272,7 +274,7 @@ public class McsService extends Service implements Handler.Callback {
     public void scheduleHeartbeat(Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(ALARM_SERVICE);
 
-        int heartbeatMs = GcmPrefs.get(this).getHeartbeatMsFor(activeNetworkPref);
+        int heartbeatMs = Objects.requireNonNull(GcmPrefs.get(this)).getHeartbeatMsFor(activeNetworkPref);
         if (heartbeatMs < 0) {
             closeAll();
         }
@@ -408,7 +410,7 @@ public class McsService extends Service implements Handler.Callback {
         }
     }
 
-    private boolean connect(int port) {
+    private void connect(int port) {
         try {
             wasTornDown = false;
 
@@ -431,10 +433,8 @@ public class McsService extends Service implements Handler.Callback {
             Log.w(TAG, "Exception while connecting to " + SERVICE_HOST + ":" + port, e);
             rootHandler.sendMessage(rootHandler.obtainMessage(MSG_TEARDOWN, e));
             closeAll();
-            return false;
         }
 
-        return true;
     }
 
     private synchronized void connect() {
@@ -442,8 +442,8 @@ public class McsService extends Service implements Handler.Callback {
 
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = cm.getActiveNetworkInfo();
-        activeNetworkPref = GcmPrefs.get(this).getNetworkPrefForInfo(activeNetworkInfo);
-        if (!GcmPrefs.get(this).isEnabledFor(activeNetworkInfo)) {
+        activeNetworkPref = Objects.requireNonNull(GcmPrefs.get(this)).getNetworkPrefForInfo(activeNetworkInfo);
+        if (!Objects.requireNonNull(GcmPrefs.get(this)).isEnabledFor(activeNetworkInfo)) {
             if (activeNetworkInfo != null) {
                 logd(this, "Don't connect, because disabled for " + activeNetworkInfo.getTypeName());
             } else {
@@ -503,13 +503,14 @@ public class McsService extends Service implements Handler.Callback {
     }
 
     private void handleHeartbeatAck(HeartbeatAck ack) {
-        GcmPrefs.get(this).learnReached(this, activeNetworkPref, SystemClock.elapsedRealtime() - lastIncomingNetworkRealtime);
+        Objects.requireNonNull(GcmPrefs.get(this)).learnReached(this, activeNetworkPref, SystemClock.elapsedRealtime() - lastIncomingNetworkRealtime);
         lastHeartbeatAckElapsedRealtime = SystemClock.elapsedRealtime();
         wakeLock.release();
     }
 
     private LoginRequest buildLoginRequest() {
         LastCheckinInfo info = LastCheckinInfo.read(this);
+        assert info != null;
         return new LoginRequest.Builder()
                 .adaptive_heartbeat(false)
                 .auth_service(LoginRequest.AuthService.ANDROID_ID)
@@ -522,7 +523,7 @@ public class McsService extends Service implements Handler.Callback {
                 .user(Long.toString(info.getAndroidId()))
                 .use_rmq2(true)
                 .setting(Collections.singletonList(new Setting.Builder().name("new_vc").value_("1").build()))
-                .received_persistent_id(GcmPrefs.get(this).getLastPersistedIds())
+                .received_persistent_id(Objects.requireNonNull(GcmPrefs.get(this)).getLastPersistedIds())
                 .build();
     }
 
@@ -633,12 +634,12 @@ public class McsService extends Service implements Handler.Callback {
         rootHandler.sendMessage(rootHandler.obtainMessage(MSG_OUTPUT, type, 0, message));
     }
 
-    private void sendOutputStream(int what, int arg, Object obj) {
+    private void sendOutputStream(int arg, Object obj) {
         McsOutputStream os = outputStream;
         if (os != null && os.isAlive()) {
             Handler outputHandler = os.getHandler();
             if (outputHandler != null)
-                outputHandler.sendMessage(outputHandler.obtainMessage(what, arg, 0, obj));
+                outputHandler.sendMessage(outputHandler.obtainMessage(McsConstants.MSG_OUTPUT, arg, 0, obj));
         }
     }
 
@@ -649,7 +650,7 @@ public class McsService extends Service implements Handler.Callback {
                 handleInput(msg.arg1, (Message) msg.obj);
                 return true;
             case MSG_OUTPUT:
-                sendOutputStream(MSG_OUTPUT, msg.arg1, msg.obj);
+                sendOutputStream(msg.arg1, msg.obj);
                 return true;
             case MSG_INPUT_ERROR:
             case MSG_OUTPUT_ERROR:
@@ -657,7 +658,7 @@ public class McsService extends Service implements Handler.Callback {
                 if (msg.obj instanceof SocketException) {
                     SocketException e = (SocketException) msg.obj;
                     if ("Connection reset".equals(e.getMessage())) {
-                        GcmPrefs.get(this).learnTimeout(this, activeNetworkPref);
+                        Objects.requireNonNull(GcmPrefs.get(this)).learnTimeout(this, activeNetworkPref);
                     }
                 }
                 rootHandler.sendMessage(rootHandler.obtainMessage(MSG_TEARDOWN, msg.obj));

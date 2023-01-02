@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.RuntimeExecutionException;
 import com.google.android.gms.tasks.SuccessContinuation;
 import com.google.android.gms.tasks.Task;
 
+import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.Executor;
@@ -138,7 +139,7 @@ public class TaskImpl<TResult> extends Task<TResult> {
         synchronized (lock) {
             if (!completed) throw new IllegalStateException("Task is not yet complete");
             if (cancelled) throw new CancellationException("Task is canceled");
-            if (exceptionType.isInstance(exception)) throw exceptionType.cast(exception);
+            if (exceptionType.isInstance(exception)) throw Objects.requireNonNull(exceptionType.cast(exception));
             if (exception != null) throw new RuntimeExecutionException(exception);
             return result;
         }

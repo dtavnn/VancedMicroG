@@ -44,10 +44,6 @@ public class ToggleSwitch extends SwitchMaterial {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setOnBeforeCheckedChangeListener(OnBeforeCheckedChangeListener listener) {
-        mOnBeforeListener = listener;
-    }
-
     @Override
     public void setChecked(boolean checked) {
         if (mOnBeforeListener != null

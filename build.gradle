@@ -42,14 +42,6 @@ buildscript {
     }
 }
 
-def execResult(...args) {
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine args
-        standardOutput = stdout
-    }
-    return stdout.toString()
-}
 
 def gmsVersion = "22.49.13"
 def gmsVersionCode = Integer.parseInt(gmsVersion.replaceAll('\\.', ''))

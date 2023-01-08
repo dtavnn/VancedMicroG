@@ -13,11 +13,13 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.color.DynamicColors;
 import com.mgoogle.android.gms.R;
 
+import java.util.Objects;
+
 public class SettingsActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
 
     private NavController getNavController() {
-        return ((NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.navhost)).getNavController();
+        return ((NavHostFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.navhost))).getNavController();
     }
 
     @Override

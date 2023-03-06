@@ -22,8 +22,8 @@ dependencies {
 
     // Dependencies from play-services-basement:18.0.0
     api "androidx.collection:collection:$collectionVersion"
-    api "androidx.core:core:$coreVersion"
-    api "androidx.fragment:fragment:$fragmentVersion"
+    api "androidx.core:core-ktx:$coreVersion"
+    api "androidx.fragment:fragment-ktx:$fragmentVersion"
 }
 
 android {
@@ -50,7 +50,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
+        sourceCompatibility = 11
+        targetCompatibility = 11
     }
+    namespace 'org.microg.gms.basement'
 }

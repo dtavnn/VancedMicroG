@@ -75,9 +75,6 @@ android {
         }
     }
 
-    lintOptions {
-        disable 'MissingTranslation', 'BatteryLife', 'ImpliedQuantity', 'MissingQuantity', 'InvalidWakeLockTag', 'Range'
-    }
 
     buildTypes {
         release {
@@ -87,16 +84,22 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     packagingOptions {
-        exclude 'META-INF/ASL2.0'
         jniLibs {
             useLegacyPackaging false
         }
+        resources {
+            excludes += ['META-INF/ASL2.0']
+        }
     }
+    lint {
+        disable 'MissingTranslation', 'BatteryLife', 'ImpliedQuantity', 'MissingQuantity', 'InvalidWakeLockTag', 'Range'
+    }
+    namespace 'com.mgoogle.android.gms'
 }
 
 if (file('user.gradle').exists()) {
